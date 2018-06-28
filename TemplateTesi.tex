@@ -1138,46 +1138,48 @@ Le differenze maggiori sono evidenti soprattutto per la metrica AUPRC, dove diff
 Per verificare inoltre se la differenza in performance tra selezione delle feature e PCA è statisticamente significativa, sono stati effettuati dei test di ipotesi sui campioni dei risultati ottenuti dai due metodi di riduzione della dimensionalità del problema.
 \newline
 \newline
-Come test di ipotesi è stato utilizzato quello di Kolmogorov e Smirnov\cite{ROSS}, un test \emph{non parametrico} e a due code, che ci permette di verificare la probabilità che due campioni provengono dalla stessa popolazione senza fare assunzioni sul tipo di distribuzione.
+Come test di ipotesi è stato utilizzato quello dei ranghi con segno di Wilcoxon\cite{wilcoxon} (\emph{Paired Wilcoxon signed-rank test}). Tale test è \emph{non parametrico}, in quanto non fa assunzioni sulla distribuzione delle differenze di performance tra gli, ma assume ci sia dipendenza tra le coppie estratte dalla popolazione.
 \newline
 \newline
-Dato il livello di significatività del test $a=0.05$ e come ipotesi nulla $H_0$ l'appartenenza dei due campioni alla medesima popolazione, sono quindi stati effettuati dei test a due a due sui campioni ottenuti variando il metodo di riduzione della dimensionalità del problema, fissato un algoritmo. Come si può vedere dalle tabelle \ref{AUROC_FS_vs_PCA} e \ref{AUPRC_FS_vs_PCA}, che mostrano rispettivamente i p-value ottenuti per la metrica AUROC e per la metrica AUPRC, i casi in cui l'ipotesi nulla non viene scartata (p-value $>= a$), fanno riferimento prevalentemente all'algoritmo \emph{glmnet}. Questo è dovuto probabilmente ai risultati dell'algoritmo che, a causa del mancato tuning, porta a risultati vicini a quelli di un predittore casuale. Un altro algoritmo che genera risultati statisticamente indistinguibili al variare del metodo di riduzione della dimensionalità è \emph{K-NN}, per l'ontologia MF. In tutti gli altri casi si può dire, con una confidenza del 95\%, che gli algoritmi producono popolazioni (e quindi risultati) differenti. Consequenzialmente si può affermare che in generale il metodo di selezione delle feature genera performance migliori.
+Dato il livello di significatività del test $a=0.01$ e come ipotesi nulla $H_0$ l'appartenenza dei due campioni alla medesima popolazione, sono quindi stati effettuati dei test a due a due sui campioni ottenuti variando il metodo di riduzione della dimensionalità del problema, fissato un algoritmo. Come si può vedere dalle tabelle \ref{AUROC_FS_vs_PCA} e \ref{AUPRC_FS_vs_PCA}, che mostrano rispettivamente i p-value ottenuti per la metrica AUROC e per la metrica AUPRC, i casi in cui l'ipotesi nulla non viene scartata (p-value $>= a$), fanno riferimento all'algoritmo \emph{lda} per le ontologie MF e CC (AUROC), l'algoritmo \emph{ranger} per l'ontologia  MF (AUROC), l'algoritmo \emph{Knn} per l'ontologia MF (AUPRC) e l'algoritmo \emph{Naive Bayes} per l'ontologia MF (AUPRC). In tutti gli altri casi si può dire, con una confidenza del 99\%, che gli algoritmi producono popolazioni (e quindi risultati) differenti. Consequenzialmente si può affermare che in generale il metodo di selezione delle feature genera performance migliori.
+
 \begin{table}[h]
 \centering
 \hspace*{-0.3in}
+\caption*{\textbf{Wilcoxon p-value tra le performance con FS e con PCA (AUROC).}}
 \resizebox{.8\textwidth}{!}{
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-\textbf{Onto\textbackslash{}Algo} & \textbf{adaboost} & \textbf{C5.0}         & \textbf{glmnet} & \textbf{knn}       & \textbf{lda}     & \textbf{LogitBoost} \\ \hline
-\textbf{BP}                       & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
-\textbf{MF}                       & 0                 & 0                     & 0,65118         & 7E-05               & 0,00337          & 0                   \\ \hline
-\textbf{CC}                       & 0                 & 0                     & 0,67381         & 0,02319             & 0,03078          & 0                   \\ \hline
-\textbf{Onto\textbackslash{}Algo} & \textbf{mlp}      & \textbf{naiveBayes} & \textbf{ranger} & \textbf{svm} & \textbf{treebag} & \textbf{xgbLinear}  \\ \hline
-\textbf{BP}                       & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
-\textbf{MF}                       & 0                 & 0                     & 0,02632         & 0                   & 5E-05            & 0                   \\ \hline
-\textbf{CC}                       & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
+\textbf{Onto\textbackslash{}Algo} & \textbf{adaboost} & \textbf{C5.0}         & \textbf{glmnet} & \textbf{kknn}       & \textbf{lda}     & \textbf{LogitBoost} \\ \hline
+\textbf{BP} & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
+\textbf{MF} & 0                 & 0                     & 0,00084         & 0                   & 0,02849          & 0                   \\ \hline
+\textbf{CC} & 0                 & 0                     & 0,00053         & 0                   & 0,33815          & 0                   \\ \hline
+\textbf{Onto\textbackslash{}Algo}  & \textbf{mlp}      & \textbf{naive\_bayes} & \textbf{ranger} & \textbf{svmLinear2} & \textbf{treebag} & \textbf{xgbLinear}  \\ \hline
+\textbf{BP} & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
+\textbf{MF} & 0                 & 0                     & 0,06289         & 0                   & 0                & 0                   \\ \hline
+\textbf{CC} & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
 \end{tabular}}
-\caption{\footnotesize{P-value ottenuti dal test di kolmogorov per la metrica AUROC. Fissato l'algoritmo (colonna) si può identificare il p-value relativo ad una specifica ontologia (riga). Il p-value fa riferimento ai due campioni delle performance (AUROC) ottenuti dallo stesso algoritmo, variando il tipo di riduzione della dimensionalità (Selezione delle feature e PCA).}}
+\caption{\footnotesize{P-value ottenuti dal Wilcoxon rank sum test per la metrica AUROC. Fissato l'algoritmo (colonna) si può identificare il p-value relativo ad una specifica ontologia (riga). Il p-value fa riferimento ai due campioni delle performance (AUROC) ottenuti dallo stesso algoritmo, variando il tipo di riduzione della dimensionalità (Selezione delle feature e PCA).}}
 \label{AUROC_FS_vs_PCA}
 \end{table}
-
 
 \begin{table}[h]
 \centering
 \hspace*{-0.3in}
-\resizebox{.9\textwidth}{!}{
+\caption*{\textbf{Wilcoxon p-value tra le performance con FS e con PCA (AUPRC).}}
+\resizebox{.8\textwidth}{!}{
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-\textbf{Onto\textbackslash{}Algo} & \textbf{adaboost} & \textbf{C5.0}       & \textbf{glmnet} & \textbf{knn} & \textbf{lda}     & \textbf{LogitBoost} \\ \hline
-\textbf{BP}                       & 0                 & 0                   & 0               & 0            & 0                & 0                   \\ \hline
-\textbf{MF}                       & 0                 & 0                   & 0,73899         & 0,13797      & 0                & 0                   \\ \hline
-\textbf{CC}                       & 0                 & 0                   & 0,94171         & 0            & 0                & 0                   \\ \hline
-\textbf{Onto\textbackslash{}Algo} & \textbf{mlp}      & \textbf{naiveBayes} & \textbf{ranger} & \textbf{svm} & \textbf{treebag} & \textbf{xgbLinear}  \\ \hline
-\textbf{BP}                       & 0                 & 0                   & 0               & 0            & 0                & 0                   \\ \hline
-\textbf{MF}                       & 0                 & 0,0023              & 0               & 0            & 0                & 0                   \\ \hline
-\textbf{CC}                       & 0                 & 0                   & 0               & 0            & 0                & 0                   \\ \hline
+\textbf{Onto\textbackslash{}Algo} & \textbf{adaboost} & \textbf{C5.0}         & \textbf{glmnet} & \textbf{kknn}       & \textbf{lda}     & \textbf{LogitBoost} \\ \hline
+\textbf{BP}                       & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
+\textbf{MF}                       & 0                 & 0                     & 0,00084         & 0,3661              & 0                & 0                   \\ \hline
+\textbf{CC}                       & 0                 & 0                     & 0,00053         & 0                   & 0                & 0                   \\ \hline
+\textbf{Onto\textbackslash{}Algo} & \textbf{mlp}      & \textbf{naive\_bayes} & \textbf{ranger} & \textbf{svmLinear2} & \textbf{treebag} & \textbf{xgbLinear}  \\ \hline
+\textbf{BP}                       & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
+\textbf{MF}                       & 0                 & 0,1689                & 0               & 0                   & 0                & 0                   \\ \hline
+\textbf{CC}                       & 0                 & 0                     & 0               & 0                   & 0                & 0                   \\ \hline
 \end{tabular}}
-\caption{\footnotesize{P-value ottenuti dal test di kolmogorov per la metrica AUPRC. Fissato l'algoritmo (colonna) si può identificare il p-value relativo ad una specifica ontologia (riga). Il p-value fa riferimento ai due campioni delle performance (AUPRC) ottenuti dallo stesso algoritmo, variando il tipo di riduzione della dimensionalità (Selezione delle feature e PCA).}}
+\caption{\footnotesize{P-value ottenuti dal Wilcoxon rank sum test per la metrica AUPRC. Fissato l'algoritmo (colonna) si può identificare il p-value relativo ad una specifica ontologia (riga). Il p-value fa riferimento ai due campioni delle performance (AUPRC) ottenuti dallo stesso algoritmo, variando il tipo di riduzione della dimensionalità (Selezione delle feature e PCA).}}
 \label{AUPRC_FS_vs_PCA}
 \end{table}
 \newpage
@@ -1188,7 +1190,7 @@ Nelle figure \ref{BP_AUC_1}, \ref{BP_AUC_2}, \ref{MF_AUC_1}, \ref{MF_AUC_2}, \re
 La situazione è visivamente del tutto simile all'AUROC per la metrica AUPRC, come mostrato nei box plot \ref{BP_PRC_1}, \ref{BP_PRC_2}, \ref{MF_PRC_1}, \ref{MF_PRC_2}, \ref{CC_PRC_1} e \ref{CC_PRC_2} in appendice. Non vi è infatti un metodo ensemble dominante, e anzi dipende dal contesto (ontologia, algoritmo di ML e metodo di riduzione della dimensionalità). Anche qui HTD mostra risultati non del tutto positivi, e, come per l'AUROC, ci sono situazioni in cui la performance del metodo risulta peggiorativa in relazione agli score flat.  
 
 \subsection{Metodi Flat vs Metodi Ensemble Gerarchici}
-Per verificare se esistono differenze statisticamente significative tra le performance dei metodi gerarchici e quelle degli algoritmi flat, si è eseguito il test dei ranghi con segno di Wilcoxon\cite{wilcoxon}(\emph{Paired Wilcoxon signed-rank test}). Tale test è \emph{non parametrico}, in quanto non fa assunzioni sulla distribuzione delle differenze di performance tra i metodi, ma assume ci sia dipendenza tra le coppie estratte dalla popolazione\footnote{\footnotesize{Assume che ci sia ad esempio un dipendenza del tipo \emph{prima} - \emph{dopo}, che nel nostro caso si può tradurre come \emph{metodo flat}(prima) -  \emph{metodo gerarchico}(dopo).}}.
+Per verificare se esistono differenze statisticamente significative tra le performance dei metodi gerarchici e quelle degli algoritmi flat, si è eseguito, anche in questo caso, il test dei ranghi con segno di Wilcoxon\cite{wilcoxon}
 \newline
 \newline
 Si sono quindi raggruppati i risultati per ontologia e metodo di riduzione della dimensionalità, e si sono confrontate le performance dei metodi flat e dei diversi metodi di correzione gerarchica, assumendo come ipotesi nulla $H_0$ la condizione che i due campioni provengano dalla stessa popolazione.
