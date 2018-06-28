@@ -1856,7 +1856,7 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 \textbf{AUROC}         & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} & \textbf{SommeXrighe} \\ \hline
-\textbf{adaboost}      & 3             & 0            & 3               & 3                   & 1               & 3                   & 3              & 16/21                \\ \hline
+\textbf{adaboost}      & 3             & 0            & 3               & 3                   & 0 & 3                   & 3              & 15/21                \\ \hline
 \textbf{C5.0}          & 3             & 2            & 3               & 3                   & 3               & 3                   & 3              & 20/21                \\ \hline
 \textbf{glmnet}        & 1             & 0            & 0               & 1                   & 0               & 0                   & 0              & 2/21                 \\ \hline
 \textbf{kknn}          & 3             & 0            & 3               & 3                   & 2               & 3                   & 3              & 17/21                \\ \hline
@@ -1867,8 +1867,8 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \textbf{ranger}        & 3             & 0            & 3               & 3                   & 0               & 3                   & 3              & 15/21                \\ \hline
 \textbf{svmLinear2}    & 3             & 0            & 3               & 3                   & 0               & 3                   & 2              & 14/21                \\ \hline
 \textbf{treebag}       & 3             & 0            & 3               & 3                   & 0               & 3                   & 3              & 15/21                \\ \hline
-\textbf{xgbLinear}     & 3             & 0            & 3               & 3                   & 3               & 3                   & 3              & 18/21                \\ \hline
-\textbf{SommeXcolonne} & 34/36         & 2/34         & 33/36           & 34/36               & 15/36           & 33/36               & 31/36          &                      \\ \hline
+\textbf{xgbLinear}     & 3             & 0            & 3               & 3                   & 2   & 3                   & 3              & 17/21                \\ \hline
+\textbf{SommeXcolonne} & 34/36         & 2/34         & 33/36           & 34/36               & 13/36           & 33/36               & 31/36          &                      \\ \hline
 \end{tabular}}
 
 \centering
@@ -1881,15 +1881,15 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \textbf{C5.0}          & 2             & 3            & 3               & 1                   & 3               & 1                   & 3              & 16/21                \\ \hline
 \textbf{glmnet}        & 0             & 0            & 0               & 0                   & 0               & 0                   & 0              & 0/21                 \\ \hline
 \textbf{kknn}          & 3             & 0            & 3               & 3                   & 0               & 3                   & 3              & 15/21                \\ \hline
-\textbf{lda}           & 0             & 1            & 1               & 0                   & 1               & 0                   & 2              & 5/21                 \\ \hline
+\textbf{lda}           & 0             & 1            & 0               & 0                   & 1               & 0                   & 2              & 4/21                 \\ \hline
 \textbf{LogitBoost}    & 3             & 3            & 3               & 3                   & 3               & 3                   & 3              & 21/21                \\ \hline
-\textbf{mlp}           & 3             & 3            & 3               & 0                   & 3               & 1                   & 3              & 16/21                \\ \hline
+\textbf{mlp}           & 2             & 3            & 3               & 0                   & 3               & 1                   & 2              & 14/21                \\ \hline
 \textbf{naive\_bayes}  & 0             & 2            & 0               & 0                   & 1               & 0                   & 0              & 3/21                 \\ \hline
 \textbf{ranger}        & 3             & 0            & 3               & 3                   & 0               & 3                   & 3              & 15/21                \\ \hline
-\textbf{svmLinear2}    & 0             & 3            & 0               & 0                   & 1               & 0                   & 1              & 5/21                 \\ \hline
+\textbf{svmLinear2}    & 0             & 3            & 0               & 0                   & 0               & 0                   & 1              & 4/21                 \\ \hline
 \textbf{treebag}       & 3             & 0            & 3               & 3                   & 0               & 3                   & 3              & 15/21                \\ \hline
 \textbf{xgbLinear}     & 3             & 3            & 3               & 3                   & 3               & 3                   & 3              & 21/21                \\ \hline
-\textbf{SommeXcolonne} & 23/36         & 18/36        & 25/36           & 19/36               & 17/36           & 20/36               & 27/36          &                      \\ \hline
+\textbf{SommeXcolonne} & 22/36         & 18/36        & 24/36           & 19/36               & 16/36           & 20/36               & 26/36          &                      \\ \hline
 \end{tabular}}
 \caption{\footnotesize{Confronto delle performance (AUROC) metodi flat - metodi gerarchici per ogni metodo flat utilizzato. Ogni entry delle tabelle conta per quante ontologie (BP, MF, CC) esiste una differenza significativa fra il metodo gerarchico ed il metodo flat, e il valore atteso della metrica risulta superiore per il metodo ensemble (Wilcoxon rank sum test, $\alpha = 0.01$).}}
 \label{AUROC_1_}
@@ -1904,17 +1904,17 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \textbf{AUPRC}         & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} & \textbf{SommeXrighe} \\ \hline
 \textbf{adaboost}      & 3             & 0            & 3               & 3                   & 3               & 3                   & 3              & 18/21                \\ \hline
 \textbf{C5.0}          & 3             & 0            & 3               & 3                   & 3               & 3                   & 3              & 18/21                \\ \hline
-\textbf{glmnet}        & 1             & 2            & 1               & 1                   & 1               & 1                   & 1              & 8/21                 \\ \hline
+\textbf{glmnet}        & 1             & 2            & 1               & 1                   & 0               & 1                   & 1              & 7/21                 \\ \hline
 \textbf{kknn}          & 3             & 0            & 3               & 3                   & 3               & 3                   & 3              & 18/21                \\ \hline
 \textbf{lda}           & 3             & 3            & 3               & 3                   & 3               & 3                   & 3              & 21/21                \\ \hline
 \textbf{LogitBoost}    & 3             & 0            & 3               & 3                   & 3               & 3                   & 3              & 18/21                \\ \hline
 \textbf{mlp}           & 3             & 0            & 2               & 3                   & 0               & 3                   & 0              & 11/21                \\ \hline
 \textbf{naive\_bayes}  & 3             & 3            & 3               & 3                   & 3               & 3                   & 3              & 21/21                \\ \hline
-\textbf{ranger}        & 3             & 0            & 3               & 3                   & 1               & 3                   & 3              & 16/21                \\ \hline
+\textbf{ranger}        & 3             & 0            & 3               & 3                   & 0   & 3                   & 3              & 15/21                \\ \hline
 \textbf{svmLinear2}    & 3             & 0            & 3               & 3                   & 3               & 3                   & 3              & 18/21                \\ \hline
 \textbf{treebag}       & 3             & 0            & 3               & 3                   & 3               & 3                   & 3              & 18/21                \\ \hline
 \textbf{xgbLinear}     & 3             & 0            & 3               & 3                   & 2               & 3                   & 3              & 17/21                \\ \hline
-\textbf{SommeXcolonne} & 34/36         & 8/36         & 33/36           & 34/36               & 28/36           & 34/36               & 31/36          &                      \\ \hline
+\textbf{SommeXcolonne} & 34/36         & 8/36         & 33/36           & 34/36               & 26/36           & 34/36               & 31/36          &                      \\ \hline
 \end{tabular}}
 
 
