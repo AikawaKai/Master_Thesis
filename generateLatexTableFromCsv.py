@@ -89,15 +89,24 @@ def write_by_fs(fs_):
                                     key=lambda x: x.lower())
             i = 0
             for file in curr_files:
-                string = gen_tabular(curr_path+file)
+                if fs_ is not None:
+                    string = gen_tabular2(curr_path+file)
+                else:
+                    string = gen_tabular(curr_path + file)
                 fs = file.split(".csv")[0]
                 curr_string = basic_tabular1 + "\n" + title_caption.format(""" \\textbf{[""" + metric+"] ["+onto+"] ["+ fs + """]}""") \
                               + "\n" + string + "\n" + basic_tabular2
                 if i % 2 == 0:
-                    #curr_string += sep_tabular
-                    pass
+                    if fs_ is None:
+                        #curr_string += sep_tabular
+                        pass
+                    else:
+                        curr_string += sep_tabular
                 else:
-                    curr_string += sep_tabular
+                    if fs_ is None:
+                        curr_string += sep_tabular
+                    else:
+                        pass
                 i += 1
                 # print(curr_string)
                 total_string += "\n"+curr_string
@@ -107,7 +116,7 @@ def write_by_fs(fs_):
                     w.write(total_string+"\n"+last_caption.format(genSubCaption(metrics[0], "BP, MF, CC", "FS, PCA")))
             else:
                 with open("testAUC_"+fs, "w") as w:
-                    w.write(total_string+"\n"+last_caption.format(genSubCaption(metrics[0], "BP, MF, CC", "FS, PCA")))
+                    w.write(total_string+"\n"+last_caption.format(genSubCaption2(metrics[0], "BP, MF, CC", "FS, PCA")))
         else:
             if fs_ is None:
                 with open("testPRC", "w") as w:
@@ -115,15 +124,15 @@ def write_by_fs(fs_):
                         total_string + "\n" + last_caption.format(genSubCaption(metrics[1], "BP, MF, CC", "FS, PCA")))
             else:
                 with open("testPRC_"+fs, "w") as w:
-                    w.write(total_string+"\n"+last_caption.format(genSubCaption(metrics[1], "BP, MF, CC", "FS, PCA")))
+                    w.write(total_string+"\n"+last_caption.format(genSubCaption2(metrics[1], "BP, MF, CC", "FS, PCA")))
 
 if __name__ == "__main__":
     path = "/home/kai/Documenti/UNIMI/Master_Thesis/csv_results/"
     metrics = ["AUC", "PRC"]
     ontos = ["BP", "MF", "CC"]
     write_by_fs(None)
-    #write_by_fs("FS")
-    #write_by_fs("PCA")
+    write_by_fs("FS")
+    write_by_fs("PCA")
 
 
 
