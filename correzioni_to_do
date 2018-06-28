@@ -1,0 +1,18 @@
+- Spiegare a inizio capitolo 3 perché si fanno gli esperimenti ✔
+- aggiungi immagini per i metodi HTD-DAG e TPR-DAG x
+- riferimenti bibliografici ai metodi flat ✔
+- snippet training test tesi ✔
+- modificare boxplot per visualizzazione migliore (carattere -> grandezza) ✔
+- tabella 3.8 in box plot (non ho i dati...) ✔
+- rifare esperimenti per il calcolo dei tempi sulle medesime 10 classi cv 10 fold. X 
+- aggiungere riferimento alla configurazione dei nuovi algoritmi ✔
+- aggiustare gli pseudocodici ✔
+- aggiustare sezione experimental set-up aggiungendo qualcosa ✔
+- xtab multipage table ✔ (longtable)
+
+
+- aggiungere le performance box plot prime stime (senza riduzione della dimensionalità)
+- aggiungere immagine per metodi ensemble gerarchici ✔
+- modificare box plot predizioni flat ✔
+- aggiungere test di ipotesi di kolmogorov per le predizioni flat (con riduzione della dimensionalità)
+- mettere dimostrazioni teoremi? boh.

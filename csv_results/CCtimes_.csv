@@ -1,0 +1,7 @@
+algo,max_time,min_time,mean_time,std_time
+C5.0,3.98,3.17,3.41,0.24
+glmnet,3.58,2.19,2.5,0.38
+knn,15.07,6.4,8.01,3.17
+mlp,5.33,5.05,5.19,0.1
+svmLinear,6.3,2.38,3.1,1.19
+xgbLinear,2.51,2.04,2.24,0.14

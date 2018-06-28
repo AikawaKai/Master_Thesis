@@ -1,0 +1,107 @@
+
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[AUC] [BP] [FS]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 12/12 \\ \hline
+ \textbf{HTD} & 1/12 \\ \hline
+ \textbf{TPR-TF} & 11/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 12/12 \\ \hline
+ \textbf{TPR-T} & 5/12 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[AUC] [BP] [PCA]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 8/12 \\ \hline
+ \textbf{HTD} & 7/12 \\ \hline
+ \textbf{TPR-TF} & 9/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 6/12 \\ \hline
+ \textbf{TPR-T} & 7/12 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[AUC] [MF] [FS]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 11/12 \\ \hline
+ \textbf{HTD} & 1/12 \\ \hline
+ \textbf{TPR-TF} & 11/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 11/12 \\ \hline
+ \textbf{TPR-T} & 5/12 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[AUC] [MF] [PCA]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 7/12 \\ \hline
+ \textbf{HTD} & 5/12 \\ \hline
+ \textbf{TPR-TF} & 8/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 6/12 \\ \hline
+ \textbf{TPR-T} & 5/12 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[AUC] [CC] [FS]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 11/12 \\ \hline
+ \textbf{HTD} & 0/12 \\ \hline
+ \textbf{TPR-TF} & 11/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 11/12 \\ \hline
+ \textbf{TPR-T} & 5/12 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[AUC] [CC] [PCA]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 8/12 \\ \hline
+ \textbf{HTD} & 6/12 \\ \hline
+ \textbf{TPR-TF} & 8/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 7/12 \\ \hline
+ \textbf{TPR-T} & 5/12 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\caption{Confronto tra i diversi metodi di correzione gerarchica e i metodi flat, per la metrica AUC, date le diverse ontologie (BP, MF, CC) e i due metodi di riduzione della dimensionalità usati (FS, PCA). Le tabelle contano le volte in cui, fissato un algoritmo di ML, un metodo ensemble o flat (riga) supera un altro metodo (colonna) a livello di performance. Un metodo viene considerato migliore di un altro se il test di Wilcoxon rifiuta l'ipotesi nulla (p-value $<$ 0.01), che afferma che i metodi sono indistinguibili }

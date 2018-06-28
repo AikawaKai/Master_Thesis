@@ -1,0 +1,14 @@
+	GPAV	HTD	TPR-TF	ISO-TPR-TF	TPR-AT	ISO-TPR-AT	TPR-W	SommeXrighe
+adaboost	3	0	3	3	3	3	3	18
+C5.0	3	0	3	3	3	3	3	18
+glmnet	1	2	1	1	1	1	1	8
+kknn	3	0	3	3	3	3	3	18
+lda	3	3	3	3	3	3	3	21
+LogitBoost	3	0	3	3	3	3	3	18
+mlp	3	0	2	3	0	3	0	11
+naive_bayes	3	3	3	3	3	3	3	21
+ranger	3	0	3	3	1	3	3	16
+svmLinear2	3	0	3	3	3	3	3	18
+treebag	3	0	3	3	3	3	3	18
+xgbLinear	3	0	3	3	2	3	3	17
+SommeXcolonne	34	8	33	34	28	34	31	

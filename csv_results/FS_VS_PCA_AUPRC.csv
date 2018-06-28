@@ -1,0 +1,4 @@
+Onto\Algo	adaboost	C5.0	glmnet	kknn	lda	LogitBoost	mlp	naive_bayes	ranger	svmLinear2	treebag	xgbLinear
+BP	0	0	0	0	0	0	0	0	0	0	0	0
+MF	0	0	0,73899	0,13797	0	0	0	0,0023	0	0	0	0
+CC	0	0	0,94171	0	0	0	0	0	0	0	0	0

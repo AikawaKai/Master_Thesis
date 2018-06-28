@@ -1,0 +1,62 @@
+
+\hspace*{0.3in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [BP] [PCA]}}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+ \textbf{GPAV} & 0/0 & 6/12 & 4/12 & 10/12 & 6/12 & 11/12 & 4/12 \\ \hline
+ \textbf{HTD} & 5/12 & 0/0 & 5/12 & 5/12 & 5/12 & 6/12 & 3/12 \\ \hline
+ \textbf{TPR-TF} & 5/12 & 7/12 & 0/0 & 7/12 & 8/12 & 9/12 & 4/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 1/12 & 5/12 & 3/12 & 0/0 & 5/12 & 4/12 & 3/12 \\ \hline
+ \textbf{TPR-AT} & 4/12 & 6/12 & 2/12 & 7/12 & 0/0 & 7/12 & 1/12 \\ \hline
+ \textbf{ISO-TPR-AT} & 1/12 & 6/12 & 2/12 & 3/12 & 4/12 & 0/0 & 3/12 \\ \hline
+ \textbf{TPR-W} & 5/12 & 9/12 & 5/12 & 6/12 & 9/12 & 7/12 & 0/0 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\hspace*{0.3in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [MF] [PCA]}}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+ \textbf{GPAV} & 0/0 & 3/12 & 2/12 & 9/12 & 5/12 & 5/12 & 1/12 \\ \hline
+ \textbf{HTD} & 3/12 & 0/0 & 3/12 & 3/12 & 4/12 & 4/12 & 3/12 \\ \hline
+ \textbf{TPR-TF} & 6/12 & 6/12 & 0/0 & 6/12 & 6/12 & 6/12 & 5/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 1/12 & 3/12 & 1/12 & 0/0 & 2/12 & 1/12 & 2/12 \\ \hline
+ \textbf{TPR-AT} & 2/12 & 3/12 & 0/12 & 4/12 & 0/0 & 3/12 & 3/12 \\ \hline
+ \textbf{ISO-TPR-AT} & 1/12 & 3/12 & 1/12 & 4/12 & 1/12 & 0/0 & 3/12 \\ \hline
+ \textbf{TPR-W} & 2/12 & 7/12 & 1/12 & 3/12 & 4/12 & 3/12 & 0/0 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\hspace*{0.3in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [CC] [PCA]}}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+ \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+ \textbf{GPAV} & 0/0 & 6/12 & 2/12 & 9/12 & 7/12 & 10/12 & 5/12 \\ \hline
+ \textbf{HTD} & 5/12 & 0/0 & 3/12 & 5/12 & 5/12 & 6/12 & 4/12 \\ \hline
+ \textbf{TPR-TF} & 3/12 & 7/12 & 0/0 & 6/12 & 10/12 & 6/12 & 9/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 0/12 & 6/12 & 1/12 & 0/0 & 4/12 & 4/12 & 3/12 \\ \hline
+ \textbf{TPR-AT} & 3/12 & 5/12 & 1/12 & 3/12 & 0/0 & 4/12 & 2/12 \\ \hline
+ \textbf{ISO-TPR-AT} & 0/12 & 6/12 & 1/12 & 4/12 & 4/12 & 0/0 & 2/12 \\ \hline
+ \textbf{TPR-W} & 1/12 & 7/12 & 1/12 & 3/12 & 4/12 & 5/12 & 0/0 \\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\caption{Confronto tra i diversi metodi di correzione gerarchica, per la metrica PRC, date le diverse ontologie (BP, MF, CC) e i due metodi di riduzione della dimensionalità usati (FS, PCA). Le tabelle contano le volte in cui, fissato un algoritmo di ML, un metodo ensemble ne supera un altro(colonna) a livello di performance. Un metodo viene considerato migliorativo rispetto al metodo flat, se il test di Wilcoxon rifiuta l'ipotesi nulla (p-value $<$ 0.01 con correzione di Bonferroni) e se la media della performance per classe è maggiore.}

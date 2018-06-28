@@ -1,0 +1,5 @@
+Set H = H \ {i}.
+Set B j − = B i − ∪ B j − \ {i}.
+Set x j = (W j x j + W i x i ) / (W j + W i ).
+Set B j = B j ∪ B i and W j = W j + W i .
+For all k ∈ H such that i ∈ B k − , set B k − = B k − \ {i} ∪ {j}.
