@@ -2,7 +2,7 @@ import os
 import sys
 
 
-basic_tabular1 = """\\hspace*{0.3in}
+basic_tabular1 = """\\hspace*{0.6in}
                     \\resizebox{.3\\textwidth}{!}{
                     \\begin{subtable}[t]{0.4\\textwidth}
                     \\centering\\footnotesize"""
@@ -22,7 +22,7 @@ def getFract(val):
 
 def gen_tabular(csv_file):
     with open(csv_file, "r") as csv_file:
-        lines = [["WIN / LOSE" if l == "" else l for l in [l.strip() for l in line.split("\t")]] for line in csv_file.readlines()]
+        lines = [["WIN / LOSS" if l == "" else l for l in [l.strip() for l in line.split("\t")]] for line in csv_file.readlines()]
     header = """\\begin{tabular}{""" + "|"+"|".join(["l" for i in range(0, 2)]) + "|" + """}\n\\hline"""
     title = """&""".join([""" \\textbf{"""+val+"""} """ for val in lines[0][:2]]) + "\\\\ \\hline"
     body = [title]
@@ -75,38 +75,55 @@ def genSubCaption2(metric, ontos, fs):
 
 
 
-def write_by_fs(fs):
+def write_by_fs(fs_):
     for metric in metrics:
         total_string = ""
         for onto in ontos:
             curr_path = path + "/" + metric + "/" + onto + "/"
             print(curr_path)
-            curr_files = sorted([f for f in os.listdir(curr_path) if f.endswith(".csv") and fs in f], key=lambda x: x.lower())
+            if fs_ is not None:
+                curr_files = sorted([f for f in os.listdir(curr_path) if f.endswith(".csv") and fs_ in f],
+                                    key=lambda x: x.lower())
+            if fs_ is None:
+                curr_files = sorted([f for f in os.listdir(curr_path) if f.endswith(".csv")],
+                                    key=lambda x: x.lower())
             i = 0
             for file in curr_files:
-                string = gen_tabular2(curr_path+file)
+                string = gen_tabular(curr_path+file)
+                fs = file.split(".csv")[0]
                 curr_string = basic_tabular1 + "\n" + title_caption.format(""" \\textbf{[""" + metric+"] ["+onto+"] ["+ fs + """]}""") \
                               + "\n" + string + "\n" + basic_tabular2
-                if i % 2 == 1:
-                    curr_string += sep_tabular
+                if i % 2 == 0:
+                    #curr_string += sep_tabular
+                    pass
                 else:
                     curr_string += sep_tabular
                 i += 1
                 # print(curr_string)
                 total_string += "\n"+curr_string
         if metric == "AUC":
-            with open("testAUC_"+fs, "w") as w:
-                w.write(total_string+"\n"+last_caption.format(genSubCaption2(metrics[0], "BP, MF, CC", "FS, PCA")))
+            if fs_ is None:
+                with open("testAUC", "w") as w:
+                    w.write(total_string+"\n"+last_caption.format(genSubCaption(metrics[0], "BP, MF, CC", "FS, PCA")))
+            else:
+                with open("testAUC_"+fs, "w") as w:
+                    w.write(total_string+"\n"+last_caption.format(genSubCaption(metrics[0], "BP, MF, CC", "FS, PCA")))
         else:
-            with open("testPRC_"+fs, "w") as w:
-                w.write(total_string+"\n"+last_caption.format(genSubCaption2(metrics[1], "BP, MF, CC", "FS, PCA")))
+            if fs_ is None:
+                with open("testPRC", "w") as w:
+                    w.write(
+                        total_string + "\n" + last_caption.format(genSubCaption(metrics[1], "BP, MF, CC", "FS, PCA")))
+            else:
+                with open("testPRC_"+fs, "w") as w:
+                    w.write(total_string+"\n"+last_caption.format(genSubCaption(metrics[1], "BP, MF, CC", "FS, PCA")))
 
 if __name__ == "__main__":
-    path = "/home/kai/Documenti/UNIMI/Bioinformatics_latex_thesis/csv_results/"
+    path = "/home/kai/Documenti/UNIMI/Master_Thesis/csv_results/"
     metrics = ["AUC", "PRC"]
     ontos = ["BP", "MF", "CC"]
-    write_by_fs("FS")
-    write_by_fs("PCA")
+    write_by_fs(None)
+    #write_by_fs("FS")
+    #write_by_fs("PCA")
 
 
 

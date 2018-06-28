@@ -4,16 +4,16 @@
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[PRC] [BP] [FS]}}
-\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
- \textbf{GPAV} & 0/0 & 11/12 & 9/12 & 6/12 & 10/12 & 5/12 & 10/12 \\ \hline
- \textbf{HTD} & 0/12 & 0/0 & 0/12 & 0/12 & 0/12 & 0/12 & 0/12 \\ \hline
- \textbf{TPR-TF} & 1/12 & 11/12 & 0/0 & 3/12 & 11/12 & 2/12 & 9/12 \\ \hline
- \textbf{ISO-TPR-TF} & 2/12 & 11/12 & 7/12 & 0/0 & 9/12 & 2/12 & 8/12 \\ \hline
- \textbf{TPR-AT} & 1/12 & 11/12 & 0/12 & 2/12 & 0/0 & 0/12 & 1/12 \\ \hline
- \textbf{ISO-TPR-AT} & 3/12 & 11/12 & 7/12 & 3/12 & 10/12 & 0/0 & 9/12 \\ \hline
- \textbf{TPR-W} & 0/12 & 12/12 & 0/12 & 1/12 & 9/12 & 0/12 & 0/0 \\ \hline
+ \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 12/12 \\ \hline
+ \textbf{HTD} & 3/12 \\ \hline
+ \textbf{TPR-TF} & 12/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 12/12 \\ \hline
+ \textbf{TPR-AT} & 9/12 \\ \hline
+ \textbf{ISO-TPR-AT} & 12/12 \\ \hline
+ \textbf{TPR-W} & 11/12 \\ \hline
 \end{tabular}
 
                     \label{table1}
@@ -24,16 +24,16 @@
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[PRC] [MF] [FS]}}
-\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
- \textbf{GPAV} & 0/0 & 11/12 & 4/12 & 3/12 & 9/12 & 8/12 & 6/12 \\ \hline
- \textbf{HTD} & 1/12 & 0/0 & 0/12 & 1/12 & 0/12 & 1/12 & 0/12 \\ \hline
- \textbf{TPR-TF} & 1/12 & 11/12 & 0/0 & 2/12 & 10/12 & 5/12 & 5/12 \\ \hline
- \textbf{ISO-TPR-TF} & 0/12 & 11/12 & 3/12 & 0/0 & 7/12 & 3/12 & 5/12 \\ \hline
- \textbf{TPR-AT} & 1/12 & 10/12 & 0/12 & 1/12 & 0/0 & 1/12 & 0/12 \\ \hline
- \textbf{ISO-TPR-AT} & 1/12 & 9/12 & 1/12 & 2/12 & 7/12 & 0/0 & 4/12 \\ \hline
- \textbf{TPR-W} & 3/12 & 11/12 & 1/12 & 3/12 & 4/12 & 4/12 & 0/0 \\ \hline
+ \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 11/12 \\ \hline
+ \textbf{HTD} & 3/12 \\ \hline
+ \textbf{TPR-TF} & 10/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 11/12 \\ \hline
+ \textbf{TPR-AT} & 9/12 \\ \hline
+ \textbf{ISO-TPR-AT} & 11/12 \\ \hline
+ \textbf{TPR-W} & 10/12 \\ \hline
 \end{tabular}
 
                     \label{table1}
@@ -44,19 +44,19 @@
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[PRC] [CC] [FS]}}
-\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
- \textbf{GPAV} & 0/0 & 11/12 & 9/12 & 5/12 & 10/12 & 4/12 & 11/12 \\ \hline
- \textbf{HTD} & 0/12 & 0/0 & 0/12 & 0/12 & 0/12 & 0/12 & 0/12 \\ \hline
- \textbf{TPR-TF} & 0/12 & 11/12 & 0/0 & 0/12 & 9/12 & 0/12 & 10/12 \\ \hline
- \textbf{ISO-TPR-TF} & 0/12 & 11/12 & 7/12 & 0/0 & 10/12 & 2/12 & 10/12 \\ \hline
- \textbf{TPR-AT} & 0/12 & 10/12 & 0/12 & 0/12 & 0/0 & 0/12 & 2/12 \\ \hline
- \textbf{ISO-TPR-AT} & 2/12 & 11/12 & 6/12 & 0/12 & 11/12 & 0/0 & 8/12 \\ \hline
- \textbf{TPR-W} & 0/12 & 11/12 & 0/12 & 0/12 & 5/12 & 0/12 & 0/0 \\ \hline
+ \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} & 11/12 \\ \hline
+ \textbf{HTD} & 2/12 \\ \hline
+ \textbf{TPR-TF} & 11/12 \\ \hline
+ \textbf{ISO-TPR-TF} & 11/12 \\ \hline
+ \textbf{TPR-AT} & 8/12 \\ \hline
+ \textbf{ISO-TPR-AT} & 11/12 \\ \hline
+ \textbf{TPR-W} & 10/12 \\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}\par\bigskip
 
-\caption{Confronto tra i diversi metodi di correzione gerarchica, per la metrica PRC, date le diverse ontologie (BP, MF, CC) e i due metodi di riduzione della dimensionalità usati (FS, PCA). Le tabelle contano le volte in cui, fissato un algoritmo di ML, un metodo ensemble ne supera un altro(colonna) a livello di performance. Un metodo viene considerato migliorativo rispetto al metodo flat, se il test di Wilcoxon rifiuta l'ipotesi nulla (p-value $<$ 0.01 con correzione di Bonferroni) e se la media della performance per classe è maggiore.}
+\caption{Confronto tra i diversi metodi di correzione gerarchica e i metodi flat, per la metrica PRC, date le diverse ontologie (BP, MF, CC) e i due metodi di riduzione della dimensionalità usati (FS, PCA). Le tabelle contano le volte in cui, fissato un algoritmo di ML, un metodo ensemble o flat (riga) supera un altro metodo (colonna) a livello di performance. Un metodo viene considerato migliorativo rispetto al metodo flat, se il test di Wilcoxon rifiuta l'ipotesi nulla (p-value $<$ 0.01) e se la media della performance per classe è maggiore.}
