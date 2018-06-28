@@ -1,0 +1,119 @@
+
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [BP] [FS]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &12-0-0\\ \hline
+ \textbf{HTD} &3-1-8\\ \hline
+ \textbf{TPR-TF} &12-0-0\\ \hline
+ \textbf{ISO-TPR-TF} &12-0-0\\ \hline
+ \textbf{TPR-AT} &9-2-1\\ \hline
+ \textbf{ISO-TPR-AT} &12-0-0\\ \hline
+ \textbf{TPR-W} &11-1-0\\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [BP] [PCA]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &8-3-1\\ \hline
+ \textbf{HTD} &6-2-4\\ \hline
+ \textbf{TPR-TF} &10-1-1\\ \hline
+ \textbf{ISO-TPR-TF} &7-2-3\\ \hline
+ \textbf{TPR-AT} &8-2-2\\ \hline
+ \textbf{ISO-TPR-AT} &6-2-4\\ \hline
+ \textbf{TPR-W} &10-0-2\\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [MF] [FS]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &11-1-0\\ \hline
+ \textbf{HTD} &3-7-2\\ \hline
+ \textbf{TPR-TF} &10-2-0\\ \hline
+ \textbf{ISO-TPR-TF} &11-1-0\\ \hline
+ \textbf{TPR-AT} &9-3-0\\ \hline
+ \textbf{ISO-TPR-AT} &11-1-0\\ \hline
+ \textbf{TPR-W} &10-2-0\\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [MF] [PCA]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &7-3-2\\ \hline
+ \textbf{HTD} &5-6-1\\ \hline
+ \textbf{TPR-TF} &7-3-2\\ \hline
+ \textbf{ISO-TPR-TF} &7-1-4\\ \hline
+ \textbf{TPR-AT} &7-2-3\\ \hline
+ \textbf{ISO-TPR-AT} &7-0-5\\ \hline
+ \textbf{TPR-W} &7-4-1\\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [CC] [FS]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &11-1-0\\ \hline
+ \textbf{HTD} &2-3-7\\ \hline
+ \textbf{TPR-TF} &11-1-0\\ \hline
+ \textbf{ISO-TPR-TF} &11-1-0\\ \hline
+ \textbf{TPR-AT} &8-4-0\\ \hline
+ \textbf{ISO-TPR-AT} &11-1-0\\ \hline
+ \textbf{TPR-W} &10-2-0\\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{0.6in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize
+\caption{ \textbf{[PRC] [CC] [PCA]}}
+\begin{tabular}{|l|l|}
+\hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &7-4-1\\ \hline
+ \textbf{HTD} &4-6-2\\ \hline
+ \textbf{TPR-TF} &8-3-1\\ \hline
+ \textbf{ISO-TPR-TF} &6-3-3\\ \hline
+ \textbf{TPR-AT} &6-4-2\\ \hline
+ \textbf{ISO-TPR-AT} &5-4-3\\ \hline
+ \textbf{TPR-W} &7-3-2\\ \hline
+\end{tabular}
+
+                    \label{table1}
+                    \end{subtable}}\par\bigskip
+
+\caption{Confronto tra i diversi metodi di correzione gerarchica e i metodi flat, per la metrica PRC, date le diverse ontologie (BP, MF, CC) e i due metodi di riduzione della dimensionalità usati (FS, PCA). Le tabelle contano le volte in cui, fissato un algoritmo di ML, un metodo ensemble o flat (riga) supera un altro metodo (colonna) a livello di performance. Un metodo viene considerato migliorativo rispetto al metodo flat, se il test di Wilcoxon rifiuta l'ipotesi nulla (p-value $<$ 0.01) e se la media della performance per classe è maggiore.}

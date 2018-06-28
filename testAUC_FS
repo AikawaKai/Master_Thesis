@@ -1,59 +1,59 @@
 
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [BP] [FS]}}
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
- \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
- \textbf{GPAV} & 0/0 & 11/12 & 8/12 & 6/12 & 12/12 & 8/12 & 8/12 \\ \hline
- \textbf{HTD} & 0/12 & 0/0 & 1/12 & 0/12 & 1/12 & 0/12 & 0/12 \\ \hline
- \textbf{TPR-TF} & 0/12 & 11/12 & 0/0 & 3/12 & 12/12 & 1/12 & 7/12 \\ \hline
- \textbf{ISO-TPR-TF} & 3/12 & 11/12 & 8/12 & 0/0 & 11/12 & 5/12 & 9/12 \\ \hline
- \textbf{TPR-AT} & 0/12 & 11/12 & 0/12 & 0/12 & 0/0 & 0/12 & 0/12 \\ \hline
- \textbf{ISO-TPR-AT} & 2/12 & 11/12 & 6/12 & 4/12 & 11/12 & 0/0 & 6/12 \\ \hline
- \textbf{TPR-W} & 2/12 & 11/12 & 3/12 & 1/12 & 12/12 & 2/12 & 0/0 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+ \textbf{GPAV} &-&11-1-0&8-4-0&6-3-3&12-0-0&8-2-2&8-2-2\\ \hline
+ \textbf{HTD} &-&-&1-0-11&0-1-11&1-0-11&0-1-11&0-1-11\\ \hline
+ \textbf{TPR-TF} &-&-&-&3-1-8&12-0-0&1-5-6&7-2-3\\ \hline
+ \textbf{ISO-TPR-TF} &-&-&-&-&11-1-0&5-3-4&9-2-1\\ \hline
+ \textbf{TPR-AT} &-&-&-&-&-&0-1-11&0-0-12\\ \hline
+ \textbf{ISO-TPR-AT} &-&-&-&-&-&-&6-4-2\\ \hline
+ \textbf{TPR-W} &-&-&-&-&-&-&-\\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}\par\bigskip
 
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [MF] [FS]}}
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
- \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
- \textbf{GPAV} & 0/0 & 11/12 & 2/12 & 4/12 & 11/12 & 7/12 & 2/12 \\ \hline
- \textbf{HTD} & 0/12 & 0/0 & 1/12 & 1/12 & 1/12 & 1/12 & 1/12 \\ \hline
- \textbf{TPR-TF} & 0/12 & 11/12 & 0/0 & 2/12 & 11/12 & 3/12 & 2/12 \\ \hline
- \textbf{ISO-TPR-TF} & 1/12 & 11/12 & 2/12 & 0/0 & 10/12 & 3/12 & 2/12 \\ \hline
- \textbf{TPR-AT} & 0/12 & 10/12 & 0/12 & 0/12 & 0/0 & 0/12 & 0/12 \\ \hline
- \textbf{ISO-TPR-AT} & 0/12 & 10/12 & 1/12 & 2/12 & 10/12 & 0/0 & 2/12 \\ \hline
- \textbf{TPR-W} & 1/12 & 11/12 & 0/12 & 2/12 & 11/12 & 3/12 & 0/0 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+ \textbf{GPAV} &-&11-1-0&2-10-0&4-7-1&11-1-0&7-5-0&2-9-1\\ \hline
+ \textbf{HTD} &-&-&1-0-11&1-0-11&1-1-10&1-1-10&1-0-11\\ \hline
+ \textbf{TPR-TF} &-&-&-&2-8-2&11-1-0&3-8-1&2-10-0\\ \hline
+ \textbf{ISO-TPR-TF} &-&-&-&-&10-2-0&3-7-2&2-8-2\\ \hline
+ \textbf{TPR-AT} &-&-&-&-&-&0-2-10&0-1-11\\ \hline
+ \textbf{ISO-TPR-AT} &-&-&-&-&-&-&2-7-3\\ \hline
+ \textbf{TPR-W} &-&-&-&-&-&-&-\\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}\par\bigskip
 
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [CC] [FS]}}
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
 \hline
- \textbf{WIN / LOSE} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
- \textbf{GPAV} & 0/0 & 11/12 & 8/12 & 4/12 & 11/12 & 6/12 & 7/12 \\ \hline
- \textbf{HTD} & 0/12 & 0/0 & 0/12 & 0/12 & 0/12 & 0/12 & 0/12 \\ \hline
- \textbf{TPR-TF} & 0/12 & 11/12 & 0/0 & 0/12 & 11/12 & 0/12 & 7/12 \\ \hline
- \textbf{ISO-TPR-TF} & 3/12 & 11/12 & 6/12 & 0/0 & 11/12 & 5/12 & 8/12 \\ \hline
- \textbf{TPR-AT} & 0/12 & 11/12 & 0/12 & 0/12 & 0/0 & 0/12 & 0/12 \\ \hline
- \textbf{ISO-TPR-AT} & 1/12 & 11/12 & 4/12 & 1/12 & 11/12 & 0/0 & 7/12 \\ \hline
- \textbf{TPR-W} & 2/12 & 11/12 & 1/12 & 0/12 & 10/12 & 1/12 & 0/0 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+ \textbf{GPAV} &-&11-1-0&8-4-0&4-5-3&11-1-0&6-5-1&7-3-2\\ \hline
+ \textbf{HTD} &-&-&0-1-11&0-1-11&0-1-11&0-1-11&0-1-11\\ \hline
+ \textbf{TPR-TF} &-&-&-&0-6-6&11-1-0&0-8-4&7-4-1\\ \hline
+ \textbf{ISO-TPR-TF} &-&-&-&-&11-1-0&5-6-1&8-4-0\\ \hline
+ \textbf{TPR-AT} &-&-&-&-&-&0-1-11&0-2-10\\ \hline
+ \textbf{ISO-TPR-AT} &-&-&-&-&-&-&7-4-1\\ \hline
+ \textbf{TPR-W} &-&-&-&-&-&-&-\\ \hline
 \end{tabular}
 
                     \label{table1}

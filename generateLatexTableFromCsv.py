@@ -2,8 +2,8 @@ import os
 import sys
 
 
-basic_tabular1 = """\\hspace*{0.6in}
-                    \\resizebox{.3\\textwidth}{!}{
+basic_tabular1 = """\\hspace*{-0.45in}
+                    \\resizebox{.4\\textwidth}{!}{
                     \\begin{subtable}[t]{0.4\\textwidth}
                     \\centering\\footnotesize"""
 title_caption = """\\caption{{{}}}"""
@@ -15,19 +15,39 @@ sep_tabular = """\\par\\bigskip\n"""
 last_caption = "\\caption{{{}}}"
 
 
+def getWinLoss(val):
+    list_ = eval(val)
+    if list_[0]==list_[1]==list_[2] == 0:
+        return "-"
+    print(list_)
+    return str(list_[0]) + "-" + str(list_[1]) + "-" + str(list_[2])
 
 def getFract(val):
     list_ = eval(val)
     return " " + str(list_[0]) + "/" + str(list_[1]) + " "
 
+def vanish(matrix):
+    firstrow = matrix[0]
+    matrix = matrix[1:]
+    nrow = len(matrix)
+    ncol = len(matrix[0])
+    for i in range(nrow):
+        for j in range(ncol):
+            if j==0 or j>=i+1 :
+                matrix[i][j] = matrix[i][j]
+            else:
+                matrix[i][j] = "[0, 0, 0]"
+    return [firstrow] + matrix
+
 def gen_tabular(csv_file):
     with open(csv_file, "r") as csv_file:
-        lines = [["WIN / LOSS" if l == "" else l for l in [l.strip() for l in line.split("\t")]] for line in csv_file.readlines()]
+        lines = [["WIN-TIE-LOSS" if l == "" else l for l in [l.strip() for l in line.split("\t")]] for line in csv_file.readlines()]
+        lines = vanish(lines)
     header = """\\begin{tabular}{""" + "|"+"|".join(["l" for i in range(0, 2)]) + "|" + """}\n\\hline"""
     title = """&""".join([""" \\textbf{"""+val+"""} """ for val in lines[0][:2]]) + "\\\\ \\hline"
     body = [title]
     for line in lines[2:]:
-        curr_line = "&".join([""" \\textbf{"""+line[i]+"""} """ if i==0 else getFract(line[i])
+        curr_line = "&".join([""" \\textbf{"""+line[i]+"""} """ if i==0 else getWinLoss(line[i])
                               for i in range(0, 2)])+"""\\\\ \\hline"""
         #print(curr_line)
         body.append(curr_line)
@@ -38,14 +58,15 @@ def gen_tabular(csv_file):
 
 def gen_tabular2(csv_file):
     with open(csv_file, "r") as csv_file:
-        lines = [["WIN / LOSE" if l == "" else l for l in [l.strip() for l in line.split("\t")]] for line in csv_file.readlines()]
+        lines = [["WIN-TIE-LOSS" if l == "" else l for l in [l.strip() for l in line.split("\t")]] for line in csv_file.readlines()]
+        lines = vanish(lines)
     header = """\\begin{tabular}{""" + "|"+"|".join(["l" for i in range(1, len(lines[0]))]) + "|" + """}\n\\hline"""
     first_line = lines[0][0:1]+lines[0][2:]
     title = """&""".join([""" \\textbf{"""+val+"""} """ for val in first_line]) + "\\\\ \\hline"
     body = [title]
     for line in lines[2:]:
         line = line[0:1] + line[2:]
-        curr_line = "&".join([""" \\textbf{"""+line[i]+"""} """ if i==0 else getFract(line[i])
+        curr_line = "&".join([""" \\textbf{"""+line[i]+"""} """ if i==0 else getWinLoss(line[i])
                               for i in range(0, len(line))])+"""\\\\ \\hline"""
         #print(curr_line)
         body.append(curr_line)

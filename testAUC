@@ -1,116 +1,116 @@
 
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [BP] [FS]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
- \textbf{GPAV} & 12/12 \\ \hline
- \textbf{HTD} & 1/12 \\ \hline
- \textbf{TPR-TF} & 11/12 \\ \hline
- \textbf{ISO-TPR-TF} & 12/12 \\ \hline
- \textbf{TPR-AT} & 5/12 \\ \hline
- \textbf{ISO-TPR-AT} & 11/12 \\ \hline
- \textbf{TPR-W} & 11/12 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &-\\ \hline
+ \textbf{HTD} &-\\ \hline
+ \textbf{TPR-TF} &-\\ \hline
+ \textbf{ISO-TPR-TF} &-\\ \hline
+ \textbf{TPR-AT} &-\\ \hline
+ \textbf{ISO-TPR-AT} &-\\ \hline
+ \textbf{TPR-W} &-\\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [BP] [PCA]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
- \textbf{GPAV} & 8/12 \\ \hline
- \textbf{HTD} & 7/12 \\ \hline
- \textbf{TPR-TF} & 8/12 \\ \hline
- \textbf{ISO-TPR-TF} & 6/12 \\ \hline
- \textbf{TPR-AT} & 6/12 \\ \hline
- \textbf{ISO-TPR-AT} & 6/12 \\ \hline
- \textbf{TPR-W} & 10/12 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &-\\ \hline
+ \textbf{HTD} &-\\ \hline
+ \textbf{TPR-TF} &-\\ \hline
+ \textbf{ISO-TPR-TF} &-\\ \hline
+ \textbf{TPR-AT} &-\\ \hline
+ \textbf{ISO-TPR-AT} &-\\ \hline
+ \textbf{TPR-W} &-\\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}\par\bigskip
 
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [MF] [FS]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
- \textbf{GPAV} & 11/12 \\ \hline
- \textbf{HTD} & 1/12 \\ \hline
- \textbf{TPR-TF} & 11/12 \\ \hline
- \textbf{ISO-TPR-TF} & 11/12 \\ \hline
- \textbf{TPR-AT} & 4/12 \\ \hline
- \textbf{ISO-TPR-AT} & 11/12 \\ \hline
- \textbf{TPR-W} & 11/12 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &-\\ \hline
+ \textbf{HTD} &-\\ \hline
+ \textbf{TPR-TF} &-\\ \hline
+ \textbf{ISO-TPR-TF} &-\\ \hline
+ \textbf{TPR-AT} &-\\ \hline
+ \textbf{ISO-TPR-AT} &-\\ \hline
+ \textbf{TPR-W} &-\\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [MF] [PCA]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
- \textbf{GPAV} & 6/12 \\ \hline
- \textbf{HTD} & 5/12 \\ \hline
- \textbf{TPR-TF} & 8/12 \\ \hline
- \textbf{ISO-TPR-TF} & 6/12 \\ \hline
- \textbf{TPR-AT} & 5/12 \\ \hline
- \textbf{ISO-TPR-AT} & 6/12 \\ \hline
- \textbf{TPR-W} & 7/12 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &-\\ \hline
+ \textbf{HTD} &-\\ \hline
+ \textbf{TPR-TF} &-\\ \hline
+ \textbf{ISO-TPR-TF} &-\\ \hline
+ \textbf{TPR-AT} &-\\ \hline
+ \textbf{ISO-TPR-AT} &-\\ \hline
+ \textbf{TPR-W} &-\\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}\par\bigskip
 
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [CC] [FS]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
- \textbf{GPAV} & 11/12 \\ \hline
- \textbf{HTD} & 0/12 \\ \hline
- \textbf{TPR-TF} & 11/12 \\ \hline
- \textbf{ISO-TPR-TF} & 11/12 \\ \hline
- \textbf{TPR-AT} & 4/12 \\ \hline
- \textbf{ISO-TPR-AT} & 11/12 \\ \hline
- \textbf{TPR-W} & 9/12 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &-\\ \hline
+ \textbf{HTD} &-\\ \hline
+ \textbf{TPR-TF} &-\\ \hline
+ \textbf{ISO-TPR-TF} &-\\ \hline
+ \textbf{TPR-AT} &-\\ \hline
+ \textbf{ISO-TPR-AT} &-\\ \hline
+ \textbf{TPR-W} &-\\ \hline
 \end{tabular}
 
                     \label{table1}
                     \end{subtable}}
-\hspace*{0.6in}
-                    \resizebox{.3\textwidth}{!}{
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
                     \begin{subtable}[t]{0.4\textwidth}
                     \centering\footnotesize
 \caption{ \textbf{[AUC] [CC] [PCA]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN / LOSS} & \textbf{flat} \\ \hline
- \textbf{GPAV} & 8/12 \\ \hline
- \textbf{HTD} & 6/12 \\ \hline
- \textbf{TPR-TF} & 8/12 \\ \hline
- \textbf{ISO-TPR-TF} & 7/12 \\ \hline
- \textbf{TPR-AT} & 5/12 \\ \hline
- \textbf{ISO-TPR-AT} & 8/12 \\ \hline
- \textbf{TPR-W} & 9/12 \\ \hline
+ \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{GPAV} &-\\ \hline
+ \textbf{HTD} &-\\ \hline
+ \textbf{TPR-TF} &-\\ \hline
+ \textbf{ISO-TPR-TF} &-\\ \hline
+ \textbf{TPR-AT} &-\\ \hline
+ \textbf{ISO-TPR-AT} &-\\ \hline
+ \textbf{TPR-W} &-\\ \hline
 \end{tabular}
 
                     \label{table1}
