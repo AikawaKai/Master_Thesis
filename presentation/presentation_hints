@@ -1,0 +1,26 @@
+predizione della funzione delle proteine:
+
+Perché
+- Per molte specie la funzione di moltissimi geni è sconosciuta o parzialmente nota.
+- Si stima che l'essere umano possegga tra i 20.000 - 25.000 geni.
+
+Problemi
+- la predizione della funzione dei geni attraverso le analisi con sperimentazione diretta in laboratorio è costosa e richiede molto tempo.
+
+- Inoltre il quantitativo di dati genomici cresce molto rapidamente.
+
+- L'etichettatura manuale è quindi infattibile.
+
+Caratterizzazione del problema
+
+- Per poter gestire il problema, sono state create diverse tassonomie per i geni, come il Functional Catalogue (FunCat) e la Gene Ontology(GO).
+
+- La Gene Ontology organizza le funzioni come un Grafo diretto aciclico, varia per ogni specie, e possiede tre ontologie differenti.
+
+- Il Functional Catalogue è organizzato invece come un albero, e descrive le funzioni in maniera più grossolana rispetto alla Gene Ontology.
+
+- In questa tesi ci si è focalizzati sulla predizione delle funzioni per la GO.
+
+Gene Ontology
+
+ 
