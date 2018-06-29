@@ -16,72 +16,46 @@
 
 \begin{document}
 \titlepageframe
-\begin{tframe}{Il Problema della Predizione Delle Proteine}
+\begin{tframe}{Central Dogma}
   % 
   \begin{columns}
     %
-    \begin{column}{.70\textwidth}
-      \minipage[c][0.30\textheight][s]{\columnwidth}
+    \begin{column}{.65\textwidth}
+      \minipage[c][0.4\textheight][s]{\columnwidth}
 	   \begin{itemize}	
-      \item Le proteine sono polimeri (macromolecole biologiche) composte da amminoacidi, che sono codificate dai geni (porzioni di genoma) presenti nel DNA di ogni essere vivente. 
-
+	  \item All'interno delle molecole di DNA di ogni essere vivente esistono diverse migliaia di geni.   
       \onslide<2->
-
-      \item Ogni gene può codificare più proteine.
-
+	  \item Si stima che per l'essere umano il DNA possegga tra i 20.000 - 25.000 geni.
       \onslide<3->
-
-      \item Si stima che l'essere umano possegga tra i 20.000 - 25.000 geni.
-		
-      \end{itemize}
-      \vfill
+      \item Tramite il processo di trascrizione, sintesi e processamento del DNA, un gene è capace di produrre più proteine.	
       \onslide<4->
-      \begin{tabular}{|p{0.9\textwidth}}
-        Use \texttt{minipage} for top aligned images, and
-        \texttt{parbox} for vertically centered images.
-      \end{tabular}
-
-
+      \item Ogni proteina è responsabile di una o più funzioni all'interno delle cellule degli esseri viventi.
+      \end{itemize}
       \endminipage      
     \end{column}
     %
-    \begin{column}{.30\textwidth}
+    \begin{column}{.35\textwidth}
 
       % for top aligned images use minipage
-      \only<1-3>{
-        \minipage[c][0.8\textheight][s]{\columnwidth}
+      \only<1-4>{
+        \minipage[c][0.4\textheight][s]{\columnwidth}
 
         \onslide<1->    
 
-        \only<1-3>{
+        \only<1-4>{
           \begin{figure}
             \centering
-            \includegraphics<1>[scale=0.3]{%
-              img/DNA.png} %
-            \includegraphics<2-3>[scale=0.3]{%
-              img/DNA.png} %
+            \includegraphics<1>[scale=0.2]{img/DNA.png} %         
+            \includegraphics<2>[scale=0.3]{img/humandna.png} %
+            \includegraphics<3>[scale=0.2]{img/centraldogma.png}%
+            \includegraphics<4>[scale=0.5]{img/funzioni.jpg}
         \end{figure}}
 
-        \only<3>{
-          \begin{figure}
-            \centering
-            \includegraphics[scale=0.3]{%
-              img/DNA.png} %
-        \end{figure}}
 
         \endminipage
       }   
 
       % for vertically centered images use parbox
-      \only<4>{
-        \parbox[c][0.8\textheight][c]{\columnwidth}{
-          \begin{figure}
-            \centering
-            \includegraphics[scale=0.3]{%
-              img/DNA.png} %
-          \end{figure}
-        }
-      }
 
     \end{column}
   \end{columns}
