@@ -1,26 +1,51 @@
-predizione della funzione delle proteine:
+[Il problema della predizione della funzione delle proteine]
 
-Perché
-- Per molte specie la funzione di moltissimi geni è sconosciuta o parzialmente nota.
+- Le proteine sono polimeri (macromolecole biologiche) composte da amminoacidi.
+- Le proteine sono codificate dai geni (porzioni di genoma) presenti nel DNA di ogni essere vivente. 
+- Ogni gene può codificare più proteine.
 - Si stima che l'essere umano possegga tra i 20.000 - 25.000 geni.
 
-Problemi
-- la predizione della funzione dei geni attraverso le analisi con sperimentazione diretta in laboratorio è costosa e richiede molto tempo.
+Le proteine hanno diverse funzioni:
+	a) Metaboliche, ad esempio per la produzione di energia
+	b) Di trascrizione, sintesi e processamento delle proteine stesse
+	c) Di trasporto
+	d) Di comunicazione intra o intercellulare
+	e) Di ciclo della cellula, ad esempio per la divisione e riroduzione cellulare.
+	
+- Per molte specie le funzioni di moltissimi geni (e quindi delle corrispettive proteine codificate) è sconosciuta o parzialmente nota.
 
+
+[Problemi]
+- la predizione della funzione delle proteine attraverso le analisi con sperimentazione diretta in laboratorio è costosa e richiede molto tempo.
 - Inoltre il quantitativo di dati genomici cresce molto rapidamente.
-
 - L'etichettatura manuale è quindi infattibile.
 
-Caratterizzazione del problema
 
-- Per poter gestire il problema, sono state create diverse tassonomie per i geni, come il Functional Catalogue (FunCat) e la Gene Ontology(GO).
+[Cosa fare?]
+Predizioni in "silicio".
+Machine Learning.
 
+[Caratterizzazione del problema della predizione]
+- Esistono due tassonomie principali per la funzione delle proteine:
+	a) il Functional Catalogue (FunCat) 
+	b) la Gene Ontology(GO).
 - La Gene Ontology organizza le funzioni come un Grafo diretto aciclico, varia per ogni specie, e possiede tre ontologie differenti.
-
-- Il Functional Catalogue è organizzato invece come un albero, e descrive le funzioni in maniera più grossolana rispetto alla Gene Ontology.
-
+- Il Functional Catalogue è organizzato invece come un albero, non varia in base alle specie, e descrive le funzioni in maniera più sintetica rispetto alla Gene Ontology.
 - In questa tesi ci si è focalizzati sulla predizione delle funzioni per la GO.
 
-Gene Ontology
+[Gene Ontology]
+- La Gene Ontology organizza le funzioni come grafo diretto aciclico:
+
+	[immagine dag]
+
+
+- Gli archi tra i termini della GO denotano tre differenti tipi di relazione:
+	a) is a: relazione di sotto-tipo
+	b) a part of: relazione di composizione
+	c) regulates: relazione di influenza/regolazione 
+- La GO viene caratterizzata da tre differenti ontologie:
+	a) Processo Biologico: descrive i processi ad alto livello, come 		   insieme di diverse attività molecolari
+	b) Funzione Molecoalre: descrive le funzioni di specifici prodotti 		   genici.
+	c) Componente Cellulare: il luogo all’interno della cellula (nello 		   specifico le strutture cellulari) nelle quali avviene la funzione 		genica.
 
  
