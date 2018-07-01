@@ -83,7 +83,7 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/2}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/3}
   % 
   \begin{columns}
     %
@@ -91,7 +91,7 @@
       \minipage[c][0.4\textheight][s]{\columnwidth}
 	   \begin{itemize}	
 	   \onslide<1->
-	  \item la predizione della funzione delle proteine attraverso le analisi con sperimentazione diretta in laboratorio è \highlightbf{costosa} e richiede \highlightbf{molto tempo}
+	  \item L'individuazione della funzione delle proteine attraverso le analisi con sperimentazione diretta in laboratorio è \highlightbf{costosa} e richiede \highlightbf{molto tempo}
 	  \onslide<2->
 	  \item Esistono centinaia di funzioni a cui poter associare un gene/proteina \highlightbf{(problema multiclasse)}
 	  \onslide<3->
@@ -132,17 +132,36 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/2}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/3}
 \begin{itemize}
 \onslide<1->
-\item A complicare ulteriormente il problema è il modo in cui sono \emph{relazionate} le funzioni delle proteine.
+\item A complicare ulteriormente il problema è il modo in cui sono \emph{relazionate} tra loro le funzioni delle proteine.
 \onslide<2->
 \item Esistono infatti due tassonomie principali per l'organizzazione delle classi:
 \begin{itemize}
+
 \onslide<3->
-\item \highlightbf{Functional Catalogue} (FunCat)
+\item \highlightbf{Gene Ontology} (GO):  che organizza le funzioni come un grafo diretto aciclico (DAG), varia per ogni specie, e possiede tre ontologie differenti.
 \onslide<4->
-\item \highlightbf{Gene Ontology} (GO)
+\item \highlightbf{Functional Catalogue} (FunCat): che è organizzato invece come un albero, non varia in base alle specie, e descrive le funzioni in maniera più sintetica rispetto alla Gene Ontology.
+\end{itemize}
+\end{itemize}  
+
+\end{tframe}
+
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 3/3}
+\begin{itemize}
+\onslide<1->
+\item Data la granularità e specificità superiori della GO e il suo largo utilizzo nella comunità scientifica, all’interno della tesi ci si è soffermati sulla predizione delle sue funzioni.
+\onslide<2->
+\item Tale tassonomia presenta tre ontologie (e quindi tre DAG) principali:
+\begin{itemize}
+\onslide<3->
+\item \highlightbf{Processo Biologico} (BP): descrive i processi ad alto livello, come insieme di diverse attività molecolari.
+\onslide<4->
+\item \highlightbf{Funzione Molecolare} (MF): descrive le funzioni di specifici prodotti genici.
+\onslide<5->
+\item \highlightbf{Componente Cellulare} (CC):il luogo all’interno della cellula nelle quali avviene la funzione genica.
 \end{itemize}
 \end{itemize}  
 
