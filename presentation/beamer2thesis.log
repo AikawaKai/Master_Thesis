@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  29 JUN 2018 19:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  1 JUL 2018 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1207,7 +1207,7 @@ thkerncmss.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./minerva2.jpg>]
-Overfull \vbox (61.37228pt too high) detected at line 63
+Overfull \vbox (47.77228pt too high) detected at line 63
  []
 
 <img/DNA.png, id=41, 201.75375pt x 574.145pt>
@@ -1232,7 +1232,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [2
 
  <./img/DNA.png>]
-Overfull \vbox (61.37228pt too high) detected at line 63
+Overfull \vbox (47.77228pt too high) detected at line 63
  []
 
 <img/humandna.png, id=55, 292.09125pt x 293.095pt>
@@ -1257,7 +1257,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [3
 
  <./img/humandna.png>]
-Overfull \vbox (61.37228pt too high) detected at line 63
+Overfull \vbox (47.77228pt too high) detected at line 63
  []
 
 <img/centraldogma.png, id=65, 532.99126pt x 232.87pt>
@@ -1282,7 +1282,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [4
 
  <./img/centraldogma.png (PNG copy)>]
-Overfull \vbox (61.37228pt too high) detected at line 63
+Overfull \vbox (47.77228pt too high) detected at line 63
  []
 
 <img/funzioni.jpg, id=74, 193.6836pt x 225.12105pt>
@@ -1307,9 +1307,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [5
 
  <./img/funzioni.jpg>]
-\openout4 = `beamer2thesis.vrb'.
-
- (./beamer2thesis.vrb)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1322,9 +1319,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [6
 
 ]
-\openout4 = `beamer2thesis.vrb'.
-
- (./beamer2thesis.vrb)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1336,7 +1330,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [7
 
-] (./beamer2thesis.vrb)
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1349,9 +1343,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [8
 
 ]
-\openout4 = `beamer2thesis.vrb'.
-
- (./beamer2thesis.vrb)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1364,9 +1355,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [9
 
 ]
-\openout4 = `beamer2thesis.vrb'.
-
- (./beamer2thesis.vrb)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1379,12 +1367,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [10
 
 ]
-\openout4 = `beamer2thesis.vrb'.
-
- (./beamer2thesis.vrb
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1396,10 +1378,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [11
 
-] (./beamer2thesis.vrb
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1411,14 +1390,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [12
 
-] (./content_end.tex
+]
 \openout4 = `beamer2thesis.vrb'.
 
  (./beamer2thesis.vrb)
-Overfull \vbox (1.37425pt too high) detected at line 18
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1445,10 +1420,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [14
 
-]
-\openout4 = `beamer2thesis.vrb'.
-
- (./beamer2thesis.vrb)
+] (./beamer2thesis.vrb)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1463,11 +1435,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 \openout4 = `beamer2thesis.vrb'.
 
- (./beamer2thesis.vrb
-
-LaTeX Warning: Reference `secondrel' on page 16 undefined on input line 8.
-
-)
+ (./beamer2thesis.vrb)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1480,6 +1448,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [16
 
 ]
+\openout4 = `beamer2thesis.vrb'.
+
+ (./beamer2thesis.vrb)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1492,6 +1463,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [17
 
 ]
+\openout4 = `beamer2thesis.vrb'.
+
+ (./beamer2thesis.vrb
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1503,7 +1480,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [18
 
-]
+] (./beamer2thesis.vrb
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1515,6 +1495,110 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [19
 
+] (./content_end.tex
+\openout4 = `beamer2thesis.vrb'.
+
+ (./beamer2thesis.vrb)
+Overfull \vbox (1.37425pt too high) detected at line 18
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[20
+
+]
+\openout4 = `beamer2thesis.vrb'.
+
+ (./beamer2thesis.vrb)
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[21
+
+]
+\openout4 = `beamer2thesis.vrb'.
+
+ (./beamer2thesis.vrb)
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[22
+
+]
+\openout4 = `beamer2thesis.vrb'.
+
+ (./beamer2thesis.vrb
+
+LaTeX Warning: Reference `secondrel' on page 23 undefined on input line 8.
+
+)
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[23
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[24
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[25
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[26
+
 ])
 \tf@nav=\write6
 \openout6 = `beamer2thesis.nav'.
@@ -1525,11 +1609,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `beamer2thesis.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  (./beamer2thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `beamer2thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1538,10 +1622,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 29968 strings out of 494871
- 594089 string characters out of 6179251
+ 29984 strings out of 494871
+ 594238 string characters out of 6179251
  657969 words of memory out of 5000000
- 32699 multiletter control sequences out of 15000+600000
+ 32701 multiletter control sequences out of 15000+600000
  544044 words of font info for 71 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,18n,63p,10425b,812s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1556,10 +1640,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt10.pfb>
-Output written on beamer2thesis.pdf (19 pages, 551280 bytes).
+Output written on beamer2thesis.pdf (26 pages, 564854 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
