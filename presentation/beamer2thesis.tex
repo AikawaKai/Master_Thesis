@@ -83,7 +83,7 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/3}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/5}
   % 
   \begin{columns}
     %
@@ -132,7 +132,7 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/3}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/5}
 \begin{itemize}
 \onslide<1->
 \item A complicare ulteriormente il problema è il modo in cui sono \emph{relazionate} tra loro le funzioni delle proteine.
@@ -145,11 +145,22 @@
 \onslide<4->
 \item \highlightbf{Functional Catalogue} (FunCat): che è organizzato invece come un albero, non varia in base alle specie, e descrive le funzioni in maniera più sintetica rispetto alla Gene Ontology.
 \end{itemize}
+
 \end{itemize}  
 
 \end{tframe}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine  3/5}
+\begin{figure}[h]
+\center
+\includegraphics[scale=0.25]{./img/GO.png}
+\includegraphics[scale=0.24]{./img/FunCat.png}
+\caption{\footnotesize{A sinistra un DAG della GO per la specie \emph{S. cerevisiae}. A destra FunCat.}}
+\label{DAGTREE}
+\end{figure}
+\end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 3/3}
+
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 4/5}
 \begin{itemize}
 \onslide<1->
 \item Data la granularità e specificità superiori della GO e il suo largo utilizzo nella comunità scientifica, all’interno della tesi ci si è soffermati sulla predizione delle sue funzioni.
@@ -161,7 +172,7 @@
 \onslide<4->
 \item \highlightbf{Funzione Molecolare} (MF): descrive le funzioni di specifici prodotti genici.
 \onslide<5->
-\item \highlightbf{Componente Cellulare} (CC):il luogo all’interno della cellula nelle quali avviene la funzione genica.
+\item \highlightbf{Componente Cellulare} (CC): il luogo all’interno della cellula nelle quali avviene la funzione genica.
 \end{itemize}
 \end{itemize}  
 
@@ -172,76 +183,4 @@ Per gestire il problema della predizione della funzione delle proteine si rende 
 
 \end{tframe}
 
-
-\begin{frame}[t,fragile]{Configuration}
-\begin{itemize}
-\item The configuration of the standard theme is:
-\begin{itemize}
-\item \verb!language=italian!
-\item \verb!coding=utf8x!
-\item \verb!titlepagelogo=name-of-the-logo!
-\item \verb!bullet=circle!
-\item \verb!pageofpages=of!
-\item \verb!titleline=true!
-\item \verb!color=blue!
-\item \verb!secondcandidate=false!
-\item \verb!secondlogo=false!
-\end{itemize}
-\item Most of them, actually everyone except the \highlight{titlepagelogo}, can be omitted if there are no modifications
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Behavior of alerts}
-Each color theme requires different colors to highlight words. To insert alerts by using the \emph{itemize} environment, you can exploit:
-\begin{verbatim}
-\begin{itemize}
-\item<+-| alert@+> Apple
-\item<+-| alert@+> Peach
-\end{itemize}
-\end{verbatim}
-For example:
-\begin{itemize}
-\item<+-| alert@+> Apple
-\item<+-| alert@+> Peach
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Another way to highlight words}
-If you want to highlight your text out of the enviroment \emph{itemize}, Beamer2Thesis offers you the following possibilities:
-\begin{itemize}
-\item the standard command \verb!\alert{text}!: it simply highlights your \alert{text}
-\item the command \verb!\highlight{text}!: it highlights your \highlight{text} setting it in italic
-\item the command \verb!\highlightbf{text}!: it highlights your \highlightbf{text} setting it in bold
-\end{itemize}
-Of course, the color used, is set accordingly to your choice in the configuration phase.
-\end{frame}
-
-\begin{frame}[fragile]{Highlighting formulas}
-\begin{itemize}
-\item The package \href{http://www.ctan.org/pkg/hf-tikz}{hf-tikz} allows to highlight formulas and formula parts in Beamer with overlay specifications 
-\item The adaptation of colors to the theme could be done in this way:
-\begin{verbatim}
-\usepackage[beamer,customcolors]{hf-tikz}
-\hfsetfillcolor{alerted text.fg!10}
-\hfsetbordercolor{alerted text.fg}
-\end{verbatim}
-\item \highlight{Two compilation runs} are required to get the right result!
-\item Read the package documentation to find more options; an example will be provided in the next frame.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Highlighting formulas (II)}
-\begin{itemize}
-\item Example:
-\[\tikzmarkin<2->{a}x+\tikzmarkin<1>{b}y\tikzmarkend{b}=10\tikzmarkend{a}\]
-\item<2-> Code:
-\begin{verbatim}
-\[\tikzmarkin<2->{a}x+
-  \tikzmarkin<1>{b}y\tikzmarkend{b}
-  =10\tikzmarkend{a}\]
-\end{verbatim}
-\end{itemize}
-\end{frame}
-
-\input{content_end}
 \end{document}
