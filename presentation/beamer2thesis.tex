@@ -62,7 +62,7 @@
 
 \end{tframe}
 
-\begin{tframe}{Le funzioni delle proteine}
+\begin{tframe}{La funzione delle proteine}
 
 
       Le proteine sono molecole biologiche composte da amminoacidi, e le funzioni che svolgono sono molteplici:
@@ -70,7 +70,7 @@
 	   \onslide<2->
 	   \item Metaboliche, ad esempio per la produzione di energia
 	   \onslide<3->
-		\item Di trascrizione, sintesi e processamento delle proteine stesse.
+		\item Di trascrizione, sintesi e processamento delle proteine stesse
 		\onslide<4->		
 		\item Di trasporto
 		\onslide<5->
@@ -79,7 +79,56 @@
 		\item Di ciclo della cellula, ad esempio per la divisione e riproduzione cellulare
       \end{itemize}
       \onslide<7->
-      Per molte specie le funzioni di moltissimi geni (e quindi delle corrispettive proteine codificate) è sconosciuta o parzialmente nota.
+      Per molte specie le funzioni di moltissimi geni (e quindi delle corrispettive proteine codificate) è \highlightbf{sconosciuta o parzialmente nota}.
+
+\end{tframe}
+
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine}
+  % 
+  \begin{columns}
+    %
+    \begin{column}{.75\textwidth}
+      \minipage[c][0.4\textheight][s]{\columnwidth}
+	   \begin{itemize}	
+	   \onslide<1->
+	  \item la predizione della funzione delle proteine attraverso le analisi con sperimentazione diretta in laboratorio è \highlightbf{costosa} e richiede \highlightbf{molto tempo}
+	  \onslide<2->
+	  \item Esistono centinaia di funzioni a cui poter associare un gene/proteina \highlightbf{(problema multiclasse)}
+	  \onslide<3->
+	  \item Ad ogni gene/proteina possono essere associate diverse funzioni contemporaneamente \highlightbf{(problema multietichetta)}
+      \onslide<4->
+	  \item Il quantitativo di dati genomici cresce molto rapidamente.
+      \end{itemize}
+      \onslide<5->
+      La classificazione manuale delle proteine è quindi infattibile.
+      \endminipage      
+    \end{column}
+    %
+    \begin{column}{.25\textwidth}
+
+      % for top aligned images use minipage
+      \only<1-5>{
+        \minipage[c][0.4\textheight][s]{\columnwidth}
+
+        \onslide<1->    
+
+        \only<1-5>{
+          \begin{figure}
+            \centering
+            \includegraphics<1>[scale=0.15]{img/lab3.jpg} %         
+            \includegraphics<2>[scale=0.2]{img/multiclass.png} %
+            \includegraphics<3>[scale=0.3]{img/multilabel.png}%
+            \includegraphics<4>[scale=0.16]{img/growth.jpg}
+        \end{figure}}
+
+
+        \endminipage
+      }   
+
+      % for vertically centered images use parbox
+
+    \end{column}
+  \end{columns}
 
 \end{tframe}
 
