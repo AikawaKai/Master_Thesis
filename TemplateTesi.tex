@@ -598,7 +598,7 @@ Assumendo che i nodi siano stati pre ordinati topologicamente\footnote{\footnote
 \EndFor
 \For{$k = 1, 2, ..., n$}
 \State \emph{// finché esiste un predecessore di $B_{k}$ che viola la monotonicità}
-\While{$\{i \in B_k^{-}: x_i \geq x_k\}\neq 0$} 
+\While{$\{i \in B_k^{-}: x_i > x_k\}\neq 0$} 
 \State \emph{// Trova l'elemento che viola maggiormente il vincolo}
 \State \textbf{Find} $j \in B_k: U_j = max\{U_i : i \in B_k^{-}\}$ 
 \State \textbf{Absorb(i, j)} \emph{// $j$ viene assorbito da $B_i$}
@@ -649,7 +649,7 @@ Sostituendo quindi il secondo step del metodo TPR-DAG, e cioè quello top down, 
 \EndFor
 \For{$k = 1, 2, ..., n$}
 \State \emph{// finché esiste un predecessore di $B_{k}$ che viola la monotonicità}
-\While{$\{i \in B_k^{-}: x_i \geq x_k\}\neq 0$} 
+\While{$\{i \in B_k^{-}: x_i > x_k\}\neq 0$} 
 \State \emph{// Trova l'elemento che viola maggiormente il vincolo}
 \State \textbf{Find} $j \in B_k: U_j = max\{U_i : i \in B_k^{-}\}$ 
 \State \textbf{Absorb(i, j)} \emph{// $j$ viene assorbito da $B_i$}
