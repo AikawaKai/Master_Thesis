@@ -83,7 +83,7 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/5}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/6}
   % 
   \begin{columns}
     %
@@ -132,7 +132,7 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/5}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/6}
 \begin{itemize}
 \onslide<1->
 \item A complicare ulteriormente il problema è il modo in cui sono \emph{relazionate} tra loro le funzioni delle proteine.
@@ -149,7 +149,7 @@
 \end{itemize}  
 
 \end{tframe}
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine  3/5}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine  3/6}
 \begin{figure}[h]
 \center
 \includegraphics[scale=0.25]{./img/GO.png}
@@ -160,7 +160,7 @@
 \end{tframe}
 
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 4/5}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 4/6}
 \begin{itemize}
 \onslide<1->
 \item Data la granularità e specificità superiori della GO e il suo largo utilizzo nella comunità scientifica, all’interno della tesi ci si è soffermati sulla predizione delle sue funzioni.
@@ -178,8 +178,39 @@
 
 \end{tframe}
 
-\begin{tframe}{La predizione automatica}
-Per gestire il problema della predizione della funzione delle proteine si rende quindi necessario un approccio \highlightbf{automatico}.
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 5/6}
+Gli archi dei DAG nella GO indicano inoltre 3 differenti tipi di relazione:
+\begin{itemize}
+\onslide<2->
+\item \highlight{is a}: indica una relazione di sotto-tipo.
+\onslide<3->
+\item \highlight{a part of}: indica una relazione di composizione
+\onslide<4->
+\item \highlight{regulates}: indica una relazione di influenza/regolazione
+\end{itemize} 
+
+\end{tframe}
+
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 6/6}
+\begin{figure}
+\includegraphics[scale=0.24]{./img/DAG_relations.png}
+\caption{\footnotesize{Un porzione di DAG che evidenzia i diversi tipi di relazione.}}
+\end{figure}
+\end{tframe}
+
+\begin{tframe}{\footnotesize{La predizione della funzione delle proteine tramite metodi automatici}}
+Per gestire il problema della predizione della funzione delle proteine si rende quindi necessario un approccio \highlightbf{automatico}. I metodi più noti in letteratura sono:
+
+\begin{itemize}
+\onslide<2->
+\item I metodi basati sulla \highlightbf{comparazione di biosequenze}: si basano sull'idea che sequenze simili condividono funzioni simili.
+\onslide<3->
+\item I metodi \highlightbf{basati su reti}: sono metodi applicati a dati rappresentati sotto forma di reti, che si basano sugli algoritmi di propagazione delle etichette.
+\onslide<4->
+\item I metodi \highlightbf{Kernel per spazi di output strutturato}: sono metodi che sfruttano funzioni kernel congiunte per predire in spazi di output strutturato.
+\onslide<5->
+\item I metodi \highlightbf{Ensemble Gerarchici}: i metodi trattati in questa tesi.
+\end{itemize}
 
 \end{tframe}
 
