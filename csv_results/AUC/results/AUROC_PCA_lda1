@@ -1,0 +1,10 @@
+\hspace*{-0.45in}
+                    \resizebox{.4\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.7891$\pm$0.0024}& \textbf{\footnotesize{0.7925$\pm$0.0023}} &\footnotesize{0.7895$\pm$0.0024}& \textbf{\footnotesize{0.7903$\pm$0.0024}} &\footnotesize{0.7872$\pm$0.0024}& \textbf{\footnotesize{0.792$\pm$0.0023}} &\footnotesize{0.7893$\pm$0.0024}& \textbf{\footnotesize{0.793$\pm$0.0023}} \\ \hline
+MF&\footnotesize{0.8042$\pm$0.0065}&\footnotesize{0.797$\pm$0.0068}&\footnotesize{0.802$\pm$0.007}&\footnotesize{0.8003$\pm$0.0069}&\footnotesize{0.8006$\pm$0.0071}&\footnotesize{0.797$\pm$0.0068}&\footnotesize{0.8014$\pm$0.0072}&\footnotesize{0.7996$\pm$0.0067}\\ \hline
+CC&\footnotesize{0.8085$\pm$0.0045}&\footnotesize{0.8082$\pm$0.0045}&\footnotesize{0.809$\pm$0.0046}&\footnotesize{0.8091$\pm$0.0046}&\footnotesize{0.8064$\pm$0.0047}&\footnotesize{0.8081$\pm$0.0045}&\footnotesize{0.8087$\pm$0.0046}& \textbf{\footnotesize{0.8095$\pm$0.0045}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}

@@ -30,9 +30,9 @@
 \contentsline {section}{\numberline {3.8}Predizioni flat}{43}{section.3.8}
 \contentsline {section}{\numberline {3.9}Predizioni strutturate}{47}{section.3.9}
 \contentsline {subsection}{\numberline {3.9.1}Metodi Flat vs Metodi Ensemble Gerarchici}{47}{subsection.3.9.1}
-\contentsline {subsection}{\numberline {3.9.2}Confronto fra Metodi Ensemble Gerarchici}{51}{subsection.3.9.2}
-\contentsline {chapter}{\numberline {4}Conclusioni}{54}{chapter.4}
-\contentsline {chapter}{Appendices}{56}{section*.36}
-\contentsline {chapter}{\numberline {A}Codice}{56}{Appendice.1.Alph1}
-\contentsline {chapter}{\numberline {B}Boxplot}{59}{Appendice.1.Alph2}
-\contentsline {chapter}{\numberline {C}Tabelle}{72}{Appendice.1.Alph3}
+\contentsline {subsection}{\numberline {3.9.2}Confronto fra Metodi Ensemble Gerarchici}{52}{subsection.3.9.2}
+\contentsline {chapter}{\numberline {4}Conclusioni}{55}{chapter.4}
+\contentsline {chapter}{Appendices}{57}{section*.38}
+\contentsline {chapter}{\numberline {A}Codice}{57}{Appendice.1.Alph1}
+\contentsline {chapter}{\numberline {B}Boxplot}{60}{Appendice.1.Alph2}
+\contentsline {chapter}{\numberline {C}Tabelle}{73}{Appendice.1.Alph3}

@@ -15,6 +15,7 @@
 %
 %
 \documentclass[12pt]{report}
+\pdfminorversion=4
 %    \renewcommand{\baselinestretch}{1.6}      % interline spacing
 %
 % \includeonly{}
@@ -40,6 +41,7 @@
 \usepackage[toc]{appendix}
 \usepackage{longtable}
 \usepackage{subcaption}
+\usepackage[a-1b]{pdfx}
 \makeatletter
 \renewcommand*{\ALG@name}{Pseudocodice}
 \makeatother
@@ -966,7 +968,7 @@ Per la selezione delle feature si è deciso di stimare i tempi di calcolo e le p
 \item Le prime 100 feature nel ranking 
 \end{itemize}
 
-Come si può vedere dalla tabella \ref{featureSelection} in appendice, i tempi di calcolo ottenuti, sempre selezionando 10 classi per ognuna delle 3 ontologie (BP, MF, CC), per le selezioni delle feature a 1000 e 500 feature, risultano particolarmente alti, soprattutto per alcuni algoritmi (\emph{Adaboost, SvmLinear, LogitBoost e Treebag}).
+Come si può vedere dalla tabella \ref{featureSelection} in appendice, i tempi di calcolo ottenuti, sempre selezionando 10 classi per ognuna delle 3 ontologie (BP, MF, CC), per le selezioni delle feature a 1000 e 500 feature, risultano particolarmente alti, soprattutto per alcuni algoritmi (\emph{AdaBoost.M1, SVM, LogitBoost e Bagged CART}).
 \newline
 \newline
 Per questa motivazione si è deciso di optare per la selezione delle prime 100 feature nel ranking ottenuto dal calcolo della correlazione di Pearson. Nei boxplot in figura \ref{BPMFCCboxplotFStimes}, è possibile vedere come i tempi di calcolo si siano ridotti di molto a seguito della selezione delle prime 100 feature e con cross-validation a 5 fold. 
@@ -978,7 +980,7 @@ Per questa motivazione si è deciso di optare per la selezione delle prime 100 f
 \label{BPMFCCboxplotFStimes}
 \end{figure}
 
-Considerato il tempo medio per classe stimato e il numero totale delle classi, gli algoritmi più problematici a livello di tempo di calcolo risultano essere \emph{K-NN} (6 giorni di computazione),\emph{ Adaboost }(3 gg di computazione) e \emph{svmLinear} (meno di 3 giorni di computazione). Mentre a livello di performance non mostrano buoni risultati, vicino ad un predittore casuale, gli algoritmi \emph{glmnet}, \emph{C5.0}, \emph{K-NN}. Questo è probabilmente dovuto al fatto che si sono utilizzati i parametri di default delle librerie di caret senza effettuare una ricerca dei valori ottimali per lo specifico problema\footnote{\footnotesize{Lo scopo della tesi è di dimostrare empiricamente l'efficacia dei metodi ensemble a prescindere dei risultati flat.}}. \emph{Naive Bayes} mostra risultati scadenti per la metrica AUPRC, ma non per la AUROC, dove anzi ha risultati molto buoni. Nella figura \ref{BPMFCCboxplotfs5f} sono messe a confronto le performance stimate degli algoritmi, relative alla metrica AUROC, tramite boxplot, per le ontologie BP, MF e CC. Nella figura \ref{BPMFCCboxplotfs5fauprc} troviamo invece i boxplot per le stime della AUPRC.
+Considerato il tempo medio per classe stimato e il numero totale delle classi, gli algoritmi più problematici a livello di tempo di calcolo risultano essere \emph{K-NN} (6 giorni di computazione), \emph{Adaboost.M1}(3 gg di computazione) e \emph{SVM} (meno di 3 giorni di computazione). Mentre a livello di performance non mostrano buoni risultati, vicino ad un predittore casuale, gli algoritmi \emph{glmnet}, \emph{C5.0}, \emph{K-NN}. Questo è probabilmente dovuto al fatto che si sono utilizzati i parametri di default delle librerie di caret senza effettuare una ricerca dei valori ottimali per lo specifico problema\footnote{\footnotesize{Lo scopo della tesi è di dimostrare empiricamente l'efficacia dei metodi ensemble a prescindere dei risultati flat.}}. \emph{Naive Bayes} mostra risultati scadenti per la metrica AUPRC, ma non per la AUROC, dove anzi ha risultati molto buoni. Nella figura \ref{BPMFCCboxplotfs5f} sono messe a confronto le performance stimate degli algoritmi, relative alla metrica AUROC, tramite boxplot, per le ontologie BP, MF e CC. Nella figura \ref{BPMFCCboxplotfs5fauprc} troviamo invece i boxplot per le stime della AUPRC.
 \begin{figure}[hp!]
 \centering
 \includegraphics[scale=0.37]{./images/FS_BP_auroc.png}
@@ -1114,7 +1116,7 @@ Nella figura \ref{versusAUROC} sono messi a confronto i risultati degli algoritm
 \includegraphics[scale=0.43]{./images/FS_vs_PCA_MF_AUROC.png}
 \hspace*{-0.9in}
 \includegraphics[scale=0.43]{./images/FS_vs_PCA_CC_AUROC.png}
-\caption{\footnotesize{I risultati della AUROC per algoritmo, alternando selezione delle feature a PCA, per le tre ontologie in sequenza (BP, MF, CC). In ordine abbiamo: Adaboost, C5.0, glmnet, knn, lda, Logit Boost, mlp, naive bayes, Random Forest, Svm , tree bag, xgbLinear.}}
+\caption{\footnotesize{I risultati della AUROC per algoritmo, alternando selezione delle feature a PCA, per le tre ontologie in sequenza (BP, MF, CC). In ordine abbiamo: Adaboost, C5.0, glmnet, knn, lda, Logit Boost, mlp, naive bayes, ranger, svmLinear , treebag, xgbLinear.}}
 \label{versusAUROC}
 \end{figure}
 
@@ -1126,7 +1128,7 @@ Nella figura \ref{versusAUROC} sono messi a confronto i risultati degli algoritm
 \includegraphics[scale=0.43]{./images/FS_vs_PCA_MF_AUPRC.png}
 \hspace*{-0.9in}
 \includegraphics[scale=0.43]{./images/FS_vs_PCA_CC_AUPRC.png}
-\caption{\footnotesize{I risultati della AUPRC per algoritmo, alternando selezione delle feature a PCA, per le tre ontologie in sequenza (BP, MF, CC). In ordine abbiamo: Adaboost, C5.0, glmnet, knn, lda, Logit Boost, mlp, naive bayes, Random Forest, Svm , tree bag, xgbLinear}}
+\caption{\footnotesize{I risultati della AUPRC per algoritmo, alternando selezione delle feature a PCA, per le tre ontologie in sequenza (BP, MF, CC). In ordine abbiamo: Adaboost, C5.0, glmnet, knn, lda, Logit Boost, mlp, naive bayes, ranger, svmLinear , treebag, xgbLinear}}
 \label{versusAUPRC}
 \end{figure}
 
@@ -1139,7 +1141,7 @@ Per verificare inoltre se la differenza in performance tra selezione delle featu
 Come test di ipotesi è stato utilizzato quello dei ranghi con segno di Wilcoxon\cite{wilcoxon} (\emph{Paired Wilcoxon signed-rank test}). Tale test è \emph{non parametrico}, in quanto non fa assunzioni sulla distribuzione delle differenze di performance tra gli, ma assume ci sia dipendenza tra le coppie estratte dalla popolazione.
 \newline
 \newline
-Dato il livello di significatività del test $a=0.01$ e come ipotesi nulla $H_0$ l'appartenenza dei due campioni alla medesima popolazione, sono quindi stati effettuati dei test a due a due sui campioni ottenuti variando il metodo di riduzione della dimensionalità del problema, fissato un algoritmo. Come si può vedere dalle tabelle \ref{AUROC_FS_vs_PCA} e \ref{AUPRC_FS_vs_PCA}, che mostrano rispettivamente i p-value ottenuti per la metrica AUROC e per la metrica AUPRC, i casi in cui l'ipotesi nulla non viene scartata (p-value $>= a$), fanno riferimento all'algoritmo \emph{lda} per le ontologie MF e CC (AUROC), l'algoritmo \emph{ranger} per l'ontologia  MF (AUROC), l'algoritmo \emph{Knn} per l'ontologia MF (AUPRC) e l'algoritmo \emph{Naive Bayes} per l'ontologia MF (AUPRC). In tutti gli altri casi si può dire, con una confidenza del 99\%, che gli algoritmi producono popolazioni (e quindi risultati) differenti. Consequenzialmente si può affermare che in generale il metodo di selezione delle feature genera performance migliori.
+Dato il livello di significatività del test $a=0.01$ e come ipotesi nulla $H_0$ l'appartenenza dei due campioni alla medesima popolazione, sono quindi stati effettuati dei test a due a due sui campioni ottenuti variando il metodo di riduzione della dimensionalità del problema, fissato un algoritmo. Come si può vedere dalle tabelle \ref{AUROC_FS_vs_PCA} e \ref{AUPRC_FS_vs_PCA}, che mostrano rispettivamente i p-value ottenuti per la metrica AUROC e per la metrica AUPRC, i casi in cui l'ipotesi nulla non viene scartata (p-value $>= a$), fanno riferimento all'algoritmo \emph{lda} per le ontologie MF e CC (AUROC), l'algoritmo \emph{Random Forest} (ranger) per l'ontologia  MF (AUROC), l'algoritmo \emph{K-NN} per l'ontologia MF (AUPRC) e l'algoritmo \emph{Naive Bayes} per l'ontologia MF (AUPRC). In tutti gli altri casi si può dire, con una confidenza del 99\%, che gli algoritmi producono popolazioni (e quindi risultati) differenti. Consequenzialmente si può affermare che in generale il metodo di selezione delle feature genera performance migliori.
 
 \begin{table}[h]
 \centering
@@ -1188,10 +1190,71 @@ Nelle figure \ref{BP_AUC_1}, \ref{BP_AUC_2}, \ref{MF_AUC_1}, \ref{MF_AUC_2}, \re
 La situazione è visivamente del tutto simile all'AUROC per la metrica AUPRC, come mostrato nei box plot \ref{BP_PRC_1}, \ref{BP_PRC_2}, \ref{MF_PRC_1}, \ref{MF_PRC_2}, \ref{CC_PRC_1} e \ref{CC_PRC_2} in appendice. Non vi è infatti un metodo ensemble dominante, e anzi dipende dal contesto (ontologia, algoritmo di ML e metodo di riduzione della dimensionalità). Anche qui HTD mostra risultati non del tutto positivi, e, come per l'AUROC, ci sono situazioni in cui la performance del metodo risulta peggiorativa in relazione agli score flat.  
 
 \subsection{Metodi Flat vs Metodi Ensemble Gerarchici}
-Per verificare se esistono differenze statisticamente significative tra le performance dei metodi gerarchici e quelle degli algoritmi flat, si è eseguito, anche in questo caso, il test dei ranghi con segno di Wilcoxon\cite{wilcoxon}
+Per verificare se esistono differenze statisticamente significative tra le performance dei metodi gerarchici e quelle degli algoritmi flat, si è eseguito, anche in questo caso, il test dei ranghi con segno di Wilcoxon\cite{wilcoxon}.
 \newline
 \newline
-Si sono quindi raggruppati i risultati per ontologia e metodo di riduzione della dimensionalità, e si sono confrontate le performance dei metodi flat e dei diversi metodi di correzione gerarchica, assumendo come ipotesi nulla $H_0$ la condizione che i due campioni provengano dalla stessa popolazione.
+Nelle tabelle  \ref{best_auroc_fs} e \ref{best_auprc_fs} sono mostrati i risultati dei metodi ensemble relativi ai migliori predittori flat per metrica(AUROC e AUPRC), considerando la selezione delle feature con correlazione di Pearson (FS) come metodo di riduzione della dimensionalità del problema. È interessante notare come i metodi di ensemble gerarchici riescano sempre a migliorare le predizioni del classificatore flat (in relazione al valore atteso), a differenza del metodo HTD che non sembra apportare migliorie statisticamente significative. In appendice, nelle tabelle \ref{best_auroc_pca} e \ref{best_auprc_pca} sono invece mostrati i risultati dei metodi ensemble gerarchici in relazione alla riduzione della dimensionalità con PCA, sempre selezionando i due miglior algoritmi flat per metrica.
+
+\begin{table}[h!]
+\hspace*{-0.47in}
+\caption*{\textbf{Risultati della AUROC ottenuti per Extreme gradient boosting (FS)}}
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.8699$\pm$0.002}&\footnotesize{0.8729$\pm$0.0021}& \textbf{\footnotesize{0.9121$\pm$0.0016}} & \textbf{\footnotesize{0.9081$\pm$0.0016}} & \textbf{\footnotesize{0.9118$\pm$0.0016}} & \textbf{\footnotesize{0.8818$\pm$0.0019}} & \textbf{\footnotesize{0.9122$\pm$0.0016}} & \textbf{\footnotesize{0.9069$\pm$0.0016}} \\ \hline
+MF&\footnotesize{0.8535$\pm$0.0066}&\footnotesize{0.8475$\pm$0.0078}& \textbf{\footnotesize{0.8875$\pm$0.0059}} & \textbf{\footnotesize{0.8848$\pm$0.0061}} & \textbf{\footnotesize{0.887$\pm$0.006}} & \textbf{\footnotesize{0.8563$\pm$0.0071}} & \textbf{\footnotesize{0.8875$\pm$0.0059}} & \textbf{\footnotesize{0.8818$\pm$0.0062}} \\ \hline
+CC&\footnotesize{0.86$\pm$0.0053}&\footnotesize{0.8593$\pm$0.0058}& \textbf{\footnotesize{0.8946$\pm$0.0049}} & \textbf{\footnotesize{0.8897$\pm$0.0049}} & \textbf{\footnotesize{0.8913$\pm$0.005}} & \textbf{\footnotesize{0.8652$\pm$0.0054}} & \textbf{\footnotesize{0.8946$\pm$0.0049}} & \textbf{\footnotesize{0.8912$\pm$0.0047}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{-0.47in}       
+               \caption*{\textbf{Risultati della AUROC ottenuti per Naive Bayes (FS)}}     
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.9048$\pm$0.0016}&\footnotesize{0.9024$\pm$0.0017}& \textbf{\footnotesize{0.9187$\pm$0.0014}} & \textbf{\footnotesize{0.9169$\pm$0.0014}} & \textbf{\footnotesize{0.9185$\pm$0.0014}} & \textbf{\footnotesize{0.9132$\pm$0.0015}} & \textbf{\footnotesize{0.9181$\pm$0.0014}} & \textbf{\footnotesize{0.917$\pm$0.0014}} \\ \hline
+MF&\footnotesize{0.8985$\pm$0.0049}&\footnotesize{0.8918$\pm$0.0054}& \textbf{\footnotesize{0.9153$\pm$0.0044}} & \textbf{\footnotesize{0.9144$\pm$0.0044}} & \textbf{\footnotesize{0.9151$\pm$0.0044}} & \textbf{\footnotesize{0.903$\pm$0.0051}} & \textbf{\footnotesize{0.9146$\pm$0.0044}} & \textbf{\footnotesize{0.9145$\pm$0.0044}} \\ \hline
+CC&\footnotesize{0.8992$\pm$0.0043}&\footnotesize{0.894$\pm$0.0049}& \textbf{\footnotesize{0.9134$\pm$0.004}} & \textbf{\footnotesize{0.9115$\pm$0.004}} & \textbf{\footnotesize{0.9127$\pm$0.004}} & \textbf{\footnotesize{0.9068$\pm$0.0041}} & \textbf{\footnotesize{0.9124$\pm$0.004}} & \textbf{\footnotesize{0.9095$\pm$0.0041}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\caption{\footnotesize{Le performance relative all'AUROC media dei metodi ensemble per i due migliori algoritmi flat (selezionati per AUROC), considerando la selezione delle feature con la correlazione di Pearson. I valori in grassetto sono quei valori che differiscono dai risultati del predittore flat in maniera statisticamente significativa (Wilcoxon rank sum test con $\alpha = 0.01$).}}
+\label{best_auroc_fs}
+\end{table}
+
+\begin{table}[h!]
+\hspace*{-0.47in}
+\caption*{\textbf{Risultati della AUPRC ottenuti per Extreme gradient boosting (FS)}}
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.2255$\pm$0.0041}&\footnotesize{0.1971$\pm$0.0039}& \textbf{\footnotesize{0.259$\pm$0.0044}} & \textbf{\footnotesize{0.2511$\pm$0.0043}} & \textbf{\footnotesize{0.2565$\pm$0.0043}} & \textbf{\footnotesize{0.2475$\pm$0.0043}} & \textbf{\footnotesize{0.2574$\pm$0.0043}} & \textbf{\footnotesize{0.2463$\pm$0.0042}} \\ \hline
+MF&\footnotesize{0.1853$\pm$0.0094}&\footnotesize{0.1808$\pm$0.0104}& \textbf{\footnotesize{0.2114$\pm$0.01}} & \textbf{\footnotesize{0.2055$\pm$0.0101}} & \textbf{\footnotesize{0.2072$\pm$0.0098}} & \textbf{\footnotesize{0.197$\pm$0.0101}} & \textbf{\footnotesize{0.2065$\pm$0.0098}} & \textbf{\footnotesize{0.1976$\pm$0.0102}} \\ \hline
+CC&\footnotesize{0.25$\pm$0.0116}&\footnotesize{0.2305$\pm$0.0118}& \textbf{\footnotesize{0.2739$\pm$0.012}} & \textbf{\footnotesize{0.2635$\pm$0.0119}} & \textbf{\footnotesize{0.2751$\pm$0.0122}} & \textbf{\footnotesize{0.2545$\pm$0.0119}} & \textbf{\footnotesize{0.2765$\pm$0.0121}} & \textbf{\footnotesize{0.2558$\pm$0.0118}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{-0.47in}
+\caption*{\textbf{Risultati della AUPRC ottenuti per Random Forest (FS)}}
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.2531$\pm$0.0047}&\footnotesize{0.2115$\pm$0.004}& \textbf{\footnotesize{0.2738$\pm$0.0046}} & \textbf{\footnotesize{0.2618$\pm$0.0045}} & \textbf{\footnotesize{0.274$\pm$0.0046}} &\footnotesize{0.2532$\pm$0.0044}& \textbf{\footnotesize{0.2727$\pm$0.0046}} & \textbf{\footnotesize{0.2632$\pm$0.0044}} \\ \hline
+MF&\footnotesize{0.2089$\pm$0.0098}&\footnotesize{0.1996$\pm$0.0102}& \textbf{\footnotesize{0.2231$\pm$0.0103}} & \textbf{\footnotesize{0.2245$\pm$0.0106}} & \textbf{\footnotesize{0.2208$\pm$0.01}} & \textbf{\footnotesize{0.2158$\pm$0.0097}} & \textbf{\footnotesize{0.2229$\pm$0.0101}} & \textbf{\footnotesize{0.228$\pm$0.0105}} \\ \hline
+CC&\footnotesize{0.2962$\pm$0.0127}&\footnotesize{0.2581$\pm$0.0124}& \textbf{\footnotesize{0.3139$\pm$0.0127}} & \textbf{\footnotesize{0.3015$\pm$0.0126}} & \textbf{\footnotesize{0.3149$\pm$0.0128}} &\footnotesize{0.2933$\pm$0.0123}& \textbf{\footnotesize{0.3115$\pm$0.0128}} & \textbf{\footnotesize{0.3041$\pm$0.013}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\caption{\footnotesize{Le performance relative all'AUPRC media dei metodi ensemble per i due migliori algoritmi flat (selezionati per AUPRC), considerando la selezione delle feature con la correlazione di Pearson. I valori in grassetto sono quei valori che differiscono dai risultati del predittore flat in maniera statisticamente significativa (Wilcoxon rank sum test con $\alpha = 0.01$).}}
+\label{best_auprc_fs}
+\end{table}
+\newpage
+
+Volendo effettuare un'analisi più generale su tutti gli algoritmi flat, si sono raggruppati i risultati per ontologia e metodo di riduzione della dimensionalità, e si sono confrontate le performance dei metodi flat e dei diversi metodi di correzione gerarchica, assumendo come ipotesi nulla $H_0$ la condizione che i due campioni provengano dalla stessa popolazione.
 \newline
 \newline 
 Dato il numero di test di ipotesi elevato da effettuare per gruppo (12 per algoritmo flat base), al fine di evitare di identificare dei falsi positivi,  si è applicata la correzione di Bonferroni\cite{bonferr} al p-value. Data quindi una significatività finale desiderata $\alpha=0.01$, ogni test $i$ è stato effettuato con un livello di significatività $\alpha_i$ pari a $\alpha/12$ \footnote{\footnotesize{Senza correzione di Bonferroni, la probabilità di identificare un falso positivo con una significatività $\alpha = 0.01$ e 12 test di ipotesi, è pari a $1-(0.99^{12}) = 0.11 > 0.01$.}}.
@@ -1450,7 +1513,8 @@ Effettuando i confronti per ontologia, metodo di riduzione della dimensionalità
 \label{test_ipotesi2}
 \end{table}
 \newpage
-Volendo analizzare la situazione dal punto di vista degli algoritmi flat di partenza utilizzati dal metodo gerarchico, si sono generate la tabella \ref{AUROC_1_} per la metrica AUROC e la tabella \ref{AUPRC_1_} per la metrica AUPRC, mostrate in appendice. Tali tabelle contano le volte in cui le performance del metodo gerarchico sono migliorative rispetto all'algoritmo flat di partenza\footnote{\footnotesize{Verificato sempre tramite test di ipotesi di Wilcoxon.}}, a seconda del metodo di riduzione della dimensionalità e del metodo gerarchico utilizzato. Si può notare come per determinati algoritmi flat di partenza, i metodi gerarchici portino spesso a dei miglioramenti, sia per AUROC che per AUPRC. È il caso ad esempio degli algoritmi \emph{adaboost}, \emph{C5.0}, \emph{knn}, \emph{LogitBoost}, \emph{ranger}, \emph{treebag} e \emph{xgbLinear}. Casi particolari sono invece \emph{lda}, \emph{svmLinear} e \emph{naive bayes}, che hanno dei sostanziali miglioramenti con i metodi gerarchici più frequentemente quando è stata eseguita la selezione delle feature tramite Pearson, mentre con PCA tendono ad avere performance invariate o peggiori. Per l'algoritmo \emph{glmnet} invece, i metodi gerarchici risultano generalmente poco efficaci, sia che sia stata eseguita la selezione delle feature che la PCA. Questo è dovuto probabilmente alla scarsa informazione di partenza che produce l'algoritmo (con la configurazione base utilizzata), che come si è avuto modo di verificare in partenza, nella fase di sperimentazione flat, produce risultati molto vicini a quelli di un predittore casuale.
+Volendo analizzare la situazione dal punto di vista degli algoritmi flat di partenza utilizzati dal metodo gerarchico, si sono generate la tabella \ref{AUROC_1_} per la metrica AUROC e la tabella \ref{AUPRC_1_} per la metrica AUPRC, mostrate in appendice. Tali tabelle contano le volte in cui le performance del metodo gerarchico sono migliorative rispetto all'algoritmo flat di partenza\footnote{\footnotesize{Verificato sempre tramite test di ipotesi di Wilcoxon.}}, a seconda del metodo di riduzione della dimensionalità e del metodo gerarchico utilizzato. Si può notare come per determinati algoritmi flat di partenza, i metodi gerarchici portino spesso a dei miglioramenti, sia per AUROC che per AUPRC. È il caso ad esempio degli algoritmi \emph{Adaboost.M1}, \emph{C5.0}, \emph{K-NN}, \emph{Logit Boost}, \emph{Random Forest} (ranger), \emph{Bagged CART}(treebag) e \emph{eXtreme Gradient Boosting} (xgbLinear). Casi particolari sono invece \emph{lda}, \emph{SVM} (svmLinear) e \emph{Naive Bayes}, che hanno dei sostanziali miglioramenti con i metodi gerarchici più frequentemente quando è stata eseguita la selezione delle feature tramite Pearson, mentre con PCA tendono ad avere performance invariate o peggiori. Per l'algoritmo \emph{glmnet} invece, i metodi gerarchici risultano generalmente poco efficaci, sia che sia stata eseguita la selezione delle feature che la PCA. Questo è dovuto probabilmente alla scarsa informazione di partenza che produce l'algoritmo (con la configurazione base utilizzata), che come si è avuto modo di verificare in partenza, nella fase di sperimentazione flat, produce risultati molto vicini a quelli di un predittore casuale.
+
 
 \subsection{Confronto fra Metodi Ensemble Gerarchici}
 
@@ -1854,7 +1918,7 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \begin{table}[h!]
 \centering
 \small\caption*{\textbf{Confronto fra metodi gerarchici e metodi flat specifici con FS (AUROC).}}
-\resizebox{1\textwidth}{!}{
+\resizebox{1.05\textwidth}{!}{
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 \textbf{AUROC}         & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} & \textbf{SommeXrighe} \\ \hline
@@ -1875,7 +1939,7 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 
 \centering
 \small\caption*{\textbf{Confronto fra metodi gerarchici e metodi flat specifici con PCA (AUROC).}}
-\resizebox{1\textwidth}{!}{
+\resizebox{1.05\textwidth}{!}{
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 \textbf{AUROC}         & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} & \textbf{SommeXrighe} \\ \hline
@@ -1900,7 +1964,7 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \begin{table}[h!]
 \centering
 \small\caption*{\textbf{Confronto fra metodi gerarchici e metodi flat specifici con FS (AUPRC).}}
-\resizebox{1\textwidth}{!}{
+\resizebox{1.05\textwidth}{!}{
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 \textbf{AUPRC}         & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} & \textbf{SommeXrighe} \\ \hline
@@ -1919,10 +1983,9 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \textbf{SommeXcolonne} & 34/36         & 8/36         & 33/36           & 34/36               & 26/36           & 34/36               & 31/36          &                      \\ \hline
 \end{tabular}}
 
-
-\centering
+\centering 
 \small\caption*{\textbf{Confronto fra metodi gerarchici e metodi flat specifici con PCA (AUPRC).}}
-\resizebox{1\textwidth}{!}{
+\resizebox{1.05\textwidth}{!}{
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 \textbf{AUPRC}                  & \textbf{GPAV} & \textbf{HTD} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} & \textbf{SommeXrighe} \\ \hline
@@ -1942,6 +2005,64 @@ xgbLinear          & MF            & 0,0976         & 0,7863         & 0,0029   
 \end{tabular}}
 \caption{\footnotesize{Confronto delle performance (AUPRC) metodi flat - metodi gerarchici per ogni metodo flat utilizzato. Ogni entry delle tabelle conta per quante ontologie (BP, MF, CC) esiste una differenza significativa fra il metodo gerarchico ed il metodo flat, e il valore atteso della metrica risulta superiore per il metodo ensemble (Wilcoxon rank sum test, $\alpha = 0.01$).}}
 \label{AUPRC_1_}
+\end{table}
+
+\begin{table}[h!]
+\hspace*{-0.47in}       
+               \caption*{\textbf{Risultati della AUROC ottenuti per lda (PCA)}} 
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.7891$\pm$0.0024}& \textbf{\footnotesize{0.7925$\pm$0.0023}} &\footnotesize{0.7895$\pm$0.0024}& \textbf{\footnotesize{0.7903$\pm$0.0024}} &\footnotesize{0.7872$\pm$0.0024}& \textbf{\footnotesize{0.792$\pm$0.0023}} &\footnotesize{0.7893$\pm$0.0024}& \textbf{\footnotesize{0.793$\pm$0.0023}} \\ \hline
+MF&\footnotesize{0.8042$\pm$0.0065}&\footnotesize{0.797$\pm$0.0068}&\footnotesize{0.802$\pm$0.007}&\footnotesize{0.8003$\pm$0.0069}&\footnotesize{0.8006$\pm$0.0071}&\footnotesize{0.797$\pm$0.0068}&\footnotesize{0.8014$\pm$0.0072}&\footnotesize{0.7996$\pm$0.0067}\\ \hline
+CC&\footnotesize{0.8085$\pm$0.0045}&\footnotesize{0.8082$\pm$0.0045}&\footnotesize{0.809$\pm$0.0046}&\footnotesize{0.8091$\pm$0.0046}&\footnotesize{0.8064$\pm$0.0047}&\footnotesize{0.8081$\pm$0.0045}&\footnotesize{0.8087$\pm$0.0046}& \textbf{\footnotesize{0.8095$\pm$0.0045}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{-0.47in}       
+               \caption*{\textbf{Risultati della AUROC ottenuti per Random Forest (PCA)}} 
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.7942$\pm$0.0025}&\footnotesize{0.7814$\pm$0.0026}& \textbf{\footnotesize{0.8122$\pm$0.0024}} & \textbf{\footnotesize{0.8127$\pm$0.0024}} & \textbf{\footnotesize{0.8105$\pm$0.0024}} &\footnotesize{0.7842$\pm$0.0026}& \textbf{\footnotesize{0.8122$\pm$0.0024}} & \textbf{\footnotesize{0.8134$\pm$0.0024}} \\ \hline
+MF&\footnotesize{0.8182$\pm$0.0066}&\footnotesize{0.8116$\pm$0.0068}& \textbf{\footnotesize{0.8281$\pm$0.0067}} & \textbf{\footnotesize{0.829$\pm$0.0067}} & \textbf{\footnotesize{0.8271$\pm$0.0067}} &\footnotesize{0.8119$\pm$0.0068}& \textbf{\footnotesize{0.8281$\pm$0.0067}} & \textbf{\footnotesize{0.8292$\pm$0.0067}} \\ \hline
+CC&\footnotesize{0.8098$\pm$0.0064}&\footnotesize{0.8044$\pm$0.0063}& \textbf{\footnotesize{0.8223$\pm$0.0065}} & \textbf{\footnotesize{0.8232$\pm$0.0065}} & \textbf{\footnotesize{0.8206$\pm$0.0064}} &\footnotesize{0.8046$\pm$0.0063}& \textbf{\footnotesize{0.8222$\pm$0.0065}} & \textbf{\footnotesize{0.8233$\pm$0.0064}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\caption{\footnotesize{Le performance relative all'AUROC media dei metodi ensemble per i due migliori algoritmi flat (selezionati per AUROC), considerando la PCA. I valori in grassetto sono quei valori che differiscono dai risultati del predittore flat in maniera statisticamente significativa (Wilcoxon rank sum test con $\alpha = 0.01$).}}
+\label{best_auroc_pca}
+\end{table}
+
+\begin{table}
+\hspace*{-0.47in}
+\caption*{\textbf{Risultati della AUPRC ottenuti per Extreme gradient boosting (PCA)}}
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.0515$\pm$0.0016}& \textbf{\footnotesize{0.0548$\pm$0.0017}} & \textbf{\footnotesize{0.0581$\pm$0.0018}} & \textbf{\footnotesize{0.0589$\pm$0.0018}} & \textbf{\footnotesize{0.0558$\pm$0.0017}} & \textbf{\footnotesize{0.0582$\pm$0.0018}} & \textbf{\footnotesize{0.0565$\pm$0.0018}} & \textbf{\footnotesize{0.0589$\pm$0.0018}} \\ \hline
+MF&\footnotesize{0.0948$\pm$0.0068}& \textbf{\footnotesize{0.103$\pm$0.0074}} & \textbf{\footnotesize{0.1049$\pm$0.0071}} & \textbf{\footnotesize{0.1095$\pm$0.0075}} & \textbf{\footnotesize{0.1039$\pm$0.0072}} & \textbf{\footnotesize{0.1061$\pm$0.0074}} & \textbf{\footnotesize{0.1051$\pm$0.0072}} & \textbf{\footnotesize{0.1065$\pm$0.0076}} \\ \hline
+CC&\footnotesize{0.0823$\pm$0.0061}&\footnotesize{0.0858$\pm$0.0061}& \textbf{\footnotesize{0.0948$\pm$0.0065}} & \textbf{\footnotesize{0.0939$\pm$0.0064}} & \textbf{\footnotesize{0.0924$\pm$0.0065}} & \textbf{\footnotesize{0.0866$\pm$0.0062}} & \textbf{\footnotesize{0.0939$\pm$0.0065}} & \textbf{\footnotesize{0.0893$\pm$0.0062}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\hspace*{-0.47in}
+\caption*{\textbf{Risultati della AUPRC ottenuti per Random Forest (PCA)}}
+\hspace*{-0.7in}
+                    \resizebox{.3\textwidth}{!}{
+                    \begin{subtable}[t]{0.4\textwidth}
+                    \centering\footnotesize\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline \textbf{onto} & \textbf{flat} & \textbf{HTD} & \textbf{GPAV} & \textbf{TPR-TF} & \textbf{ISO-TPR-TF} & \textbf{TPR-AT} & \textbf{ISO-TPR-AT} & \textbf{TPR-W} \\ \hline
+BP&\footnotesize{0.0711$\pm$0.0021}&\footnotesize{0.0668$\pm$0.0021}& \textbf{\footnotesize{0.0745$\pm$0.0022}} & \textbf{\footnotesize{0.0737$\pm$0.0022}} & \textbf{\footnotesize{0.0734$\pm$0.0022}} & \textbf{\footnotesize{0.0736$\pm$0.0022}} & \textbf{\footnotesize{0.0744$\pm$0.0022}} & \textbf{\footnotesize{0.0727$\pm$0.0022}} \\ \hline
+MF&\footnotesize{0.134$\pm$0.0082}&\footnotesize{0.1338$\pm$0.0085}& \textbf{\footnotesize{0.1395$\pm$0.0087}} & \textbf{\footnotesize{0.141$\pm$0.0086}} & \textbf{\footnotesize{0.1383$\pm$0.0084}} & \textbf{\footnotesize{0.1408$\pm$0.0089}} & \textbf{\footnotesize{0.139$\pm$0.0083}} & \textbf{\footnotesize{0.1388$\pm$0.0086}} \\ \hline
+CC&\footnotesize{0.1053$\pm$0.007}&\footnotesize{0.0999$\pm$0.007}& \textbf{\footnotesize{0.1114$\pm$0.0071}} & \textbf{\footnotesize{0.11$\pm$0.007}} & \textbf{\footnotesize{0.1097$\pm$0.0069}} &\footnotesize{0.1073$\pm$0.007}& \textbf{\footnotesize{0.1109$\pm$0.007}} & \textbf{\footnotesize{0.1074$\pm$0.0071}} \\ \hline\end{tabular}
+                    \label{table1}
+                    \end{subtable}}
+\caption{\footnotesize{Le performance relative all'AUPRC media dei metodi ensemble per i due migliori algoritmi flat (selezionati per AUPRC), considerando la PCA. I valori in grassetto sono quei valori che differiscono dai risultati del predittore flat in maniera statisticamente significativa (Wilcoxon rank sum test con $\alpha = 0.01$).}}
+\label{best_auprc_pca}             
 \end{table}
 
 
