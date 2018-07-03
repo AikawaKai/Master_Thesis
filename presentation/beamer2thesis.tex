@@ -203,7 +203,7 @@ Per gestire il problema della predizione della funzione delle proteine si rende 
 
 \begin{itemize}
 \onslide<2->
-\item I metodi basati sulla \highlightbf{comparazione di biosequenze}: si basano sull'idea che sequenze simili condividono funzioni simili.
+\item I metodi basati sulla \highlightbf{comparazione di biosequenze}: si basano sull'idea che sequenze simili condividano funzioni simili.
 \onslide<3->
 \item I metodi \highlightbf{basati su reti}: sono metodi applicati a dati rappresentati sotto forma di reti, che si basano sugli algoritmi di propagazione delle etichette.
 \onslide<4->
@@ -213,5 +213,41 @@ Per gestire il problema della predizione della funzione delle proteine si rende 
 \end{itemize}
 
 \end{tframe}
+
+\begin{tframe}{Metodi Ensemble Gerarchici 1/3}
+I Metodi di Ensemble Gerarchici sono metodi caratterizzati da due step principali:
+
+\begin{enumerate}
+\onslide<2->
+\item \highlight{Predizione flat} delle diverse classi dell’ontologia, generando diversi predittori \emph{indipendenti}.
+\onslide<3->
+\item \highlight{Combinazione e correzione gerarchica delle predizioni} sfruttando il DAG dei termini della GO.
+\end{enumerate}
+\onslide<4->
+Il secondo step rappresenta la componente \emph{ensemble} del metodo. Tale step si rende necessario in quanto le predizioni flat non tengono in considerazione la struttura gerarchica dei DAG della GO, portando a risultati \emph{inconsistenti}.
+
+\end{tframe}
+\begin{tframe}{Metodi Ensemble Gerarchici 2/3} 
+
+\block{Consistenza \& True Path Rule}
+Un insieme di predizioni $\hat{y} = <\hat{y}_1, \hat{y}_2, \dots, \hat{y}_{|N|}>$, dove $|N|$ è la cardinalità dei termini della gerarchia, è definito \emph{consistente}, se rispetta la \emph{True Path Rule}, e cioè:
+\[
+y\;\;\;consistente\;\; \leftrightarrow \forall i \in N, j \in par(i) \rightarrow y_j \geq y_i
+\] 
+Dove $par(i)$ indica l'insieme dei termini genitori del nodo $i$ nella gerarchia.
+\endblock{}
+\end{tframe}
+\begin{tframe}{Metodi Ensemble Gerarchici (Esempio) 3/3}
+
+\begin{center}
+\includegraphics<1>[width=5cm]{img/1_1.png}
+\includegraphics<2>[width=5cm]{img/2.png}
+\includegraphics<3>[width=5cm]{img/3.png}
+\includegraphics<4>[width=8.22cm]{img/4.png}
+\end{center}
+%\caption{Predittori flat indipendenti}
+
+
+\end{tframe} 
 
 \end{document}
