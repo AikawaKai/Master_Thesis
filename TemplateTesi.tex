@@ -388,7 +388,7 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 \newline
 Per garantire la correttezza e consistenza delle correzioni, i \emph{livelli} del grafo sono definiti come \emph{cammino massimo dalla radice}. Più formalmente, dobbiamo definire una funzione $\psi$ che, applicata ad un nodo $i \in N$, restituisce il livello associato al cammino massimo, cioè:
 \[
-\psi(i) = max_{p(i, r)}\; l(p(r, i))
+\psi(i) = \max_{p(i, r)}\; l(p(r, i))
 \]
 dove la funzione $p(r, i)$ calcola il cammino dalla radice $r$ al nodo $i$ e la funzione $l$ restituisce il livello associato ad un cammino.
 \newline
