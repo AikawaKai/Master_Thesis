@@ -316,4 +316,79 @@ dove la funzione $p(r, i)$ calcola il cammino dalla radice $r$ al nodo $i$ e la 
 \end{itemize}
 \end{tframe}
 
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (1/3)}
+\begin{itemize}
+\onslide<1->
+\item È un metodo che combina gli approcci top-down e bottom-up per la correzione delle predizioni flat. 
+\onslide<2->
+\item È suddiviso in due step sequenziali:
+\begin{enumerate}
+\onslide<3->
+\item \highlightbf{Step bottom-up}: che partendo dai nodi più specifici del DAG, propaga quelle predizioni flat che sono considerate \highlight{positive}.
+\onslide<4->
+\item \highlightbf{Step top-down}: È il medesimo step utilizzato dal metodo HTD-DAG.
+\end{enumerate}
+\onslide<5->
+\item Lo step top down si rende necessario in quanto la propagazione delle predizioni positive dal basso verso l’alto non garantisce la consistenza delle predizioni necessarie alla True Path Rule. 
+\end{itemize}
+\end{tframe}
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (2/3)}
+\begin{itemize}
+\onslide<1->
+\item Entrando nel dettaglio dello step bottom-up, data una predizione $\hat{y}_{i}$ per il nodo $i \in N$, questa viene aggiornata come:
+\begin{block}{Aggiornamento step Bottom-up TPR-DAG}
+\[
+\bar{y}_i = \frac{1}{1 + |\phi_i|} (\hat{y}_i + \sum_{j \in \phi_i} \bar{y}_j)
+\]
+\end{block}
+Dove $\phi_i$ rappresenta l'insieme dei figli del nodo $i$ che sono considerati \emph{positivi} in relazione alla predizione.
+\end{itemize}
+\end{tframe}
+
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) 3/3}
+
+\begin{itemize}
+\onslide<1->
+\item L'insieme $\phi$ dei \emph{positivi} può essere generato in diversi modi:
+\begin{enumerate}
+\onslide<2->
+\item \highlight{senza soglia}: I figli selezionati sono quelli che hanno un valore per la predizione superiore a quello del genitore
+\onslide<3->
+\item \highlight{soglia costante}: I figli sono considerati positivi se le predizioni superano una soglia (es. 0.5).
+\onslide<4->
+\item \highlight{soglia adattiva}: La soglia per selezionare i figli si ottiene tramite il tuning con massimizzazione di una metrica. 
+\end{enumerate}
+\onslide<5->
+\item Oltre a questi tipi di selezione, possono essere introdotti in combinazione dei pesi $w$, trasformando l'aggiornamento come:
+\begin{block}{Aggiornamento step Bottom-up TPR-DAG con $w$}
+\[
+\bar{y}_i = w \hat{y}_i + \frac{(1-w)}{|\phi_i|}\sum_{j \in \phi_i}\bar{y}_j
+\]
+\end{block}
+\end{itemize}
+\end{tframe}
+
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/4)}
+\begin{itemize}
+\onslide<1->
+\item Per il passo Top-Down dell’algoritmo TPR-DAG è possibile sfruttare gli algoritmi per la risoluzione dei problemi di \highlightbf{Isotonic Regression}:
+\begin{block}{Isotonic Regression (caso generale)}
+Dato un DAG, $G(N, E)$, con il set di nodi $N = \{1, 2, ..., n\}$, si deve trovare il vettore $x^{*}\in R^{n}$ tale che:
+\[
+min \sum_{i=1}^{n} w_i (x_i - a_i)^2
+\]
+\begin{center}
+such that $x_i \le x_j$ $\forall (i,j) \in E $ 
+\end{center}
+\end{block} 
+
+\end{itemize}
+\end{tframe}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/4)}
+Esempio di Isotonic Regression con \emph{ordinamento totale}:
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{img/monotonic.png}
+\end{figure}
+\end{tframe}
 \end{document}
