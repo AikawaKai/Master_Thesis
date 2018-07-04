@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  4 JUL 2018 23:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  5 JUL 2018 00:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2957,7 +2957,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  34125 strings out of 494871
  765102 string characters out of 6179251
- 1137873 words of memory out of 5000000
+ 1137870 words of memory out of 5000000
  36426 multiletter control sequences out of 15000+600000
  17163 words of font info for 65 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -2982,7 +2982,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist
 /type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt12.pfb>
-Output written on TemplateTesi.pdf (94 pages, 5402628 bytes).
+Output written on TemplateTesi.pdf (94 pages, 5402648 bytes).
 PDF statistics:
  1289 PDF objects out of 1440 (max. 8388607)
  395 named destinations out of 1000 (max. 500000)
