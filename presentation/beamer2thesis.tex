@@ -462,4 +462,15 @@ La procedura di assorbimento:
 \end{minipage}}
 \end{center}
 \end{tframe}
+\begin{tframe}{Metodi GPAV e ISO-TPR}
+\begin{itemize}
+\onslide<1->
+\item Riassumendo, l’algoritmo effettua degli assorbimenti di blocchi adiacenti, finché questi violano i vincoli del problema quadratico, generando di fatto una partizione dei nodi, in cui le parti condividono lo stesso valore.
+\onslide<2->
+\item L'algoritmo GPAV ha una complessità pari a $O(n^2)$.
+\onslide<3->
+\item Sostituendo quindi GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo ISO-TPR.
+\end{itemize}
+
+\end{tframe}
 \end{document}
