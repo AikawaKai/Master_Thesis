@@ -4,6 +4,8 @@
                         ]{TorinoTh}
                         
 \usepackage[beamer,customcolors]{hf-tikz}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 \hfsetfillcolor{alerted text.fg!10}
 \hfsetbordercolor{alerted text.fg}
 
@@ -368,11 +370,11 @@ Dove $\phi_i$ rappresenta l'insieme dei figli del nodo $i$ che sono considerati 
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/4)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/5)}
 \begin{itemize}
 \onslide<1->
-\item Per il passo Top-Down dell’algoritmo TPR-DAG è possibile sfruttare gli algoritmi per la risoluzione dei problemi di \highlightbf{Isotonic Regression}:
-\begin{block}{Isotonic Regression (caso generale)}
+\item Per il passo Top-Down dell’algoritmo TPR-DAG (e HTD) è possibile sfruttare gli algoritmi per la risoluzione dei problemi di \highlightbf{Isotonic Regression}:
+\begin{block}{Isotonic Regression (caso generale con ordinamento parziale)}
 Dato un DAG, $G(N, E)$, con il set di nodi $N = \{1, 2, ..., n\}$, si deve trovare il vettore $x^{*}\in R^{n}$ tale che:
 \[
 min \sum_{i=1}^{n} w_i (x_i - a_i)^2
@@ -384,11 +386,79 @@ such that $x_i \le x_j$ $\forall (i,j) \in E $
 
 \end{itemize}
 \end{tframe}
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/4)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/5)}
 Esempio di Isotonic Regression con \emph{ordinamento totale}:
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{img/monotonic.png}
 \end{figure}
+\end{tframe}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (3/5)}
+Funzionamento Generale:
+\begin{itemize}
+\onslide<2->
+\item Per far funzionare l'algoritmo è necessario effettuare un \highlight{ordinamento topologico} del grafo.
+\onslide<3->
+\item L’algoritmo genera uno split del set di nodi $N$ del DAG, in un insieme di \highlight{blocchi disgiunti definiti da $H$} (inizialmente $H = N$).
+\onslide<4->
+\item Seguendo l'ordinamento topologico del grafo, un blocco \highlight{assorbe} un suo blocco \emph{predecessore} se si verificano determinate condizioni.
+\onslide<5->
+\item I nodi presenti nel medesimo blocco $B_i$ \highlight{condividono il medesimo valore} $x_i$, e quindi a seguito dell'assorbimento sarà necessario un aggiornamento di tale valore.
+\end{itemize}
+\end{tframe}
+
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (4/5)}
+\begin{center}
+\scalebox{0.85}{
+\begin{minipage}{0.9\linewidth}
+\begin{algorithm}[H]
+\caption{Absorb}\label{ABSORB}
+\begin{algorithmic}[1]
+\Procedure{Absorb($j, i$)}{}
+\State $ H = H \backslash \{i\} $
+\State $ B_j^{-} = B_i^{-}\cup B_j^{-}\backslash \{i\} $
+\State $x_j = \frac{W_j x_j + W_i x_i}{W_j + W_i}$
+\State $B_j = B_j \cup B_i$
+\State $W_j = W_j + W_i$
+\For{(each $k \in H\;\; s.t.\;\; i  \in B_k^{-} $)}
+\State $B_k^{-} = B_k^{-}\backslash \{i\} \cup \{j\}$ 
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\end{minipage}}
+\end{center}
+\end{tframe}
+
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (5/5)}
+
+\begin{center}
+\scalebox{0.85}{
+    \begin{minipage}{0.9\linewidth}
+\begin{algorithm}[H]
+
+\caption{GPAV}\label{gpav}
+\begin{algorithmic}[1]
+\Procedure{GPAV}{}
+\State $ H = N $
+\For{(each $i \in N$)}
+\State $B_i = \{i\}$ 
+\State $B_i^{-} = i^{-}$
+\State $x_i = \hat{y}_i$
+\State $W_i = w_i$
+\EndFor
+\For{$k = 1, 2, ..., n$}
+\State \footnotesize{\emph{//finché esiste un predecessore di $B_{k}$ che viola la monotonicità}}
+\While{$\{i \in B_k^{-}: x_i > x_k\}\neq 0$} 
+\State \footnotesize{\emph{// Trova l'elemento che viola maggiormente il vincolo}}
+\State \textbf{Find} $j \in B_k^{-}: x_j = max\{x_i : i \in B_k^{-}\}$ 
+\State \textbf{Absorb(k, j)} \emph{// $j$ viene assorbito da $B_k$}
+\EndWhile
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\end{minipage}}
+\end{center}
 \end{tframe}
 \end{document}
