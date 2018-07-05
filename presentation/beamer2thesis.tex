@@ -394,12 +394,11 @@ La procedura di assorbimento:
 \end{comment}
 
 \begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (4/4)}
-
+\onslide<1->
 \begin{center}
-\scalebox{0.85}{
+\scalebox{0.70}{
     \begin{minipage}{0.9\linewidth}
 \begin{algorithm}[H]
-
 \caption{GPAV}\label{gpav}
 \begin{algorithmic}[1]
 \Procedure{GPAV}{}
@@ -423,7 +422,18 @@ La procedura di assorbimento:
 \end{algorithm}
 \end{minipage}}
 \end{center}
+\begin{itemize}
+\onslide<2->
+\item Riassumendo, l’algoritmo effettua degli assorbimenti di blocchi adiacenti, finché questi violano i vincoli del problema quadratico, generando di fatto una partizione dei nodi, in cui le parti condividono lo stesso valore.
+\onslide<3->
+\item L'algoritmo GPAV ha una complessità pari a $O(n^2)$.
+\onslide<4->
+\item Sostituendo quindi GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo ISO-TPR.
+\end{itemize}
 \end{tframe}
+
+
+\begin{comment}
 \begin{tframe}{Metodi GPAV e ISO-TPR}
 \begin{itemize}
 \onslide<1->
@@ -433,16 +443,38 @@ La procedura di assorbimento:
 \onslide<3->
 \item Sostituendo quindi GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo ISO-TPR.
 \end{itemize}
-
 \end{tframe}
-\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 1/4}
-Il dataset del nostro problema:
+\end{comment}
+
+
+\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 1/2}
 \begin{itemize}
-\onslide<2->
+\onslide<1->
 \item Si è eseguita la sperimentazione sul genoma della specie
 \highlight{Caenorhabditis elegans} (WORM), un organismo modello molto semplice, utilizzato frequentemente in biologia, soprattutto per studi di biologia dello sviluppo.
-\onslide<3->
+\onslide<2->
 \item L’insieme delle istanze utilizzato come input dai diversi predittori per il nostro problema, è dato dall’insieme dei geni della specie oggetto della sperimentazione, il quale è rappresentato da una matrice simmetrica generata dal network di interazione proteina-proteina estratto dal database \highlight{STRING} (Search Tool for the Retrieval of Interacting Genes/Proteins).
+\onslide<3->
+\item Nel caso specifico della specie C.elegans, la matrice STRING ha dimensione 15752×15752. Il nostro problema ha quindi 15752 istanze.
+\onslide<4->
+\item Per le classi funzionali/termini e annotazioni, queste cambiano in base al DAG di riferimento:
+
+\begin{table}[h]
+\centering
+\resizebox{.5\textwidth}{!}{
+\begin{tabular}{|l|l|l|}
+\hline
+      \textbf{ ontologia} & \textbf{numero di termini} & \textbf{numero di archi} \\ \hline
+BP & 4068  &  8066   \\ 
+\hline
+MF  & 1163  & 1567   \\ 
+\hline
+CC  & 578  & 1082     \\ 
+\hline
+\end{tabular}}
+
+\label{DAG_desc}
+\end{table}
 \end{itemize}
 \end{tframe}
 
@@ -473,6 +505,7 @@ Questi score combinati proteina-proteina rappresentano di fatto le feature (o ca
 \end{tframe}
 \end{comment}
 
+\begin{comment}
 \begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 4/4}
 Un po' di info sul dataset:
 \begin{itemize}
@@ -498,8 +531,9 @@ CC  & 578  & 1082     \\
 
 \end{itemize}
 \end{tframe}
+\end{comment}
 
-\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 4/4}
+\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 2/2}
 
 Per evitare di avere problemi nella cross-validazione, i DAG sono stati ridotti a quei termini per cui si hanno almeno 10 annotazioni. Un po' di statistiche a seguito della selezione:
 \begin{table}[h]
@@ -516,7 +550,9 @@ CC            & 221                 & 131,9                & 302,25             
 \end{table}
 \end{tframe}
 \begin{tframe}{Algoritmi di ML per le predizioni flat}
-Per quanto riguarda gli algoritmi di apprendmento automatico da utilizzare per le predizioni flat, si sono considerati i seguenti metodi:
+\begin{itemize}
+\onslide<1->
+\item Per quanto riguarda gli algoritmi di apprendmento automatico da utilizzare per le predizioni flat, si sono considerati i seguenti metodi:
 \begin{enumerate}
 \footnotesize{
 \item \emph{K-Nearest Neighbors}
@@ -532,6 +568,8 @@ Per quanto riguarda gli algoritmi di apprendmento automatico da utilizzare per l
 \item \emph{Naive Bayes}
 \item \emph{Glmnet}}
 \end{enumerate}
-Dato l'elevato numero di algoritmi selezionati per la sperimentazione, si è deciso di non effettuare il tuning dei parametri, questo per evitare di allungare ulteriorimente i tempi dell'intero processo di valutazione e generazione degli score flat.
+\onslide<2->
+\item Dato l'elevato numero di algoritmi selezionati per la sperimentazione, si è deciso di non effettuare il tuning dei parametri, questo per evitare di allungare ulteriorimente i tempi dell'intero processo di valutazione e generazione degli score flat.
+\end{itemize}
 \end{tframe}
 \end{document}

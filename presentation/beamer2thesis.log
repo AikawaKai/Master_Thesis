@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  5 JUL 2018 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  5 JUL 2018 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2036,7 +2036,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 426.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 433.
+
+
+Overfull \vbox (26.84311pt too high) detected at line 433
+ []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -2051,6 +2055,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [47
 
 ]
+Overfull \vbox (26.84311pt too high) detected at line 433
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2063,6 +2071,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [48
 
 ]
+Overfull \vbox (26.84311pt too high) detected at line 433
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2075,6 +2087,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [49
 
 ]
+Overfull \vbox (26.84311pt too high) detected at line 433
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2087,6 +2103,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [50
 
 ]
+Overfull \vbox (20.1067pt too high) detected at line 479
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2099,6 +2119,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [51
 
 ]
+Overfull \vbox (20.1067pt too high) detected at line 479
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2111,6 +2135,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [52
 
 ]
+Overfull \vbox (20.1067pt too high) detected at line 479
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2123,6 +2151,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [53
 
 ]
+Overfull \vbox (20.1067pt too high) detected at line 479
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2171,18 +2203,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [57
 
 ]
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[58
-
-]
 \tf@nav=\write6
 \openout6 = `beamer2thesis.nav'.
 
@@ -2192,19 +2212,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `beamer2thesis.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 537.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 537.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 575.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 575.
  (./beamer2thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 537.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 537.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 575.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 575.
 Package rerunfilecheck Info: File `beamer2thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31040 strings out of 494871
- 608884 string characters out of 6179251
- 673312 words of memory out of 5000000
- 33674 multiletter control sequences out of 15000+600000
+ 31034 strings out of 494871
+ 608833 string characters out of 6179251
+ 675241 words of memory out of 5000000
+ 33670 multiletter control sequences out of 15000+600000
  543532 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,18n,63p,10411b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2222,10 +2242,10 @@ nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on beamer2thesis.pdf (58 pages, 1419599 bytes).
+Output written on beamer2thesis.pdf (57 pages, 1423400 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 507 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 500000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 499 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
  192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
