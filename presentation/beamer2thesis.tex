@@ -264,7 +264,7 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 \end{itemize} 
 \end{tframe}
 
-\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (1/2)}
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG)}
 \begin{itemize}
 \onslide<1->
 \item È un metodo che combina gli approcci top-down e bottom-up per la correzione delle predizioni flat. 
@@ -280,6 +280,8 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 \item Lo step top down si rende necessario in quanto la propagazione delle predizioni positive dal basso verso l’alto non garantisce la consistenza delle predizioni necessarie alla True Path Rule. 
 \end{itemize}
 \end{tframe}
+
+\begin{comment}
 \begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (2/2)}
 \begin{itemize}
 \onslide<1->
@@ -292,8 +294,7 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 Dove $\phi_i$ rappresenta l'insieme dei figli del nodo $i$ che sono considerati \emph{positivi} in relazione alla predizione.
 \end{itemize}
 \end{tframe}
-
-
+\end{comment}
 
 \begin{comment}
 \begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) 3/3}
@@ -319,7 +320,7 @@ Dove $\phi_i$ rappresenta l'insieme dei figli del nodo $i$ che sono considerati 
 \end{tframe}
 \end{comment}
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/5)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/4)}
 \begin{itemize}
 \onslide<1->
 \item Per il passo Top-Down dell’algoritmo TPR-DAG (e HTD) è possibile sfruttare gli algoritmi per la risoluzione dei problemi di \highlightbf{Isotonic Regression}:
@@ -335,14 +336,14 @@ such that $x_i \le x_j$ $\forall (i,j) \in E $
 
 \end{itemize}
 \end{tframe}
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/5)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/4)}
 Esempio di Isotonic Regression con \emph{ordinamento totale}:
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{img/monotonic.png}
 \end{figure}
 \end{tframe}
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (3/5)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (3/4)}
 Funzionamento Generale:
 \begin{itemize}
 \onslide<2->
@@ -356,6 +357,7 @@ Funzionamento Generale:
 \end{itemize}
 \end{tframe}
 
+\begin{comment}
 \begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (4/5)}
 La procedura di assorbimento:
 \begin{center}
@@ -379,8 +381,9 @@ La procedura di assorbimento:
 \end{minipage}}
 \end{center}
 \end{tframe}
+\end{comment}
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (5/5)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (4/4)}
 
 \begin{center}
 \scalebox{0.85}{
@@ -422,7 +425,7 @@ La procedura di assorbimento:
 \end{itemize}
 
 \end{tframe}
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM) 1/5}}
+\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM) 1/4}}
 Il dataset del nostro problema:
 \begin{itemize}
 \onslide<2->
@@ -433,13 +436,14 @@ Il dataset del nostro problema:
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 2/5}
+\begin{comment}
+\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 2/4}
 \begin{figure}
 \includegraphics[scale=0.2]{img/STRING-NET.png}
 \caption{\footnotesize{Una porzione del grafo STRING per la specie WORM.}}
 \end{figure}
 \end{tframe}
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 3/5}
+\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 3/4}
 Cosa indicano le relazioni tra proteine in STRING:
 \begin{itemize}
 \onslide<2->
@@ -457,8 +461,9 @@ primari.
 \onslide<7->
 Questi score combinati proteina-proteina rappresentano di fatto le feature (o caratteristiche) delle istanze.
 \end{tframe}
+\end{comment}
 
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 4/5}
+\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 4/4}
 Un po' di info sul dataset:
 \begin{itemize}
 \onslide<2->
@@ -484,7 +489,7 @@ CC  & 578  & 1082     \\
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 5/5}
+\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 4/4}
 
 Per evitare di avere problemi nella cross-validazione, i DAG sono stati ridotti a quei termini per cui si hanno almeno 10 annotazioni. Un po' di statistiche a seguito della selezione:
 \begin{table}[h]
