@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  5 JUL 2018 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  5 JUL 2018 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -101,8 +101,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen125
 \Gm@dimlist=\toks15
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/size9.clo
+File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -1062,12 +1062,12 @@ LaTeX Font Info:    ... okay on input line 20.
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
-* \topskip=11.0pt
+* \topskip=9.0pt
 * \footskip=14.22636pt
 * \marginparwidth=4.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=8.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1219,7 +1219,7 @@ italian.ldf    on input line 20.
 
 (./beamer2thesis.nav)
 
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <12> not available
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
@@ -1250,16 +1250,16 @@ thkerncmss.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./minerva2.jpg>]
-Overfull \vbox (47.77228pt too high) detected at line 66
+Overfull \vbox (99.18246pt too high) detected at line 75
  []
 
-<img/DNA.png, id=41, 201.75375pt x 574.145pt>
+<img/DNA.png, id=42, 201.75375pt x 574.145pt>
 File: img/DNA.png Graphic file (type png)
 <use img/DNA.png>
-Package pdftex.def Info: img/DNA.png  used on input line 66.
+Package pdftex.def Info: img/DNA.png  used on input line 75.
 (pdftex.def)             Requested size: 40.35002pt x 114.82697pt.
 
-Overfull \vbox (32.59503pt too high) detected at line 66
+Overfull \vbox (32.55948pt too high) detected at line 75
  []
 
 
@@ -1275,16 +1275,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [2
 
  <./img/DNA.png>]
-Overfull \vbox (47.77228pt too high) detected at line 66
+Overfull \vbox (99.18246pt too high) detected at line 75
  []
 
-<img/humandna.png, id=55, 292.09125pt x 293.095pt>
+<img/humandna.png, id=56, 292.09125pt x 293.095pt>
 File: img/humandna.png Graphic file (type png)
 <use img/humandna.png>
-Package pdftex.def Info: img/humandna.png  used on input line 66.
+Package pdftex.def Info: img/humandna.png  used on input line 75.
 (pdftex.def)             Requested size: 87.62804pt x 87.92917pt.
 
-Overfull \vbox (5.69724pt too high) detected at line 66
+Overfull \vbox (5.66168pt too high) detected at line 75
  []
 
 
@@ -1300,16 +1300,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [3
 
  <./img/humandna.png>]
-Overfull \vbox (47.77228pt too high) detected at line 66
+Overfull \vbox (99.18246pt too high) detected at line 75
  []
 
-<img/centraldogma.png, id=65, 532.99126pt x 232.87pt>
+<img/centraldogma.png, id=66, 532.99126pt x 232.87pt>
 File: img/centraldogma.png Graphic file (type png)
 <use img/centraldogma.png>
-Package pdftex.def Info: img/centraldogma.png  used on input line 66.
+Package pdftex.def Info: img/centraldogma.png  used on input line 75.
 (pdftex.def)             Requested size: 106.59636pt x 46.57317pt.
 
-Underfull \vbox (badness 10000) detected at line 66
+Underfull \vbox (badness 10000) detected at line 75
  []
 
 
@@ -1325,16 +1325,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [4
 
  <./img/centraldogma.png (PNG copy)>]
-Overfull \vbox (47.77228pt too high) detected at line 66
+Overfull \vbox (99.18246pt too high) detected at line 75
  []
 
-<img/funzioni.jpg, id=74, 193.6836pt x 225.12105pt>
+<img/funzioni.jpg, id=75, 193.6836pt x 225.12105pt>
 File: img/funzioni.jpg Graphic file (type jpg)
 <use img/funzioni.jpg>
-Package pdftex.def Info: img/funzioni.jpg  used on input line 66.
+Package pdftex.def Info: img/funzioni.jpg  used on input line 75.
 (pdftex.def)             Requested size: 96.84155pt x 112.56024pt.
 
-Overfull \vbox (30.32831pt too high) detected at line 66
+Overfull \vbox (30.29276pt too high) detected at line 75
  []
 
 
@@ -1350,16 +1350,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [5
 
  <./img/funzioni.jpg>]
-Overfull \vbox (91.0723pt too high) detected at line 116
+Overfull \vbox (99.18246pt too high) detected at line 75
  []
 
-<img/lab3.jpg, id=83, 513.92pt x 476.78125pt>
+<img/lab3.jpg, id=84, 513.92pt x 476.78125pt>
 File: img/lab3.jpg Graphic file (type jpg)
 <use img/lab3.jpg>
-Package pdftex.def Info: img/lab3.jpg  used on input line 116.
+Package pdftex.def Info: img/lab3.jpg  used on input line 75.
 (pdftex.def)             Requested size: 77.08467pt x 71.5141pt.
 
-Overfull \vbox (2.88217pt too high) detected at line 116
+Underfull \vbox (badness 10000) detected at line 75
  []
 
 
@@ -1375,16 +1375,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [6
 
  <./img/lab3.jpg>]
-Overfull \vbox (91.0723pt too high) detected at line 116
+Overfull \vbox (99.18246pt too high) detected at line 75
  []
 
-<img/multiclass.png, id=92, 379.91937pt x 406.51875pt>
-File: img/multiclass.png Graphic file (type png)
-<use img/multiclass.png>
-Package pdftex.def Info: img/multiclass.png  used on input line 116.
-(pdftex.def)             Requested size: 75.98251pt x 81.3023pt.
+<img/multilabel.png, id=93, 284.0211pt x 213.1965pt>
+File: img/multilabel.png Graphic file (type png)
+<use img/multilabel.png>
+Package pdftex.def Info: img/multilabel.png  used on input line 75.
+(pdftex.def)             Requested size: 85.20699pt x 63.95943pt.
 
-Underfull \vbox (badness 10000) detected at line 116
+Underfull \vbox (badness 10000) detected at line 75
  []
 
 
@@ -1399,22 +1399,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [7
 
- <./img/multiclass.png>]
-Overfull \vbox (91.0723pt too high) detected at line 116
+ <./img/multilabel.png>]
+Overfull \vbox (99.18246pt too high) detected at line 75
  []
 
-<img/multilabel.png, id=103, 284.0211pt x 213.1965pt>
-File: img/multilabel.png Graphic file (type png)
-<use img/multilabel.png>
-Package pdftex.def Info: img/multilabel.png  used on input line 116.
-(pdftex.def)             Requested size: 85.20699pt x 63.95943pt.
+<img/growth.jpg, id=104, 475.7775pt x 394.47375pt>
+File: img/growth.jpg Graphic file (type jpg)
+<use img/growth.jpg>
+Package pdftex.def Info: img/growth.jpg  used on input line 75.
+(pdftex.def)             Requested size: 76.12595pt x 63.11708pt.
 
-Overfull \hbox (5.99495pt too wide) in paragraph at lines 116--116
- [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 116
+Underfull \vbox (badness 10000) detected at line 75
  []
 
 
@@ -1429,17 +1424,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [8
 
- <./img/multilabel.png>]
-Overfull \vbox (91.0723pt too high) detected at line 116
- []
+ <./img/growth.jpg>]
+<./img/GO.png, id=113, 574.145pt x 424.58624pt>
+File: ./img/GO.png Graphic file (type png)
+<use ./img/GO.png>
+Package pdftex.def Info: ./img/GO.png  used on input line 150.
+(pdftex.def)             Requested size: 103.34163pt x 76.42223pt.
+<./img/FunCat.png, id=114, 706.64pt x 445.665pt>
+File: ./img/FunCat.png Graphic file (type png)
+<use ./img/FunCat.png>
+Package pdftex.def Info: ./img/FunCat.png  used on input line 150.
+(pdftex.def)             Requested size: 120.12721pt x 75.76204pt.
 
-<img/growth.jpg, id=113, 475.7775pt x 394.47375pt>
-File: img/growth.jpg Graphic file (type jpg)
-<use img/growth.jpg>
-Package pdftex.def Info: img/growth.jpg  used on input line 116.
-(pdftex.def)             Requested size: 76.12595pt x 63.11708pt.
-
-Underfull \vbox (badness 10000) detected at line 116
+Overfull \vbox (21.34993pt too high) detected at line 150
  []
 
 
@@ -1454,16 +1451,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [9
 
- <./img/growth.jpg>]
-Overfull \vbox (91.0723pt too high) detected at line 116
- []
+ <./img/GO.png (PNG copy)> <./img/FunCat.png (PNG copy)>]
+File: ./img/GO.png Graphic file (type png)
+<use ./img/GO.png>
+Package pdftex.def Info: ./img/GO.png  used on input line 150.
+(pdftex.def)             Requested size: 103.34163pt x 76.42223pt.
+File: ./img/FunCat.png Graphic file (type png)
+<use ./img/FunCat.png>
+Package pdftex.def Info: ./img/FunCat.png  used on input line 150.
+(pdftex.def)             Requested size: 120.12721pt x 75.76204pt.
 
-File: img/growth.jpg Graphic file (type jpg)
-<use img/growth.jpg>
-Package pdftex.def Info: img/growth.jpg  used on input line 116.
-(pdftex.def)             Requested size: 76.12595pt x 63.11708pt.
-
-Underfull \vbox (badness 10000) detected at line 116
+Overfull \vbox (21.34993pt too high) detected at line 150
  []
 
 
@@ -1479,6 +1477,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [10
 
 ]
+File: ./img/GO.png Graphic file (type png)
+<use ./img/GO.png>
+Package pdftex.def Info: ./img/GO.png  used on input line 150.
+(pdftex.def)             Requested size: 103.34163pt x 76.42223pt.
+File: ./img/FunCat.png Graphic file (type png)
+<use ./img/FunCat.png>
+Package pdftex.def Info: ./img/FunCat.png  used on input line 150.
+(pdftex.def)             Requested size: 120.12721pt x 75.76204pt.
+
+Overfull \vbox (21.34993pt too high) detected at line 150
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1491,6 +1502,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [11
 
 ]
+File: ./img/GO.png Graphic file (type png)
+<use ./img/GO.png>
+Package pdftex.def Info: ./img/GO.png  used on input line 150.
+(pdftex.def)             Requested size: 103.34163pt x 76.42223pt.
+File: ./img/FunCat.png Graphic file (type png)
+<use ./img/FunCat.png>
+Package pdftex.def Info: ./img/FunCat.png  used on input line 150.
+(pdftex.def)             Requested size: 120.12721pt x 75.76204pt.
+
+Overfull \vbox (21.34993pt too high) detected at line 150
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1503,6 +1527,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [12
 
 ]
+File: ./img/GO.png Graphic file (type png)
+<use ./img/GO.png>
+Package pdftex.def Info: ./img/GO.png  used on input line 150.
+(pdftex.def)             Requested size: 103.34163pt x 76.42223pt.
+File: ./img/FunCat.png Graphic file (type png)
+<use ./img/FunCat.png>
+Package pdftex.def Info: ./img/FunCat.png  used on input line 150.
+(pdftex.def)             Requested size: 120.12721pt x 75.76204pt.
+
+Overfull \vbox (21.34993pt too high) detected at line 150
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1514,7 +1551,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [13
 
-]
+] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1527,17 +1566,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [14
 
 ]
-<./img/GO.png, id=164, 574.145pt x 424.58624pt>
-File: ./img/GO.png Graphic file (type png)
-<use ./img/GO.png>
-Package pdftex.def Info: ./img/GO.png  used on input line 143.
-(pdftex.def)             Requested size: 143.53589pt x 106.1463pt.
-<./img/FunCat.png, id=165, 706.64pt x 445.665pt>
-File: ./img/FunCat.png Graphic file (type png)
-<use ./img/FunCat.png>
-Package pdftex.def Info: ./img/FunCat.png  used on input line 143.
-(pdftex.def)             Requested size: 169.59706pt x 106.96178pt.
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1549,10 +1577,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [15
 
- <./img/GO.png (PNG copy)> <./img/FunCat.png (PNG copy)>]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1601,6 +1626,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [19
 
 ]
+Overfull \vbox (16.141pt too high) detected at line 211
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1613,7 +1642,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [20
 
 ]
-Overfull \vbox (9.17427pt too high) detected at line 180
+Overfull \vbox (16.141pt too high) detected at line 211
  []
 
 
@@ -1629,7 +1658,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [21
 
 ]
-Overfull \vbox (9.17427pt too high) detected at line 180
+Overfull \vbox (16.141pt too high) detected at line 211
  []
 
 
@@ -1645,7 +1674,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [22
 
 ]
-Overfull \vbox (9.17427pt too high) detected at line 180
+Overfull \vbox (16.141pt too high) detected at line 211
  []
 
 
@@ -1661,7 +1690,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [23
 
 ]
-Overfull \vbox (9.17427pt too high) detected at line 180
+Overfull \vbox (16.141pt too high) detected at line 211
  []
 
 
@@ -1677,9 +1706,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [24
 
 ]
-Overfull \vbox (9.17427pt too high) detected at line 180
- []
-
+<img/1_1.png, id=255, 888.31876pt x 763.85374pt>
+File: img/1_1.png Graphic file (type png)
+<use img/1_1.png>
+Package pdftex.def Info: img/1_1.png  used on input line 224.
+(pdftex.def)             Requested size: 142.26378pt x 122.32399pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
@@ -1692,7 +1723,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [25
 
-]
+ <./img/1_1.png>]
+<img/2.png, id=266, 888.31876pt x 763.85374pt>
+File: img/2.png Graphic file (type png)
+<use img/2.png>
+Package pdftex.def Info: img/2.png  used on input line 224.
+(pdftex.def)             Requested size: 142.26378pt x 122.32399pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1704,7 +1741,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [26
 
-]
+ <./img/2.png>]
+<img/3.png, id=276, 888.31876pt x 763.85374pt>
+File: img/3.png Graphic file (type png)
+<use img/3.png>
+Package pdftex.def Info: img/3.png  used on input line 224.
+(pdftex.def)             Requested size: 142.26378pt x 122.32399pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1716,7 +1759,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [27
 
-]
+ <./img/3.png>]
+<img/4.png, id=286, 1461.46pt x 763.85374pt>
+File: img/4.png Graphic file (type png)
+<use img/4.png>
+Package pdftex.def Info: img/4.png  used on input line 224.
+(pdftex.def)             Requested size: 233.88168pt x 122.23074pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1728,7 +1777,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [28
 
-]
+ <./img/4.png>]
+Overfull \vbox (1.13249pt too high) detected at line 252
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1741,6 +1794,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [29
 
 ]
+Overfull \vbox (1.13249pt too high) detected at line 252
+ []
+
+<img/topdown.png, id=305, 513.92pt x 418.56375pt>
+File: img/topdown.png Graphic file (type png)
+<use img/topdown.png>
+Package pdftex.def Info: img/topdown.png  used on input line 252.
+(pdftex.def)             Requested size: 154.17719pt x 125.57008pt.
+
+Overfull \vbox (43.3026pt too high) detected at line 252
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1752,12 +1818,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [30
 
-]
-<img/1_1.png, id=307, 888.31876pt x 763.85374pt>
-File: img/1_1.png Graphic file (type png)
-<use img/1_1.png>
-Package pdftex.def Info: img/1_1.png  used on input line 216.
-(pdftex.def)             Requested size: 142.26378pt x 122.32399pt.
+ <./img/topdown.png>]
+Overfull \vbox (1.13249pt too high) detected at line 252
+ []
+
+<img/bottomup.png, id=315, 513.92pt x 418.56375pt>
+File: img/bottomup.png Graphic file (type png)
+<use img/bottomup.png>
+Package pdftex.def Info: img/bottomup.png  used on input line 252.
+(pdftex.def)             Requested size: 154.17719pt x 125.57008pt.
+
+Overfull \vbox (43.3026pt too high) detected at line 252
+ []
+
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
@@ -1770,13 +1843,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [31
 
- <./img/1_1.png>]
-<img/2.png, id=318, 888.31876pt x 763.85374pt>
-File: img/2.png Graphic file (type png)
-<use img/2.png>
-Package pdftex.def Info: img/2.png  used on input line 216.
-(pdftex.def)             Requested size: 142.26378pt x 122.32399pt.
-
+ <./img/bottomup.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1788,13 +1855,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [32
 
- <./img/2.png>]
-<img/3.png, id=328, 888.31876pt x 763.85374pt>
-File: img/3.png Graphic file (type png)
-<use img/3.png>
-Package pdftex.def Info: img/3.png  used on input line 216.
-(pdftex.def)             Requested size: 142.26378pt x 122.32399pt.
-
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1806,13 +1867,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [33
 
- <./img/3.png>]
-<img/4.png, id=338, 1461.46pt x 763.85374pt>
-File: img/4.png Graphic file (type png)
-<use img/4.png>
-Package pdftex.def Info: img/4.png  used on input line 216.
-(pdftex.def)             Requested size: 233.88168pt x 122.23074pt.
-
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1824,16 +1879,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [34
 
- <./img/4.png>]
-Underfull \hbox (badness 3849) in paragraph at lines 244--244
-[]\OT1/cmss/m/n/10.95 Esistono fon-da-men-tal-men-te due
- []
-
-
-Overfull \vbox (34.67227pt too high) detected at line 244
- []
-
-
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1846,24 +1892,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [35
 
 ]
-Underfull \hbox (badness 3849) in paragraph at lines 244--244
-[]\OT1/cmss/m/n/10.95 Esistono fon-da-men-tal-men-te due
- []
-
-
-Overfull \vbox (34.67227pt too high) detected at line 244
- []
-
-<img/topdown.png, id=356, 513.92pt x 418.56375pt>
-File: img/topdown.png Graphic file (type png)
-<use img/topdown.png>
-Package pdftex.def Info: img/topdown.png  used on input line 244.
-(pdftex.def)             Requested size: 154.17719pt x 125.57008pt.
-
-Overfull \vbox (43.33815pt too high) detected at line 244
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1875,25 +1903,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [36
 
- <./img/topdown.png>]
-Underfull \hbox (badness 3849) in paragraph at lines 244--244
-[]\OT1/cmss/m/n/10.95 Esistono fon-da-men-tal-men-te due
- []
-
-
-Overfull \vbox (34.67227pt too high) detected at line 244
- []
-
-<img/bottomup.png, id=366, 513.92pt x 418.56375pt>
-File: img/bottomup.png Graphic file (type png)
-<use img/bottomup.png>
-Package pdftex.def Info: img/bottomup.png  used on input line 244.
-(pdftex.def)             Requested size: 154.17719pt x 125.57008pt.
-
-Overfull \vbox (43.33815pt too high) detected at line 244
- []
-
-
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1905,11 +1915,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [37
 
- <./img/bottomup.png>]
-Overfull \vbox (12.96814pt too high) detected at line 265
- []
-
-
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1922,10 +1928,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [38
 
 ]
-Overfull \vbox (12.96814pt too high) detected at line 265
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1950,6 +1952,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [40
 
 ]
+<img/monotonic.png, id=400, 733.74126pt x 553.06625pt>
+File: img/monotonic.png Graphic file (type png)
+<use img/monotonic.png>
+Package pdftex.def Info: img/monotonic.png  used on input line 355.
+(pdftex.def)             Requested size: 220.12407pt x 165.92114pt.
+
+Overfull \vbox (23.08774pt too high) detected at line 355
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1961,7 +1973,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [41
 
-]
+ <./img/monotonic.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1998,10 +2010,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [44
 
 ]
-Overfull \vbox (9.28622pt too high) detected at line 338
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2014,16 +2022,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [45
 
 ]
-<img/monotonic.png, id=444, 733.74126pt x 553.06625pt>
-File: img/monotonic.png Graphic file (type png)
-<use img/monotonic.png>
-Package pdftex.def Info: img/monotonic.png  used on input line 345.
-(pdftex.def)             Requested size: 220.12407pt x 165.92114pt.
-
-Overfull \vbox (33.49535pt too high) detected at line 345
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2035,7 +2033,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [46
 
- <./img/monotonic.png>]
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 426.
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2096,15 +2099,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [51
 
 ]
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 416.
-
-
-Overfull \vbox (22.93752pt too high) detected at line 416
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2177,6 +2171,47 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [57
 
 ]
+
+LaTeX Warning: Citation `KNN' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `LogitBoost' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `LDA' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `xgbLinear' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `C5.0' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `Ranger' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `mlp' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `SVM' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `treebag' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `adaboost' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `naivebayes' on page 58 undefined on input line 535.
+
+
+LaTeX Warning: Citation `glmnet' on page 58 undefined on input line 535.
+
+
+Overfull \vbox (33.56654pt too high) detected at line 535
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -2189,75 +2224,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [58
 
 ]
-Overfull \vbox (7.53944pt too high) detected at line 490
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[59
-
-]
-Overfull \vbox (7.53944pt too high) detected at line 490
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[60
-
-]
-Overfull \vbox (7.53944pt too high) detected at line 490
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[61
-
-]
-Overfull \hbox (9.94109pt too wide) in paragraph at lines 507--507
- [] 
- []
-
-
-Overfull \vbox (28.58943pt too high) detected at line 507
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[62
-
-]
 \tf@nav=\write6
 \openout6 = `beamer2thesis.nav'.
 
@@ -2267,41 +2233,44 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `beamer2thesis.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 508.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
  (./beamer2thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 536.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 536.
 Package rerunfilecheck Info: File `beamer2thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 31051 strings out of 494871
- 608929 string characters out of 6179251
- 671569 words of memory out of 5000000
- 33677 multiletter control sequences out of 15000+600000
- 546613 words of font info for 79 fonts, out of 8000000 for 9000
+ 31052 strings out of 494871
+ 608980 string characters out of 6179251
+ 673312 words of memory out of 5000000
+ 33686 multiletter control sequences out of 15000+600000
+ 543532 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,18n,63p,10411b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on beamer2thesis.pdf (62 pages, 1576185 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on beamer2thesis.pdf (58 pages, 1419118 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
- 129 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 635 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

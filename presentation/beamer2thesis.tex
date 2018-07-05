@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[9pt]{beamer}
 \usetheme[titlepagelogo=minerva2,% Logo for the first page
 						language=italian
                         ]{TorinoTh}
@@ -26,13 +26,19 @@
     \begin{column}{.65\textwidth}
       \minipage[c][0.4\textheight][s]{\columnwidth}
 	   \begin{itemize}	
-	  \item All'interno delle molecole di DNA di ogni essere vivente esistono diverse migliaia di geni.   
+	  \item All'interno del DNA di ogni essere vivente esistono diverse migliaia di geni.   
       \onslide<2->
-	  \item Si stima che per l'essere umano il DNA possegga tra i 20.000 - 25.000 geni.
+	  \item Si stima che nel DNA dell'essere umano ci siano tra i 20.000 - 25.000 geni.
       \onslide<3->
       \item Ogni gene all'interno del DNA è capace di codificare più proteine.	
       \onslide<4->
       \item Ogni proteina è responsabile di una o più funzioni all'interno delle cellule degli esseri viventi.
+      \onslide<5->
+	  \item Identificare la funzione delle proteine attraverso le analisi di laboratorio è \highlightbf{costosa} e richiede \highlightbf{molto tempo}
+	  \onslide<6->
+	  \item Esistono centinaia di funzioni a cui poter associare un gene/proteina, anche contemporaneamente \highlightbf{(problema multiclasse e multietichetta)}
+      \onslide<7->
+	  \item Il quantitativo di dati genomici cresce molto rapidamente.
       \end{itemize}
       \endminipage      
     \end{column}
@@ -40,18 +46,21 @@
     \begin{column}{.35\textwidth}
 
       % for top aligned images use minipage
-      \only<1-4>{
+      \only<1-7>{
         \minipage[c][0.4\textheight][s]{\columnwidth}
 
         \onslide<1->    
 
-        \only<1-4>{
+        \only<1-7>{
           \begin{figure}
             \centering
             \includegraphics<1>[scale=0.2]{img/DNA.png} %         
             \includegraphics<2>[scale=0.3]{img/humandna.png} %
             \includegraphics<3>[scale=0.2]{img/centraldogma.png}%
             \includegraphics<4>[scale=0.5]{img/funzioni.jpg}
+            \includegraphics<5>[scale=0.15]{img/lab3.jpg} %         
+            \includegraphics<6>[scale=0.3]{img/multilabel.png}%
+            \includegraphics<7>[scale=0.16]{img/growth.jpg}
         \end{figure}}
 
 
@@ -65,8 +74,8 @@
 
 \end{tframe}
 
-
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/4}
+\begin{comment}
+\begin{tframe}{ Il problema della predizione della funzione delle proteine 1/3}
   % 
   \begin{columns}
     %
@@ -114,8 +123,9 @@
   \end{columns}
 
 \end{tframe}
+\end{comment}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/4}
+\begin{tframe}{Il problema della predizione della funzione delle proteine 1/2}
 \begin{itemize}
 \onslide<1->
 \item A complicare ulteriormente il problema è il modo in cui sono \emph{relazionate} tra loro le funzioni delle proteine.
@@ -128,22 +138,18 @@
 \onslide<4->
 \item \highlightbf{Functional Catalogue} (FunCat): che è organizzato invece come un albero, non varia in base alle specie, e descrive le funzioni in maniera più sintetica rispetto alla Gene Ontology.
 \end{itemize}
-
-\end{itemize}  
-
-\end{tframe}
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine  3/4}
+\onslide<5->
 \begin{figure}[h]
 \center
-\includegraphics[scale=0.25]{./img/GO.png}
-\includegraphics[scale=0.24]{./img/FunCat.png}
+\includegraphics[scale=0.18]{./img/GO.png}
+\includegraphics[scale=0.17]{./img/FunCat.png}
 \caption{\footnotesize{A sinistra un DAG della GO per la specie \emph{S. cerevisiae}. A destra FunCat.}}
 \label{DAGTREE}
 \end{figure}
+\end{itemize}  
 \end{tframe}
 
-
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 4/4}
+\begin{tframe}{Il problema della predizione della funzione delle proteine (GO) 2/2}
 \begin{itemize}
 \onslide<1->
 \item Data la granularità e specificità superiori della GO e il suo largo utilizzo nella comunità scientifica, all’interno della tesi ci si è soffermati sulla predizione delle sue funzioni.
@@ -158,12 +164,14 @@
 \item \highlightbf{Componente Cellulare} (CC): il luogo all’interno della cellula nelle quali avviene la funzione genica.
 \end{itemize}
 \end{itemize}  
-
+\onslide<6->
+Visti i costi e la complessità del problema, per indirizzare la ricerca di laboratorio si rende necessaria la predizione della funzione delle proteine tramite metodi \highlightbf{automatici}. Tra questi ricordiamo: i metodi basati sulla \highlightbf{comparazione di biosequenze}, i metodi \highlightbf{basati su reti}, i metodi \highlightbf{Kernel per spazi di output strutturato} e i metodi utilizzati in questa tesi, cioè i metodi \highlightbf{Ensemble Gerarchici}.
 \end{tframe}
 
 
 
-\begin{tframe}{\footnotesize{La predizione della funzione delle proteine tramite metodi automatici}}
+\begin{comment}
+\begin{tframe}{La predizione della funzione delle proteine tramite metodi automatici}
 Per gestire il problema della predizione della funzione delle proteine si rende quindi necessario un approccio \highlightbf{automatico}. I metodi più noti in letteratura sono:
 
 \begin{itemize}
@@ -178,8 +186,9 @@ Per gestire il problema della predizione della funzione delle proteine si rende 
 \end{itemize}
 
 \end{tframe}
+\end{comment}
 
-\begin{tframe}{Metodi Ensemble Gerarchici 1/3}
+\begin{tframe}{Metodi Ensemble Gerarchici 1/2}
 I Metodi di Ensemble Gerarchici sono metodi caratterizzati da due step principali:
 
 \begin{enumerate}
@@ -190,10 +199,7 @@ I Metodi di Ensemble Gerarchici sono metodi caratterizzati da due step principal
 \end{enumerate}
 \onslide<4->
 Il secondo step rappresenta la componente \emph{ensemble} del metodo. Tale step si rende necessario in quanto le predizioni flat non tengono in considerazione la struttura gerarchica dei DAG della GO, portando a risultati \emph{inconsistenti}.
-
-\end{tframe}
-\begin{tframe}{Metodi Ensemble Gerarchici 2/3} 
-
+\onslide<5->
 \block{Consistenza \& True Path Rule}
 Un insieme di predizioni $\hat{y} = <\hat{y}_1, \hat{y}_2, \dots, \hat{y}_{|N|}>$, dove $|N|$ è la cardinalità dei termini della gerarchia, è definito \emph{consistente}, se rispetta la \emph{True Path Rule}, e cioè:
 \[
@@ -201,8 +207,10 @@ y\;\;\;consistente\;\; \leftrightarrow \forall i \in N, j \in par(i) \rightarrow
 \] 
 Dove $par(i)$ indica l'insieme dei termini genitori del nodo $i$ nella gerarchia.
 \endblock{}
+
 \end{tframe}
-\begin{tframe}{Metodi Ensemble Gerarchici (Esempio) 3/3}
+
+\begin{tframe}{Metodi Ensemble Gerarchici (Esempio) 2/2}
 
 \begin{center}
 \includegraphics<1>[width=5cm]{img/1_1.png}
@@ -278,6 +286,8 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 \end{enumerate}
 \onslide<5->
 \item Lo step top down si rende necessario in quanto la propagazione delle predizioni positive dal basso verso l’alto non garantisce la consistenza delle predizioni necessarie alla True Path Rule. 
+\onslide<6->
+\item La selezione dei nodi considerati \emph{positivi} può avvenire in diverse maniere: con \highlight{soglia adattiva}, \highlight{senza soglia} e con \highlight{soglia fissa}.
 \end{itemize}
 \end{tframe}
 
@@ -425,7 +435,7 @@ La procedura di assorbimento:
 \end{itemize}
 
 \end{tframe}
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM) 1/4}}
+\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 1/4}
 Il dataset del nostro problema:
 \begin{itemize}
 \onslide<2->
@@ -437,7 +447,7 @@ Il dataset del nostro problema:
 \end{tframe}
 
 \begin{comment}
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 2/4}
+\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 2/4}
 \begin{figure}
 \includegraphics[scale=0.2]{img/STRING-NET.png}
 \caption{\footnotesize{Una porzione del grafo STRING per la specie WORM.}}
@@ -463,7 +473,7 @@ Questi score combinati proteina-proteina rappresentano di fatto le feature (o ca
 \end{tframe}
 \end{comment}
 
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 4/4}
+\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 4/4}
 Un po' di info sul dataset:
 \begin{itemize}
 \onslide<2->
@@ -489,7 +499,7 @@ CC  & 578  & 1082     \\
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{\footnotesize{Predizione della funzione delle proteine della specie C.elegans (WORM)} 4/4}
+\begin{tframe}{Predizione della funzione delle proteine della specie C.elegans (WORM) 4/4}
 
 Per evitare di avere problemi nella cross-validazione, i DAG sono stati ridotti a quei termini per cui si hanno almeno 10 annotazioni. Un po' di statistiche a seguito della selezione:
 \begin{table}[h]
@@ -504,5 +514,23 @@ CC            & 221                 & 131,9                & 302,25             
 \caption{\footnotesize{La colonna \emph{numero di termini} indica il numero di termini ottenuti dopo la selezione, \emph{media} la media delle annotazioni per classe, per l'ontologia di riferimento, \emph{d.std.} la deviazione standard delle annotazioni per l'ontologia di riferimento, \emph{massimo} e \emph{minimo} rispettivamente il massimo e minimo numero di annotazioni.}}
 \label{riduzioneann}
 \end{table}
+\end{tframe}
+\begin{tframe}{Algoritmi di ML per le predizioni flat}
+Per quanto riguarda gli algoritmi di apprendmento automatico da utilizzare per le predizioni flat, si sono considerati i seguenti metodi:
+\begin{enumerate}
+\item \emph{K-Nearest Neighbors}\cite{KNN}
+\item \emph{Logit Boost}\cite{LogitBoost}
+\item \emph{Linear Discriminant Analysis}\cite{LDA}
+\item \emph{eXtreme Gradient Boosting} \cite{xgbLinear}
+\item \emph{C5.0} (Alberi di decisione)\cite{C5.0}
+\item \emph{Random Forest}\cite{Ranger}
+\item \emph{Multilayer Perceptron}\cite{mlp}
+\item \emph{Support Vector Machine lineare}\cite{SVM}
+\item \emph{Bagged CART} (Bagged ensemble di alberi di decisione) \cite{treebag}
+\item \emph{AdaBoost.M1}\cite{adaboost}
+\item \emph{Naive Bayes}\cite{naivebayes}
+\item \emph{Glmnet}\cite{glmnet}
+\end{enumerate}
+Dato l'elevato numero di algoritmi selezionati per la sperimentazione, si è deciso di non effettuare il tuning dei parametri, questo per evitare di allungare ulteriorimente i tempi dell'intero processo di valutazione e generazione degli score flat.
 \end{tframe}
 \end{document}
