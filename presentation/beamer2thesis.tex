@@ -393,13 +393,12 @@ La procedura di assorbimento:
 \end{tframe}
 \end{comment}
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV e ISO-TPRa) (4/4)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV e ISO-TPR) (4/4)}
 \onslide<1->
 \begin{center}
 \scalebox{0.70}{
     \begin{minipage}{0.9\linewidth}
 \begin{algorithm}[H]
-\caption{GPAV}\label{gpav}
 \begin{algorithmic}[1]
 \Procedure{GPAV}{}
 \State $ H = N $
@@ -419,6 +418,7 @@ La procedura di assorbimento:
 \EndFor
 \EndProcedure
 \end{algorithmic}
+\caption{GPAV}
 \end{algorithm}
 \end{minipage}}
 \end{center}
@@ -573,13 +573,63 @@ CC            & 221                 & 131,9                & 302,25             
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{Stima iniziale dei tempi degli algoritmi}
+\begin{tframe}{Stima preliminare dei tempi di calcolo degli algoritmi flat}
+\begin{figure}[hp!]
+\center
+\includegraphics[scale=0.25]{../images/BP_box_plot_times.png}
+
+\caption{\footnotesize{Il box plot dei tempi di esecuzione, con cross-validation a 10 fold per l' ontologia BP. I tempi sono da intendersi in ore e per classe, per un campione di 10 classi.}}
+\label{boxplot_p}
+\end{figure}
 \end{tframe}
 
 \begin{tframe}{Riduzione della complessità del problema}
+\begin{itemize}
+\onslide<1->
+\item Oltre a ridurre il numero di fold della cross-validation a 5, per ridurre la complessità del problema si sono utilizzati due metodi:
+\begin{enumerate}
+\onslide<2->
+\item \highlight{Selezione delle Feature con correlazione di Pearson} (FS).
+\onslide<3->
+\item \highlight{Analisi delle componenti principali} (PCA) con selezione delle prime componenti che spiegano una determinata percentuale di varianza.
+\end{enumerate}
+\onslide<4->
+\item Per la FS con correlazione di Pearson, si sono effettuate stime dei tempi di calcolo e performance con le:
+\begin{itemize}
+\item prime 1000 feature
+\item prime 500 feature
+\item e prime 100 feature
+\end{itemize}
+nel ranking.
+\onslide<5->
+\item Mentre per la PCA si sono selezionate le componenti che spiegavano rispettivamente:
+\begin{itemize}
+\item il 90\%
+\item il 70\%
+\item e il 50\%
+\end{itemize}
+della varianza.
+\end{itemize}
 \end{tframe}
 
 \begin{tframe}{Organizzazione esperimenti}
+\onslide<1->
+A seguito della precedente analisi, si è deciso di effettuare la fase di predizione flat iniziale con due configurazioni, che hanno rappresentato un buon compromesso tra tempi di esecuzione e performance, e cioè:
+\begin{itemize}
+\onslide<2->
+\item cross-validation 5 fold + Selezione delle prime 100 feature con Correlazione di Pearson.
+\onslide<3->
+\item cross-validation 5 fold + Selezione delle prime 15 componenti della PCA.
+\end{itemize} 
+\onslide<4->
+A seguito della generazione dei risultati flat, si è effettuata poi la correzione gerarchica tramite i seguenti metodi di ensemble gerarchico:
+
+\begin{enumerate}
+\item HTD-DAG 
+\item GPAV 
+\item TPR-DAG  (senza soglia, con soglia adattiva, senza soglia e correzione con pesi)
+\item ISO-TPR  (senza soglia, con soglia adattiva)
+\end{enumerate}
 \end{tframe}
 
 \begin{tframe}{Predizioni Flat}
