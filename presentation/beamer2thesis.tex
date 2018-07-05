@@ -257,7 +257,7 @@ Dove $par(i)$ indica l'insieme dei termini genitori del nodo $i$ nella gerarchia
 \onslide<1->
 \item È un metodo che utilizza l'approccio \emph{Top-Down}.
 \onslide<2->
-\item La correzione avviene ricorsivamente, percorrendo il grafo per \emph{livelli}. Più precisamente, dato il grafo $G = (N, E)$, gli score flat $f(x) = \hat{y}$ sono corretti gerarchicamente a $\bar{y}$, applicando la seguente regola:
+\item La correzione avviene ricorsivamente, percorrendo il grafo per \emph{livelli}\footnote{\footnotesize{Dove il livello è quello del cammino massimo dalla radice}}. Più precisamente, dato il grafo $G = (N, E)$, gli score flat $f(x) = \hat{y}$ sono corretti gerarchicamente a $\bar{y}$, applicando la seguente regola:
 \begin{block}{Aggiornamento con HTD-DAG}
 \[
 \bar{y}_i := 
@@ -393,7 +393,7 @@ La procedura di assorbimento:
 \end{tframe}
 \end{comment}
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (4/4)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV e ISO-TPRa) (4/4)}
 \onslide<1->
 \begin{center}
 \scalebox{0.70}{
@@ -428,7 +428,7 @@ La procedura di assorbimento:
 \onslide<3->
 \item L'algoritmo GPAV ha una complessità pari a $O(n^2)$.
 \onslide<4->
-\item Sostituendo quindi GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo ISO-TPR.
+\item Sostituendo GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo \highlightbf{ISO-TPR}.
 \end{itemize}
 \end{tframe}
 
