@@ -4,6 +4,7 @@
                         ]{TorinoTh}
                         
 \usepackage[beamer,customcolors]{hf-tikz}
+\usepackage{verbatim}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \hfsetfillcolor{alerted text.fg!10}
@@ -64,28 +65,8 @@
 
 \end{tframe}
 
-\begin{tframe}{La funzione delle proteine}
 
-
-      Le proteine sono molecole biologiche composte da amminoacidi, e le funzioni che svolgono sono molteplici:
-	   \begin{itemize}	
-	   \onslide<2->
-	   \item Metaboliche, ad esempio per la produzione di energia
-	   \onslide<3->
-		\item Di trascrizione, sintesi e processamento delle proteine stesse
-		\onslide<4->		
-		\item Di trasporto
-		\onslide<5->
-		\item Di comunicazione intra o intercellulare
-		\onslide<6->
-		\item Di ciclo della cellula, ad esempio per la divisione e riproduzione cellulare
-      \end{itemize}
-      \onslide<7->
-      Per molte specie le funzioni di moltissimi geni (e quindi delle corrispettive proteine codificate) è \highlightbf{sconosciuta o parzialmente nota}.
-
-\end{tframe}
-
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/6}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 1/4}
   % 
   \begin{columns}
     %
@@ -134,7 +115,7 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/6}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine 2/4}
 \begin{itemize}
 \onslide<1->
 \item A complicare ulteriormente il problema è il modo in cui sono \emph{relazionate} tra loro le funzioni delle proteine.
@@ -151,7 +132,7 @@
 \end{itemize}  
 
 \end{tframe}
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine  3/6}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine  3/4}
 \begin{figure}[h]
 \center
 \includegraphics[scale=0.25]{./img/GO.png}
@@ -162,7 +143,7 @@
 \end{tframe}
 
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 4/6}
+\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 4/4}
 \begin{itemize}
 \onslide<1->
 \item Data la granularità e specificità superiori della GO e il suo largo utilizzo nella comunità scientifica, all’interno della tesi ci si è soffermati sulla predizione delle sue funzioni.
@@ -180,25 +161,7 @@
 
 \end{tframe}
 
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 5/6}
-Gli archi dei DAG nella GO indicano inoltre 3 differenti tipi di relazione:
-\begin{itemize}
-\onslide<2->
-\item \highlight{is a}: indica una relazione di sotto-tipo.
-\onslide<3->
-\item \highlight{a part of}: indica una relazione di composizione
-\onslide<4->
-\item \highlight{regulates}: indica una relazione di influenza/regolazione
-\end{itemize} 
 
-\end{tframe}
-
-\begin{tframe}{\small Il problema della predizione della funzione delle proteine (GO) 6/6}
-\begin{figure}
-\includegraphics[scale=0.24]{./img/DAG_relations.png}
-\caption{\footnotesize{Un porzione di DAG che evidenzia i diversi tipi di relazione.}}
-\end{figure}
-\end{tframe}
 
 \begin{tframe}{\footnotesize{La predizione della funzione delle proteine tramite metodi automatici}}
 Per gestire il problema della predizione della funzione delle proteine si rende quindi necessario un approccio \highlightbf{automatico}. I metodi più noti in letteratura sono:
@@ -280,7 +243,7 @@ Dove $par(i)$ indica l'insieme dei termini genitori del nodo $i$ nella gerarchia
   \end{columns}
 \end{tframe}
 
-\begin{tframe}{Metodo Top-Down Gerarchico (HTD-DAG) (1/2)}
+\begin{tframe}{Metodo Top-Down Gerarchico (HTD-DAG)}
 \begin{itemize}
 
 \onslide<1->
@@ -301,24 +264,7 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 \end{itemize} 
 \end{tframe}
 
-\begin{tframe}{Metodo Top-Down Gerarchico (HTD-DAG) (2/2)}
-
-\begin{itemize}
-\onslide<1->
-\item Per garantire la correttezza e consistenza delle correzioni, i \emph{livelli} del grafo sono definiti come \emph{cammino massimo dalla radice}. 
-\onslide<2->
-\item Più formalmente, dobbiamo definire una funzione $\psi$ che, applicata ad un nodo $i \in N$, restituisce il livello associato al cammino massimo, cioè:
-
-\begin{block}{Livelli}
-\[
-\psi(i) = \max_{p(i, r)}\; l(p(r, i))
-\]
-\end{block}
-dove la funzione $p(r, i)$ calcola il cammino dalla radice $r$ al nodo $i$ e la funzione $l$ restituisce il livello associato ad un cammino.
-\end{itemize}
-\end{tframe}
-
-\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (1/3)}
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (1/2)}
 \begin{itemize}
 \onslide<1->
 \item È un metodo che combina gli approcci top-down e bottom-up per la correzione delle predizioni flat. 
@@ -334,7 +280,7 @@ dove la funzione $p(r, i)$ calcola il cammino dalla radice $r$ al nodo $i$ e la 
 \item Lo step top down si rende necessario in quanto la propagazione delle predizioni positive dal basso verso l’alto non garantisce la consistenza delle predizioni necessarie alla True Path Rule. 
 \end{itemize}
 \end{tframe}
-\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (2/3)}
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) (2/2)}
 \begin{itemize}
 \onslide<1->
 \item Entrando nel dettaglio dello step bottom-up, data una predizione $\hat{y}_{i}$ per il nodo $i \in N$, questa viene aggiornata come:
@@ -347,8 +293,10 @@ Dove $\phi_i$ rappresenta l'insieme dei figli del nodo $i$ che sono considerati 
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) 3/3}
 
+
+\begin{comment}
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG) 3/3}
 \begin{itemize}
 \onslide<1->
 \item L'insieme $\phi$ dei \emph{positivi} può essere generato in diversi modi:
@@ -369,6 +317,7 @@ Dove $\phi_i$ rappresenta l'insieme dei figli del nodo $i$ che sono considerati 
 \end{block}
 \end{itemize}
 \end{tframe}
+\end{comment}
 
 \begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/5)}
 \begin{itemize}
