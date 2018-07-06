@@ -203,7 +203,7 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 \begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/4)}
 \begin{itemize}
 \onslide<1->
-\item Per il passo Top-Down dell’algoritmo TPR-DAG (e HTD) è possibile sfruttare gli algoritmi per la risoluzione dei problemi di \highlightbf{Isotonic Regression}:
+\item Per il passo Top-Down dell’algoritmo TPR-DAG (e HTD) è stato sviluppato un nuovo metodo all'interno di questa tesi, e cioè \highlightbf{Generalized Pool Adjacent Violator} (GPAV), un algoritmo che permette di risolvere i problemi di \highlightbf{Isotonic Regression}, definiti come:
 \begin{block}{Isotonic Regression (caso generale con ordinamento parziale)}
 Dato un DAG, $G(N, E)$, con il set di nodi $N = \{1, 2, ..., n\}$, si deve trovare il vettore $x^{*}\in R^{n}$ tale che:
 \[
@@ -213,7 +213,8 @@ min \sum_{i=1}^{n} w_i (x_i - a_i)^2
 such that $x_i \le x_j$ $\forall (i,j) \in E $ 
 \end{center}
 \end{block} 
-
+\onslide<2->
+\item Con una complessità pari a $O(n^2)$.
 \end{itemize}
 \end{tframe}
 
@@ -272,9 +273,7 @@ Funzionamento Generale:
 \onslide<2->
 \item Riassumendo, l’algoritmo effettua degli assorbimenti di blocchi adiacenti, finché questi violano i vincoli del problema quadratico, generando di fatto una partizione dei nodi, in cui le parti condividono lo stesso valore.
 \onslide<3->
-\item L'algoritmo GPAV ha una complessità pari a $O(n^2)$.
-\onslide<4->
-\item Sostituendo GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo \highlightbf{ISO-TPR}.
+\item Sostituendo GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo \highlightbf{ISO-TPR}, un altro nuovo metodo utilizzato in questa tesi.
 \end{itemize}
 \end{tframe}
 

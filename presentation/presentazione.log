@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  6 JUL 2018 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  6 JUL 2018 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1891,16 +1891,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [37
 
 ]
-<img/monotonic.png, id=373, 733.74126pt x 553.06625pt>
-File: img/monotonic.png Graphic file (type png)
-<use img/monotonic.png>
-Package pdftex.def Info: img/monotonic.png  used on input line 227.
-(pdftex.def)             Requested size: 220.12407pt x 165.92114pt.
-
-Overfull \vbox (23.08774pt too high) detected at line 227
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1912,7 +1902,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [38
 
- <./img/monotonic.png>]
+]
+<img/monotonic.png, id=381, 733.74126pt x 553.06625pt>
+File: img/monotonic.png Graphic file (type png)
+<use img/monotonic.png>
+Package pdftex.def Info: img/monotonic.png  used on input line 228.
+(pdftex.def)             Requested size: 220.12407pt x 165.92114pt.
+
+Overfull \vbox (23.08774pt too high) detected at line 228
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1924,7 +1924,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [39
 
-]
+ <./img/monotonic.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1973,15 +1973,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [43
 
 ]
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 279.
-
-
-Overfull \vbox (23.55312pt too high) detected at line 279
- []
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
@@ -1994,7 +1985,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [44
 
 ]
-Overfull \vbox (23.55312pt too high) detected at line 279
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 278.
+
+
+Overfull \vbox (23.05312pt too high) detected at line 278
  []
 
 
@@ -2010,7 +2006,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [45
 
 ]
-Overfull \vbox (23.55312pt too high) detected at line 279
+Overfull \vbox (23.05312pt too high) detected at line 278
  []
 
 
@@ -2026,7 +2022,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [46
 
 ]
-Overfull \vbox (23.55312pt too high) detected at line 279
+Overfull \vbox (23.05312pt too high) detected at line 278
  []
 
 
@@ -2051,18 +2047,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `presentazione.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./presentazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  30988 strings out of 494871
  608341 string characters out of 6179251
- 674253 words of memory out of 5000000
+ 673253 words of memory out of 5000000
  33649 multiletter control sequences out of 15000+600000
  543532 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -2081,7 +2077,7 @@ nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentazione.pdf (47 pages, 1233735 bytes).
+Output written on presentazione.pdf (47 pages, 1233604 bytes).
 PDF statistics:
  532 PDF objects out of 1000 (max. 8388607)
  419 compressed objects within 5 object streams
