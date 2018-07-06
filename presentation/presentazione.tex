@@ -285,7 +285,7 @@ Funzionamento Generale:
 \onslide<2->
 \item Tale matrice STRING ha dimensione 15752×15752 (WORM). Il nostro problema ha quindi 15752 istanze.
 \onslide<3->
-\item Per le classi funzionali/termini e annotazioni, queste cambiano in base al DAG di riferimento:
+\item In base al tipo do ontologia, si hanno DAG con un quantitativo diverso di nodi(termini) e archi(relazioni): 
 
 \begin{table}[h]
 \centering
@@ -304,6 +304,22 @@ CC  & 578  & 1082     \\
 \label{DAG_desc}
 \end{table}
 \end{itemize}
+\end{tframe}
+
+\begin{tframe}{Annotazioni per il dataset C.elegans (WORM)}
+Per evitare di avere problemi nella fase di cross-validazione, i DAG sono stati ridotti a quei termini per cui si hanno almeno 10 annotazioni. Un po' di statistiche a seguito della selezione:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\textbf{Onto} & \textbf{numero di termini} & \textbf{media} & \textbf{d.std.} & \textbf{massimo} & \textbf{minimo} \\ \hline
+BP            & 1335                & 71,33                & 151,68              & 2597                & 10                  \\ \hline
+MF            & 186                 & 61,23                & 191,84              & 1806                & 10                  \\ \hline
+CC            & 221                 & 131,9                & 302,25              & 1924                & 10                  \\ \hline
+\end{tabular}
+\caption{\footnotesize{La colonna \emph{numero di termini} indica il numero di termini ottenuti dopo la selezione, \emph{media} la media delle annotazioni per classe, per l'ontologia di riferimento, \emph{d.std.} la deviazione standard delle annotazioni per l'ontologia di riferimento, \emph{massimo} e \emph{minimo} rispettivamente il massimo e minimo numero di annotazioni.}}
+\label{riduzioneann}
+\end{table}
 \end{tframe}
 
 \end{document}
