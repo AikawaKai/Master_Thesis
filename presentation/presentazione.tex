@@ -346,6 +346,51 @@ CC            & 221                 & 131,9                & 302,25             
 \end{itemize}
 \end{tframe}
 
+\begin{tframe}{Cross-validazione e metriche usate per la valutazione degli algoritmi}
+\begin{columns}
+
+    \begin{column}{.65\textwidth}
+      \minipage[c][0.4\textheight][s]{\columnwidth}
+	   \begin{itemize}	
+      		\onslide<1->
+	  		\item Per stimare le performance dei nostri predittori si è utilizzata la tecnica della \highlight{cross-validazione}, la quale permette di valutare l’errore di un algoritmo di apprendimento stimando l’errore medio dei predittori prodotti  dall’algoritmo. 
+	  		\onslide<2->
+	  		\item Come metriche si sono poi usate la:
+	  		\begin{enumerate}
+	  			\onslide<3->
+				\item \highlight{AUROC}: una misura di robustezza del classificatore,  che mette in relazione le misure di Recall e False Positive Rate, al variare di una soglia applicata all’output del modello.
+				\onslide<4->	  			
+				\item \highlight{AUPRC}: è una misura che mette in relazione la variazione di Precision al variare della Recall ed è utile nel caso di problemi sbilanciati. 
+				\onslide<5->
+	  			\item \highlight{F-Score gerarchica}: è una metrica centrata sui geni, massimizzata al variare di una soglia t in (0, 1). Tale misura si basa sulla Precisione e Recall centrate sui geni e non su le classi. Tale metrica è stata usata per il fit degli iperparametri dei metodi ensemble (soglia e pesi).
+	  		\end{enumerate}
+	  \end{itemize}
+      \endminipage      
+    \end{column}
+    
+    
+    \begin{column}{.35\textwidth}
+      % for top aligned images use minipage
+      \only<1-5>{
+        \minipage[c][0.4\textheight][s]{\columnwidth}
+        \onslide<1->    
+        \only<1-5>{
+          \begin{figure}
+            \centering
+            \includegraphics<1>[scale=0.3]{img/cross_val.png} %         
+            \includegraphics<3>[scale=0.14]{img/AUROC.png}%
+            \includegraphics<4>[scale=0.34]{img/AUPRC.png}
+            \includegraphics<5>[scale=0.27]{img/Fscore.png}
+        \end{figure}}
+       \endminipage
+      }   
+      % for vertically centered images use parbox
+    \end{column}
+
+
+\end{columns} 
+\end{tframe}
+
 \begin{tframe}{Stima preliminare dei tempi di calcolo degli algoritmi flat}
 \begin{figure}[hp!]
 \center

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  6 JUL 2018 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  6 JUL 2018 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2110,12 +2110,23 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [53
 
 ]
-<../images/BP_box_plot_times.png, id=509, 1203.2955pt x 508.7808pt>
-File: ../images/BP_box_plot_times.png Graphic file (type png)
-<use ../images/BP_box_plot_times.png>
-Package pdftex.def Info: ../images/BP_box_plot_times.png  used on input line 35
-7.
-(pdftex.def)             Requested size: 300.82314pt x 127.19489pt.
+Overfull \vbox (95.7825pt too high) detected at line 392
+ []
+
+<img/cross_val.png, id=510, 401.61472pt x 553.38171pt>
+File: img/cross_val.png Graphic file (type png)
+<use img/cross_val.png>
+Package pdftex.def Info: img/cross_val.png  used on input line 392.
+(pdftex.def)             Requested size: 120.48534pt x 166.0158pt.
+
+Overfull \hbox (9.58655pt too wide) in paragraph at lines 392--392
+ [] 
+ []
+
+
+Overfull \vbox (95.6983pt too high) detected at line 392
+ []
+
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
@@ -2128,6 +2139,125 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [54
 
+ <./img/cross_val.png>]
+Overfull \vbox (95.7825pt too high) detected at line 392
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 392
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[55
+
+]
+Overfull \vbox (95.7825pt too high) detected at line 392
+ []
+
+<img/AUROC.png, id=529, 753.81625pt x 570.13pt>
+File: img/AUROC.png Graphic file (type png)
+<use img/AUROC.png>
+Package pdftex.def Info: img/AUROC.png  used on input line 392.
+(pdftex.def)             Requested size: 105.53355pt x 79.81766pt.
+
+Underfull \vbox (badness 10000) detected at line 392
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[56
+
+ <./img/AUROC.png>]
+Overfull \vbox (95.7825pt too high) detected at line 392
+ []
+
+<img/AUPRC.png, id=539, 292.84406pt x 266.49562pt>
+File: img/AUPRC.png Graphic file (type png)
+<use img/AUPRC.png>
+Package pdftex.def Info: img/AUPRC.png  used on input line 392.
+(pdftex.def)             Requested size: 99.56566pt x 90.6073pt.
+
+Overfull \vbox (8.33981pt too high) detected at line 392
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[57
+
+ <./img/AUPRC.png>]
+Overfull \vbox (95.7825pt too high) detected at line 392
+ []
+
+<img/Fscore.png, id=549, 423.5825pt x 160.6pt>
+File: img/Fscore.png Graphic file (type png)
+<use img/Fscore.png>
+Package pdftex.def Info: img/Fscore.png  used on input line 392.
+(pdftex.def)             Requested size: 114.3688pt x 43.36256pt.
+
+Overfull \hbox (3.47002pt too wide) in paragraph at lines 392--392
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 392
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[58
+
+ <./img/Fscore.png>]
+<../images/BP_box_plot_times.png, id=559, 1203.2955pt x 508.7808pt>
+File: ../images/BP_box_plot_times.png Graphic file (type png)
+<use ../images/BP_box_plot_times.png>
+Package pdftex.def Info: ../images/BP_box_plot_times.png  used on input line 40
+2.
+(pdftex.def)             Requested size: 300.82314pt x 127.19489pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[59
+
  <../images/BP_box_plot_times.png>]
 \tf@nav=\write6
 \openout6 = `presentazione.nav'.
@@ -2138,26 +2268,22 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `presentazione.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
  (./presentazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 31041 strings out of 494871
- 609248 string characters out of 6179251
- 673410 words of memory out of 5000000
- 33683 multiletter control sequences out of 15000+600000
+ 31075 strings out of 494871
+ 609720 string characters out of 6179251
+ 677626 words of memory out of 5000000
+ 33703 multiletter control sequences out of 15000+600000
  543532 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 58i,18n,63p,10411b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,18n,63p,10411b,777s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
@@ -2172,10 +2298,10 @@ nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentazione.pdf (54 pages, 1280152 bytes).
+Output written on presentazione.pdf (59 pages, 1374841 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 476 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 649 PDF objects out of 1000 (max. 8388607)
+ 514 compressed objects within 6 object streams
+ 123 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
