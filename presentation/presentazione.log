@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  6 JUL 2018 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  6 JUL 2018 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1717,6 +1717,331 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [25
 
  <./img/4.png>]
+Overfull \vbox (1.13249pt too high) detected at line 161
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[26
+
+]
+Overfull \vbox (1.13249pt too high) detected at line 161
+ []
+
+<img/topdown.png, id=277, 513.92pt x 418.56375pt>
+File: img/topdown.png Graphic file (type png)
+<use img/topdown.png>
+Package pdftex.def Info: img/topdown.png  used on input line 161.
+(pdftex.def)             Requested size: 154.17719pt x 125.57008pt.
+
+Overfull \vbox (43.3026pt too high) detected at line 161
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[27
+
+ <./img/topdown.png>]
+Overfull \vbox (1.13249pt too high) detected at line 161
+ []
+
+<img/bottomup.png, id=287, 513.92pt x 418.56375pt>
+File: img/bottomup.png Graphic file (type png)
+<use img/bottomup.png>
+Package pdftex.def Info: img/bottomup.png  used on input line 161.
+(pdftex.def)             Requested size: 154.17719pt x 125.57008pt.
+
+Overfull \vbox (43.3026pt too high) detected at line 161
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[28
+
+ <./img/bottomup.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[29
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[30
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[31
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[32
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[33
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[34
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[35
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[36
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[37
+
+]
+<img/monotonic.png, id=373, 733.74126pt x 553.06625pt>
+File: img/monotonic.png Graphic file (type png)
+<use img/monotonic.png>
+Package pdftex.def Info: img/monotonic.png  used on input line 227.
+(pdftex.def)             Requested size: 220.12407pt x 165.92114pt.
+
+Overfull \vbox (23.08774pt too high) detected at line 227
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[38
+
+ <./img/monotonic.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[39
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[40
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[41
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[42
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[43
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 279.
+
+
+Overfull \vbox (23.55312pt too high) detected at line 279
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[44
+
+]
+Overfull \vbox (23.55312pt too high) detected at line 279
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[45
+
+]
+Overfull \vbox (23.55312pt too high) detected at line 279
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[46
+
+]
+Overfull \vbox (23.55312pt too high) detected at line 279
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[47
+
+]
 \tf@nav=\write6
 \openout6 = `presentazione.nav'.
 
@@ -1726,37 +2051,40 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `presentazione.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
  (./presentazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30850 strings out of 494871
- 606215 string characters out of 6179251
- 671001 words of memory out of 5000000
- 33558 multiletter control sequences out of 15000+600000
- 541245 words of font info for 60 fonts, out of 8000000 for 9000
+ 30988 strings out of 494871
+ 608341 string characters out of 6179251
+ 674253 words of memory out of 5000000
+ 33649 multiletter control sequences out of 15000+600000
+ 543532 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,18n,63p,10411b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy9.pfb>
-Output written on presentazione.pdf (25 pages, 1062697 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on presentazione.pdf (47 pages, 1233735 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 532 PDF objects out of 1000 (max. 8388607)
+ 419 compressed objects within 5 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -130,4 +130,152 @@ Dove $par(i)$ indica l'insieme dei termini genitori del nodo $i$ nella gerarchia
 \end{center}
 
 \end{tframe} 
+
+
+\begin{tframe}{Metodi Ensemble Gerarchici: Approcci}
+\begin{columns}
+    \begin{column}{.50\textwidth}
+      \minipage[c][0.4\textheight][s]{\columnwidth}
+      Esistono fondamentalmente due approcci per la correzione:
+	   \begin{itemize}
+	   \onslide<2->
+	  \item \highlight{Top-down}: le predizioni vengono corrette dai nodi più generali a quelli più specifici.
+	   \onslide<3->	  
+	  \item \highlight{Bottom-up}: Le predizioni vengono corrette dai nodi più specifici verso quelli più generali.
+      \end{itemize}
+      \endminipage 
+    \end{column}
+    %
+    \begin{column}{.50\textwidth}
+    \onslide<2-> 
+        \minipage[c][0.4\textheight][s]{\columnwidth}
+        \only<2-3>{
+          \begin{figure}
+            \centering
+            \includegraphics<2>[scale=0.3]{img/topdown.png}
+            \includegraphics<3>[scale=0.3]{img/bottomup.png}
+        \end{figure}}
+        \endminipage
+    \end{column}
+  \end{columns}
+\end{tframe}
+
+\begin{tframe}{Metodo Top-Down Gerarchico (HTD-DAG)}
+\begin{itemize}
+
+\onslide<1->
+\item È un metodo che utilizza l'approccio \emph{Top-Down}.
+\onslide<2->
+\item La correzione avviene ricorsivamente, percorrendo il grafo per \emph{livelli}\footnote{\footnotesize{Dove il livello è quello del cammino massimo dalla radice}}. Più precisamente, dato il grafo $G = (N, E)$, gli score flat $f(x) = \hat{y}$ sono corretti gerarchicamente a $\bar{y}$, applicando la seguente regola:
+\begin{block}{Aggiornamento con HTD-DAG}
+\[
+\bar{y}_i := 
+\begin{cases}
+\hat{y}_i \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; if\;\; i \in root(G)\\
+min_{j \in par(i)} \bar{y}_j \;\;\;\; if \;\; min_{j \in par(i)}\bar{y}_j < \hat{y}_i\\
+\hat{y}_i \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; altrimenti
+\end{cases}
+\]
+\end{block}
+Dove $par(i)$ specifica i genitori del nodo $i$.
+\end{itemize} 
+\end{tframe}
+
+\begin{tframe}{Metodo True Path Rule per DAG (TPR-DAG)}
+\begin{itemize}
+\onslide<1->
+\item È un metodo che combina gli approcci top-down e bottom-up per la correzione delle predizioni flat. 
+\onslide<2->
+\item È suddiviso in due step sequenziali:
+\begin{enumerate}
+\onslide<3->
+\item \highlightbf{Step bottom-up}: che partendo dai nodi più specifici del DAG, propaga quelle predizioni flat che sono considerate \highlight{positive}.
+\onslide<4->
+\item \highlightbf{Step top-down}: È il medesimo step utilizzato dal metodo HTD-DAG.
+\end{enumerate}
+\onslide<5->
+\item Lo step top down si rende necessario in quanto la propagazione delle predizioni positive dal basso verso l’alto non garantisce la consistenza delle predizioni necessarie alla True Path Rule. 
+\onslide<6->
+\item La selezione dei nodi considerati \emph{positivi} può avvenire in diverse maniere: con \highlight{soglia adattiva}, \highlight{senza soglia} e con \highlight{soglia fissa}.
+\end{itemize}
+\end{tframe}
+
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/4)}
+\begin{itemize}
+\onslide<1->
+\item Per il passo Top-Down dell’algoritmo TPR-DAG (e HTD) è possibile sfruttare gli algoritmi per la risoluzione dei problemi di \highlightbf{Isotonic Regression}:
+\begin{block}{Isotonic Regression (caso generale con ordinamento parziale)}
+Dato un DAG, $G(N, E)$, con il set di nodi $N = \{1, 2, ..., n\}$, si deve trovare il vettore $x^{*}\in R^{n}$ tale che:
+\[
+min \sum_{i=1}^{n} w_i (x_i - a_i)^2
+\]
+\begin{center}
+such that $x_i \le x_j$ $\forall (i,j) \in E $ 
+\end{center}
+\end{block} 
+
+\end{itemize}
+\end{tframe}
+
+
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/4)}
+Esempio di Isotonic Regression con \emph{ordinamento totale}:
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{img/monotonic.png}
+\end{figure}
+\end{tframe}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (3/4)}
+Funzionamento Generale:
+\begin{itemize}
+\onslide<2->
+\item Per far funzionare l'algoritmo è necessario effettuare un \highlight{ordinamento topologico} del grafo.
+\onslide<3->
+\item L’algoritmo genera uno split del set di nodi $N$ del DAG, in un insieme di \highlight{blocchi disgiunti definiti da $H$} (inizialmente $H = N$).
+\onslide<4->
+\item Seguendo l'ordinamento topologico del grafo, un blocco \highlight{assorbe} un suo blocco \emph{predecessore} se si verificano determinate condizioni.
+\onslide<5->
+\item I nodi presenti nel medesimo blocco $B_i$ \highlight{condividono il medesimo valore} $x_i$, e quindi a seguito dell'assorbimento sarà necessario un aggiornamento di tale valore.
+\end{itemize}
+\end{tframe}
+
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV e ISO-TPR) (4/4)}
+\onslide<1->
+\begin{center}
+\scalebox{0.70}{
+    \begin{minipage}{0.9\linewidth}
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+\Procedure{GPAV}{}
+\State $ H = N $
+\For{(each $i \in N$)}
+\State $B_i = \{i\}$ 
+\State $B_i^{-} = i^{-}$
+\State $x_i = \hat{y}_i$
+\State $W_i = w_i$
+\EndFor
+\For{$k = 1, 2, ..., n$}
+\State \footnotesize{\emph{//finché esiste un predecessore di $B_{k}$ che viola la monotonicità}}
+\While{$\{i \in B_k^{-}: x_i > x_k\}\neq 0$} 
+\State \footnotesize{\emph{// Trova l'elemento che viola maggiormente il vincolo}}
+\State \textbf{Find} $j \in B_k^{-}: x_j = max\{x_i : i \in B_k^{-}\}$ 
+\State \textbf{Absorb(k, j)} \emph{// $j$ viene assorbito da $B_k$}
+\EndWhile
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\caption{GPAV}
+\end{algorithm}
+\end{minipage}}
+\end{center}
+\begin{itemize}
+\onslide<2->
+\item Riassumendo, l’algoritmo effettua degli assorbimenti di blocchi adiacenti, finché questi violano i vincoli del problema quadratico, generando di fatto una partizione dei nodi, in cui le parti condividono lo stesso valore.
+\onslide<3->
+\item L'algoritmo GPAV ha una complessità pari a $O(n^2)$.
+\onslide<4->
+\item Sostituendo GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo \highlightbf{ISO-TPR}.
+\end{itemize}
+\end{tframe}
+
 \end{document}
