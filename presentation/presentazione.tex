@@ -277,4 +277,33 @@ Funzionamento Generale:
 \end{itemize}
 \end{tframe}
 
+\begin{tframe}{Predizione della funzione delle proteine in C.elegans (WORM)}
+\begin{itemize}
+\onslide<1->
+\item Si è eseguita la sperimentazione sul genoma della specie
+\highlight{Caenorhabditis elegans} (WORM), utilizzando come insieme delle  istanze e input del problema una matrice simmetrica generata dal network di interazione proteina-proteina \highlight{STRING}\footnote{\footnotesize{Search Tool for the Retrieval of Interacting Genes/Proteins}}.
+\onslide<2->
+\item Tale matrice STRING ha dimensione 15752×15752 (WORM). Il nostro problema ha quindi 15752 istanze.
+\onslide<3->
+\item Per le classi funzionali/termini e annotazioni, queste cambiano in base al DAG di riferimento:
+
+\begin{table}[h]
+\centering
+\resizebox{.5\textwidth}{!}{
+\begin{tabular}{|l|l|l|}
+\hline
+      \textbf{ ontologia} & \textbf{numero di termini} & \textbf{numero di archi} \\ \hline
+BP & 4068  &  8066   \\ 
+\hline
+MF  & 1163  & 1567   \\ 
+\hline
+CC  & 578  & 1082     \\ 
+\hline
+\end{tabular}}
+
+\label{DAG_desc}
+\end{table}
+\end{itemize}
+\end{tframe}
+
 \end{document}
