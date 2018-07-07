@@ -377,7 +377,7 @@ CC            & 221                 & 131,9                & 302,25             
         \only<1-5>{
           \begin{figure}
             \centering
-            \includegraphics<1>[scale=0.3]{img/cross_val.png} %         
+            \includegraphics<1>[scale=0.16]{img/cross10fold.png} %         
             \includegraphics<3>[scale=0.14]{img/AUROC.png}%
             \includegraphics<4>[scale=0.34]{img/AUPRC.png}
             \includegraphics<5>[scale=0.27]{img/Fscore.png}
@@ -392,6 +392,10 @@ CC            & 221                 & 131,9                & 302,25             
 \end{tframe}
 
 \begin{tframe}{Stima preliminare dei tempi di calcolo degli algoritmi flat}
+
+\begin{center}
+Cross-validation 10 fold - No tuning - Campione 10 classi
+\end{center}
 \begin{figure}[hp!]
 \center
 \includegraphics[scale=0.25]{../images/BP_box_plot_times.png}
@@ -401,4 +405,54 @@ CC            & 221                 & 131,9                & 302,25             
 \end{figure}
 \end{tframe}
 
+\begin{tframe}{Riduzione della complessità del problema}
+
+\begin{columns}
+    \begin{column}{.60\textwidth}
+      \minipage[c][0.4\textheight][s]{\columnwidth}
+		\begin{itemize}
+			\onslide<1->
+				\item Si è prima di tutto ridotto il numero di fold da 10 a 5 nella cross-validation
+			\onslide<2->
+				\item Si sono provati due metodi di riduzione della dimensionalità:
+				\begin{enumerate}
+				\onslide<3->
+					\item \highlightbf{Selezione delle feature con Correlazione di Pearson} (FS).
+				\onslide<4->
+					\item \highlightbf{Selezione delle componenti con la Principal Component Analysis} (PCA)
+				\end{enumerate}
+		\onslide<5->
+		\item Sempre facendo una stima sul medesimo campione di 10 classi, si sono testate:
+		\begin{enumerate}
+		\item configurazioni per la FS per le prime 1000, 500 e 100 feature nel ranking ottenuto (a destra BoxPlot per le prime 100 feature selezionate) 
+		\onslide<6->
+		\item configurazioni per la PCA, per le componenti che selezionano rispettivamente il 90\%, il 70\% e il 50\% della varianza spiegata (a destra BoxPlot per le prime 15 componenti = 50\% varianza spiegata)
+		\end{enumerate}
+		\end{itemize}	
+	 \endminipage
+	\end{column}
+	
+	\begin{column}{.40\textwidth}
+      % for top aligned images use minipage
+      \only<1-6>{
+        \minipage[c][0.4\textheight][s]{\columnwidth}
+        \onslide<1->    
+        \only<1-6>{
+          \begin{figure}
+            \centering
+            \includegraphics<1>[scale=0.26]{img/cross_val.png} %         
+            \includegraphics<3>[scale=0.3]{img/Pearson.png}%
+            \includegraphics<4>[scale=0.18]{img/PCA.png}
+            \includegraphics<5>[scale=0.12]{../images/FS_BP_times.png}
+            \includegraphics<5>[scale=0.12]{../images/FS_BP_auroc.png}
+            \includegraphics<5>[scale=0.12]{../images/FS_BP_auprc.png}
+            \includegraphics<6>[scale=0.12]{../images/PCA_BP_times.png}
+            \includegraphics<6>[scale=0.12]{../images/PCA_BP_auroc.png}
+            \includegraphics<6>[scale=0.12]{../images/PCA_BP_auprc.png}
+        \end{figure}}
+       \endminipage
+      }  
+      \end{column} 
+\end{columns}
+\end{tframe}
 \end{document}

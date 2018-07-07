@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  6 JUL 2018 18:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  7 JUL 2018 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2113,18 +2113,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Overfull \vbox (95.7825pt too high) detected at line 392
  []
 
-<img/cross_val.png, id=510, 401.61472pt x 553.38171pt>
-File: img/cross_val.png Graphic file (type png)
-<use img/cross_val.png>
-Package pdftex.def Info: img/cross_val.png  used on input line 392.
-(pdftex.def)             Requested size: 120.48534pt x 166.0158pt.
+<img/cross10fold.png, id=510, 710.655pt x 680.5425pt>
+File: img/cross10fold.png Graphic file (type png)
+<use img/cross10fold.png>
+Package pdftex.def Info: img/cross10fold.png  used on input line 392.
+(pdftex.def)             Requested size: 113.70712pt x 108.88902pt.
 
-Overfull \hbox (9.58655pt too wide) in paragraph at lines 392--392
+Overfull \hbox (2.80833pt too wide) in paragraph at lines 392--392
  [] 
  []
 
 
-Overfull \vbox (95.6983pt too high) detected at line 392
+Overfull \vbox (38.57153pt too high) detected at line 392
  []
 
 
@@ -2139,7 +2139,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [54
 
- <./img/cross_val.png>]
+ <./img/cross10fold.png (PNG copy)>]
 Overfull \vbox (95.7825pt too high) detected at line 392
  []
 
@@ -2163,7 +2163,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Overfull \vbox (95.7825pt too high) detected at line 392
  []
 
-<img/AUROC.png, id=529, 753.81625pt x 570.13pt>
+<img/AUROC.png, id=528, 753.81625pt x 570.13pt>
 File: img/AUROC.png Graphic file (type png)
 <use img/AUROC.png>
 Package pdftex.def Info: img/AUROC.png  used on input line 392.
@@ -2188,7 +2188,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Overfull \vbox (95.7825pt too high) detected at line 392
  []
 
-<img/AUPRC.png, id=539, 292.84406pt x 266.49562pt>
+<img/AUPRC.png, id=538, 292.84406pt x 266.49562pt>
 File: img/AUPRC.png Graphic file (type png)
 <use img/AUPRC.png>
 Package pdftex.def Info: img/AUPRC.png  used on input line 392.
@@ -2213,7 +2213,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Overfull \vbox (95.7825pt too high) detected at line 392
  []
 
-<img/Fscore.png, id=549, 423.5825pt x 160.6pt>
+<img/Fscore.png, id=548, 423.5825pt x 160.6pt>
 File: img/Fscore.png Graphic file (type png)
 <use img/Fscore.png>
 Package pdftex.def Info: img/Fscore.png  used on input line 392.
@@ -2240,12 +2240,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [58
 
  <./img/Fscore.png>]
-<../images/BP_box_plot_times.png, id=559, 1203.2955pt x 508.7808pt>
+<../images/BP_box_plot_times.png, id=558, 1203.2955pt x 508.7808pt>
 File: ../images/BP_box_plot_times.png Graphic file (type png)
 <use ../images/BP_box_plot_times.png>
 Package pdftex.def Info: ../images/BP_box_plot_times.png  used on input line 40
-2.
+6.
 (pdftex.def)             Requested size: 300.82314pt x 127.19489pt.
+
+Overfull \vbox (19.72258pt too high) detected at line 406
+ []
+
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
@@ -2259,6 +2263,203 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [59
 
  <../images/BP_box_plot_times.png>]
+Overfull \vbox (89.93251pt too high) detected at line 457
+ []
+
+<img/cross_val.png, id=569, 401.61472pt x 553.38171pt>
+File: img/cross_val.png Graphic file (type png)
+<use img/cross_val.png>
+Package pdftex.def Info: img/cross_val.png  used on input line 457.
+(pdftex.def)             Requested size: 104.41736pt x 143.87584pt.
+
+Overfull \vbox (61.60835pt too high) detected at line 457
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[60
+
+ <./img/cross_val.png>]
+Overfull \vbox (89.93251pt too high) detected at line 457
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 457
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[61
+
+]
+Overfull \vbox (89.93251pt too high) detected at line 457
+ []
+
+<img/Pearson.png, id=588, 289.08pt x 97.36375pt>
+File: img/Pearson.png Graphic file (type png)
+<use img/Pearson.png>
+Package pdftex.def Info: img/Pearson.png  used on input line 457.
+(pdftex.def)             Requested size: 86.72466pt x 29.20934pt.
+
+Underfull \vbox (badness 10000) detected at line 457
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[62
+
+ <./img/Pearson.png>]
+Overfull \vbox (89.93251pt too high) detected at line 457
+ []
+
+<img/PCA.png, id=598, 372.9132pt x 680.7834pt>
+File: img/PCA.png Graphic file (type png)
+<use img/PCA.png>
+Package pdftex.def Info: img/PCA.png  used on input line 457.
+(pdftex.def)             Requested size: 67.12148pt x 122.53572pt.
+
+Overfull \vbox (40.26823pt too high) detected at line 457
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[63
+
+ <./img/PCA.png (PNG copy)>]
+Overfull \vbox (89.93251pt too high) detected at line 457
+ []
+
+<../images/FS_BP_times.png, id=607, 1156.32pt x 361.35pt>
+File: ../images/FS_BP_times.png Graphic file (type png)
+<use ../images/FS_BP_times.png>
+Package pdftex.def Info: ../images/FS_BP_times.png  used on input line 457.
+(pdftex.def)             Requested size: 138.75241pt x 43.36012pt.
+<../images/FS_BP_auroc.png, id=608, 1156.32pt x 361.35pt>
+File: ../images/FS_BP_auroc.png Graphic file (type png)
+<use ../images/FS_BP_auroc.png>
+Package pdftex.def Info: ../images/FS_BP_auroc.png  used on input line 457.
+(pdftex.def)             Requested size: 138.75241pt x 43.36012pt.
+<../images/FS_BP_auprc.png, id=609, 1156.32pt x 361.35pt>
+File: ../images/FS_BP_auprc.png Graphic file (type png)
+<use ../images/FS_BP_auprc.png>
+Package pdftex.def Info: ../images/FS_BP_auprc.png  used on input line 457.
+(pdftex.def)             Requested size: 138.75241pt x 43.36012pt.
+
+Overfull \hbox (12.01508pt too wide) in paragraph at lines 457--457
+ [] 
+ []
+
+
+Overfull \hbox (12.01508pt too wide) in paragraph at lines 457--457
+ [] 
+ []
+
+
+Overfull \hbox (12.01508pt too wide) in paragraph at lines 457--457
+ [] 
+ []
+
+
+Overfull \vbox (61.76288pt too high) detected at line 457
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[64
+
+ <../images/FS_BP_times.png> <../images/FS_BP_auroc.png> <../images/FS_BP_auprc
+.png>]
+Overfull \vbox (89.93251pt too high) detected at line 457
+ []
+
+<../images/PCA_BP_times.png, id=621, 1156.32pt x 361.35pt>
+File: ../images/PCA_BP_times.png Graphic file (type png)
+<use ../images/PCA_BP_times.png>
+Package pdftex.def Info: ../images/PCA_BP_times.png  used on input line 457.
+(pdftex.def)             Requested size: 138.75241pt x 43.36012pt.
+<../images/PCA_BP_auroc.png, id=622, 1156.32pt x 361.35pt>
+File: ../images/PCA_BP_auroc.png Graphic file (type png)
+<use ../images/PCA_BP_auroc.png>
+Package pdftex.def Info: ../images/PCA_BP_auroc.png  used on input line 457.
+(pdftex.def)             Requested size: 138.75241pt x 43.36012pt.
+<../images/PCA_BP_auprc.png, id=623, 1156.32pt x 361.35pt>
+File: ../images/PCA_BP_auprc.png Graphic file (type png)
+<use ../images/PCA_BP_auprc.png>
+Package pdftex.def Info: ../images/PCA_BP_auprc.png  used on input line 457.
+(pdftex.def)             Requested size: 138.75241pt x 43.36012pt.
+
+Overfull \hbox (12.01508pt too wide) in paragraph at lines 457--457
+ [] 
+ []
+
+
+Overfull \hbox (12.01508pt too wide) in paragraph at lines 457--457
+ [] 
+ []
+
+
+Overfull \hbox (12.01508pt too wide) in paragraph at lines 457--457
+ [] 
+ []
+
+
+Overfull \vbox (50.81288pt too high) detected at line 457
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[65
+
+ <../images/PCA_BP_times.png> <../images/PCA_BP_auroc.png> <../images/PCA_BP_au
+prc.png>]
 \tf@nav=\write6
 \openout6 = `presentazione.nav'.
 
@@ -2268,22 +2469,22 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `presentazione.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 458.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
  (./presentazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31075 strings out of 494871
- 609720 string characters out of 6179251
- 677626 words of memory out of 5000000
- 33703 multiletter control sequences out of 15000+600000
+ 31135 strings out of 494871
+ 610956 string characters out of 6179251
+ 679216 words of memory out of 5000000
+ 33742 multiletter control sequences out of 15000+600000
  543532 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 58i,18n,63p,10411b,777s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,18n,63p,10411b,789s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
@@ -2298,10 +2499,10 @@ nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentazione.pdf (59 pages, 1374841 bytes).
+Output written on presentazione.pdf (65 pages, 1693268 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 514 compressed objects within 6 object streams
- 123 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 716 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
+ 135 named destinations out of 1000 (max. 500000)
+ 252 words of extra memory for PDF output out of 10000 (max. 10000000)
 
