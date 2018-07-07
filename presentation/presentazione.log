@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  7 JUL 2018 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.30)  7 JUL 2018 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2460,6 +2460,96 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
  <../images/PCA_BP_times.png> <../images/PCA_BP_auroc.png> <../images/PCA_BP_au
 prc.png>]
+Overfull \vbox (7.96655pt too high) detected at line 480
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[66
+
+]
+Overfull \vbox (7.96655pt too high) detected at line 480
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[67
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[68
+
+]
+<../images/FS_vs_PCA_BP_AUROC.png, id=660, 1156.32pt x 361.35pt>
+File: ../images/FS_vs_PCA_BP_AUROC.png Graphic file (type png)
+<use ../images/FS_vs_PCA_BP_AUROC.png>
+Package pdftex.def Info: ../images/FS_vs_PCA_BP_AUROC.png  used on input line 4
+92.
+(pdftex.def)             Requested size: 323.7674pt x 101.1773pt.
+
+Overfull \vbox (13.09389pt too high) detected at line 492
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[69
+
+ <../images/FS_vs_PCA_BP_AUROC.png>]
+<../images/FS_vs_PCA_BP_AUPRC.png, id=670, 1156.32pt x 361.35pt>
+File: ../images/FS_vs_PCA_BP_AUPRC.png Graphic file (type png)
+<use ../images/FS_vs_PCA_BP_AUPRC.png>
+Package pdftex.def Info: ../images/FS_vs_PCA_BP_AUPRC.png  used on input line 4
+92.
+(pdftex.def)             Requested size: 323.7674pt x 101.1773pt.
+
+Overfull \vbox (13.09389pt too high) detected at line 492
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[70
+
+ <../images/FS_vs_PCA_BP_AUPRC.png>]
 \tf@nav=\write6
 \openout6 = `presentazione.nav'.
 
@@ -2469,19 +2559,19 @@ prc.png>]
 \tf@snm=\write8
 \openout8 = `presentazione.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 458.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 493.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 493.
  (./presentazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 493.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 493.
 Package rerunfilecheck Info: File `presentazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31135 strings out of 494871
- 610956 string characters out of 6179251
- 679216 words of memory out of 5000000
- 33742 multiletter control sequences out of 15000+600000
+ 31159 strings out of 494871
+ 611421 string characters out of 6179251
+ 679288 words of memory out of 5000000
+ 33754 multiletter control sequences out of 15000+600000
  543532 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,18n,63p,10411b,789s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2499,10 +2589,10 @@ nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on presentazione.pdf (65 pages, 1693268 bytes).
+Output written on presentazione.pdf (70 pages, 1820242 bytes).
 PDF statistics:
- 716 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
- 135 named destinations out of 1000 (max. 500000)
- 252 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 764 PDF objects out of 1000 (max. 8388607)
+ 598 compressed objects within 6 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 

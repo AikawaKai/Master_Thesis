@@ -455,4 +455,39 @@ Cross-validation 10 fold - No tuning - Campione 10 classi
       \end{column} 
 \end{columns}
 \end{tframe}
+
+\begin{tframe}{Organizzazione degli esperimenti}
+\onslide<1->
+Data l'analisi precedente effettuata sugli algoritmi di apprendimento flat (su di un campione di 10 classi), si è deciso per queste due tipologie di configurazioni: 
+
+\begin{itemize}
+\item \highlightbf{cross-validation 5 fold + Selezione delle prime 100 feature con Correlazione di Pearson}.
+\item \highlightbf{cross-validation 5 fold + Selezione delle prime 15 componenti della PCA}.
+\end{itemize} 
+Le quali hanno evidenziato un buon compromesso tra tempi di esecuzione e performance.  
+\newline
+\newline
+\onslide<2->
+Per quanto riguarda i metodi ensemble gerarchici, si sono utilizzati i seguenti metodi:
+
+\begin{enumerate}
+\item \highlightbf{HTD-DAG} 
+\item \highlightbf{GPAV}
+\item \highlightbf{TPR-DAG} (con variante senza soglia, con soglia adattiva, con pesi nell'aggiornamento)
+\item \highlightbf{ISO-TPR} (con variante senza soglia, con soglia adattiva)
+\end{enumerate}
+
+\end{tframe}
+
+\begin{tframe}{Performance degli algoritmi flat con FS e PCA}
+La generazione di tutti gli score flat, per entrambi i metodi di riduzione della complessità, ha evidenziato delle performance generalmente migliori per la selezione delle feature effettuta con la correlazione di Pearson (Test dei ranghi con segno di Wilcoxon, con significatività $\alpha = 0.01$). Le performance migliori sono probabilmente da ricondurre al fatto che il tipo di riduzione per la correlazione è \emph{supervisionato} a differenza della PCA.
+
+\begin{figure}[h!]
+\centering
+\hspace*{-0.3in}
+\includegraphics<2>[scale=0.28]{../images/FS_vs_PCA_BP_AUROC.png}
+\includegraphics<3>[scale=0.28]{../images/FS_vs_PCA_BP_AUPRC.png}
+\end{figure}
+
+\end{tframe}
 \end{document}
