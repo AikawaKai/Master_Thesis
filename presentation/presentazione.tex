@@ -31,13 +31,13 @@
       \onslide<1->
 	  \item Identificare la funzione delle proteine attraverso le analisi di laboratorio è \highlightbf{costosa} e richiede \highlightbf{molto tempo}
 	  \onslide<2->
-	  \item Esistono centinaia di funzioni a cui poter associare un gene/proteina, anche contemporaneamente \highlightbf{(problema multiclasse e multietichetta)}
+	  \item Esistono migliaia di funzioni a cui poter associare un gene/proteina, anche contemporaneamente \highlightbf{(problema multiclasse e multietichetta)}
       \onslide<3->
 	  \item Il quantitativo di dati genomici cresce molto rapidamente.
       \onslide<4->
-	  \item La \highlightbf{classificazione manuale} delle proteine è quindi infattibile. È necessario quindi un approccio \highlightbf{automatico}.
+      \item Le classi che rappresentano le diverse funzioni delle proteine \highlightbf{non sono indipendenti}.
 	  \onslide<5->
-	  \item A complicare ulteriormente il problema è il modo in cui sono \emph{relazionate} tra loro le funzioni delle proteine.
+	  \item La \highlightbf{classificazione manuale} delle proteine è quindi infattibile. È necessario quindi un approccio \highlightbf{automatico}.
 	  \end{itemize}
       \endminipage      
     \end{column}
@@ -66,13 +66,13 @@
 \begin{tframe}{Tassonomie per le funzioni delle proteine}
 \begin{itemize}
 \onslide<1->
-\item Esistono infatti due tassonomie principali per l'organizzazione delle funzioni:
+\item Esistono due tassonomie principali per l'organizzazione delle funzioni:
 \begin{itemize}
 
 \onslide<2->
-\item \highlightbf{Gene Ontology} (GO):  che organizza le funzioni come un grafo diretto aciclico (DAG), varia per ogni specie, e possiede tre ontologie differenti (e quindi 3 DAG), e cioè \highlight{Biological Process} (BP), \highlight{Molecular Function} (MF) e \highlight{Cellular Component} (CC). 
+\item \highlightbf{Gene Ontology} (GO): organizza le funzioni come un grafo diretto aciclico (DAG), ed è articolata in tre ontologie differenti: \highlight{Biological Process} (BP), \highlight{Molecular Function} (MF) e \highlight{Cellular Component} (CC). 
 \onslide<3->
-\item \highlightbf{Functional Catalogue} (FunCat): che è organizzato invece come un albero, non varia in base alle specie, e descrive le funzioni in maniera più sintetica rispetto alla Gene Ontology.
+\item \highlightbf{Functional Catalogue} (FunCat): è organizzato invece come un albero, e descrive le funzioni in maniera più sintetica rispetto alla Gene Ontology.
 \end{itemize}
 \onslide<4->
 \begin{figure}[h]
@@ -82,22 +82,24 @@
 \label{DAGTREE}
 \end{figure}
 \onslide<5->
-\item Data la granularità e specificità superiori della GO e il suo largo utilizzo nella comunità scientifica, all’interno della tesi ci si è soffermati sulla predizione delle sue funzioni.
+\item Data la granularità e specificità superiori della GO e il suo largo utilizzo nella comunità scientifica, nella tesi si è utilizzata tale ontologia.
 \end{itemize}  
 \end{tframe}
 
 \begin{tframe}{La predizione della funzione delle proteine tramite metodi automatici}
-I metodi più noti in letteratura per effettuare predizioni della funzione delle proteine in maniera automatica sono:
+Schematicamente i metodi per effettuare predizioni della funzione delle proteine in maniera automatica si possono classificare in:
 
 \begin{itemize}
 \onslide<2->
-\item I metodi basati sulla \highlightbf{comparazione di biosequenze}: si basano sull'idea che sequenze simili condividano funzioni simili.
+\item Metodi basati sulla \highlightbf{comparazione di biosequenze}: si basano sull'idea che sequenze simili condividano funzioni simili.
 \onslide<3->
-\item I metodi \highlightbf{basati su reti}: sono metodi applicati a dati rappresentati sotto forma di reti, che si basano sugli algoritmi di propagazione delle etichette.
+\item Metodi \highlightbf{basati su reti}: sono metodi applicati a dati rappresentati sotto forma di reti, che si basano sugli algoritmi di propagazione delle etichette.
 \onslide<4->
-\item I metodi \highlightbf{Kernel per spazi di output strutturato}: sono metodi che sfruttano funzioni kernel congiunte per predire in spazi di output strutturato.
+\item Metodi \highlightbf{flat supervisionati} (es. basati su metodi di apprendimento supervisionato).
 \onslide<5->
-\item I metodi \highlightbf{Ensemble Gerarchici}: i metodi trattati in questa tesi.
+\item Metodi \highlightbf{Kernel per spazi di output strutturato}: sono metodi che sfruttano funzioni kernel congiunte per predire in spazi di output strutturato.
+\onslide<6->
+\item Metodi \highlightbf{Ensemble Gerarchici}: i metodi trattati in questa tesi.
 \end{itemize}
 
 \end{tframe}
@@ -344,7 +346,7 @@ CC            & 221                 & 131,9                & 302,25             
 \item \emph{Glmnet}}
 \end{enumerate}
 \onslide<2->
-\item Dato l'elevato numero di algoritmi selezionati per la sperimentazione, si è deciso di non effettuare il tuning dei parametri, questo per evitare di allungare ulteriorimente i tempi dell'intero processo di valutazione e generazione degli score flat.
+\item Dato l'elevato numero di algoritmi selezionati per la sperimentazione, si è deciso di \highlight{non effettuare il tuning dei parametri}, questo per evitare di allungare ulteriorimente i tempi dell'intero processo di valutazione e generazione degli score flat.
 \end{itemize}
 \end{tframe}
 
@@ -621,4 +623,57 @@ CC&\footnotesize{0.25$\pm$0.0116}&\footnotesize{0.2305$\pm$0.0118}& \textbf{\foo
 \label{BP_AUC_1}
 \end{figure}}
 \end{tframe}
+
+\begin{tframe}{Confronto tra metodi ensemble}
+\only<1>{
+\highlightbf{AUPRC (arancio) AUROC(Blu) FS (36 punti = 12 algo * 3 onto)}
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{../images/scatterplot_FS.png}
+\end{figure}
+}
+\only<2>{
+\highlightbf{AUPRC (arancio) AUROC(Blu) PCA (36 punti = 12 algo * 3 onto)}
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{../images/scatterplot_PCA.png}
+\end{figure}
+}
+\end{tframe}
+\begin{tframe}{Conclusioni}
+\begin{itemize}
+\onslide<1->
+\item I metodi ensemble gerarchici riescono ad apportare miglioramenti statisticamente significativi alle performance dei predittori flat a patto di avere delle predizioni di partenza sufficientemente accurate.
+\onslide<2->
+\item La FS con correlazione di Pearson richiede tempi decisamente più lunghi della selezione con PCA, ma determina un vantaggio statisticamente significativo a livello di performance rispetto a quest’ultima (sia flat che ensemble).
+\onslide<3->
+\item Il tuning degli algoritmi flat svolge un ruolo importante. Alcuni algoritmi hanno prodotto predittori flat scadenti, che non hanno consentito ai metodi di ensemble gerarchici di migliorare le performance (es. glmnet).
+\onslide<4->
+\item I nuovi metodi ensemble gerarchici introdotti in questa tesi (GPAV e ISO-TPR), si sono dimostrati competitivi rispetto ai metodi ensemble gerarchici allo stato dell’arte, e in alcuni contesti (FS) hanno prodotto risultati significativamente migliori rispetto agli algoritmi noti.
+\end{itemize}
+\end{tframe}
+\begin{tframe}{Lavori futuri}
+\begin{itemize}
+\onslide<1->
+\item Ampliare il numero di specie su cui effettuare l’analisi.
+\onslide<2->
+\item Effettuare un tuning più accurato degli algoritmi di machine learning selezionati, tenendo in considerazione che le classi dell’output strutturato sono
+spesso sbilanciate all’interno dei dataset per la GO.
+\onslide<3->
+\item Introdurre nuove tecniche di riduzione della dimensionalità, sia per ridurre i tempi di calcolo (complessità) che per migliorare i risultati dei classificatori base (performance).
+\onslide<4->
+\item Utilizzare altre tipologie di selezione dei figli per lo step bottom-up della True Path Rule, in combinazione e non (a esempio effettuando una selezione
+dei figli pesata con soglia adattiva).
+\onslide<5->
+\item Analizzare in maniera più approfondita le performance, ad esempio in relazione ad altre metriche, come la F-score gerarchica.
+\onslide<6->
+\item Confrontare i metodi ensemble con i diversi metodi per la predizione su
+output strutturati, come ad esempio i metodi Kernel o i metodi basati su
+reti.
+\end{itemize}
+\end{tframe}
+\begin{frame}{}
+  \centering \Large
+  \emph{\highlight{Grazie!}\\Domande?}
+\end{frame}
 \end{document}
