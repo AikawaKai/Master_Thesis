@@ -168,7 +168,7 @@ Dove $par(i)$ indica l'insieme dei termini genitori del nodo $i$ nella gerarchia
 \begin{itemize}
 
 \onslide<1->
-\item È un metodo che utilizza l'approccio \emph{Top-Down}.
+\item È un metodo che utilizza l'approccio \emph{Top-Down} [\emph{Notaro et al., 2017}].
 \onslide<2->
 \item La correzione avviene ricorsivamente, percorrendo il grafo per \emph{livelli}\footnote{\footnotesize{Dove il livello è quello del cammino massimo dalla radice}}. Più precisamente, dato il grafo $G = (N, E)$, gli score flat $f(x) = \hat{y}$ sono corretti gerarchicamente a $\bar{y}$, applicando la seguente regola:
 \begin{block}{Aggiornamento con HTD-DAG}
@@ -204,10 +204,10 @@ Dove $par(i)$ specifica i genitori del nodo $i$.
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/4)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (1/5)}
 \begin{itemize}
 \onslide<1->
-\item Per il passo Top-Down dell’algoritmo TPR-DAG (e HTD) è stato sviluppato un nuovo metodo all'interno di questa tesi, e cioè \highlightbf{Generalized Pool Adjacent Violator} (GPAV), un algoritmo che permette di risolvere i problemi di \highlightbf{Isotonic Regression}, definiti come:
+\item Per il passo Top-Down dell’algoritmo TPR-DAG (e HTD) è stato sviluppato un nuovo metodo all'interno di questa tesi, e cioè \highlightbf{Generalized Pool Adjacent Violator} (GPAV) [\emph{Burdakov et al., 2006}], un algoritmo che permette di risolvere i problemi di \highlightbf{Isotonic Regression}, definiti come:
 \begin{block}{Isotonic Regression (caso generale con ordinamento parziale)}
 Dato un DAG, $G(N, E)$, con il set di nodi $N = \{1, 2, ..., n\}$, si deve trovare il vettore $x^{*}\in R^{n}$ tale che:
 \[
@@ -223,36 +223,39 @@ such that $x_i \le x_j$ $\forall (i,j) \in E $
 \end{tframe}
 
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/4)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (2/5)}
 Esempio di Isotonic Regression con \emph{ordinamento totale}:
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{img/monotonic.png}
 \end{figure}
 \end{tframe}
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (3/4)}
-Funzionamento Generale:
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV) (3/5)}
 \begin{itemize}
+\onslide<1->
+\item L'algoritmo richiede un \highlight{ordinamento topologico} del grafo.
 \onslide<2->
-\item Per far funzionare l'algoritmo è necessario effettuare un \highlight{ordinamento topologico} del grafo.
+\item L’algoritmo genera uno split del set di nodi $N$ del DAG, in un insieme di \highlight{blocchi disgiunti} (inizialmente il numero di blocchi è uguale a $|N|$).
 \onslide<3->
-\item L’algoritmo genera uno split del set di nodi $N$ del DAG, in un insieme di \highlight{blocchi disgiunti definiti da $H$} (inizialmente $H = N$).
-\onslide<4->
 \item Seguendo l'ordinamento topologico del grafo, un blocco \highlight{assorbe} un suo blocco \emph{predecessore} se si verificano determinate condizioni.
-\onslide<5->
+\onslide<4->
 \item I nodi presenti nel medesimo blocco $B_i$ \highlight{condividono il medesimo valore} $x_i$, e quindi a seguito dell'assorbimento sarà necessario un aggiornamento di tale valore.
 \end{itemize}
 \end{tframe}
 
-\begin{tframe}{Generalized Pool Adjacent Violator (GPAV e ISO-TPR) (4/4)}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV e ISO-TPR) (4/5)}
 \onslide<1->
 \begin{center}
-\scalebox{0.70}{
-    \begin{minipage}{0.9\linewidth}
+\scalebox{0.6}{
+    \begin{minipage}{0.90\linewidth}
 \begin{algorithm}[H]
+\caption{GPAV}\label{gpav}
 \begin{algorithmic}[1]
+\State \textbf{Input: }
+\State $G = (N, E)$
+\State $N = \{1, 2, ..., |N|\} $ 
+\State $\hat{y} = <\hat{y}_1, \hat{y}_2, ...,\hat{y}_{|N|}>$
 \Procedure{GPAV}{}
-\State $ H = N $
 \For{(each $i \in N$)}
 \State $B_i = \{i\}$ 
 \State $B_i^{-} = i^{-}$
@@ -260,24 +263,35 @@ Funzionamento Generale:
 \State $W_i = w_i$
 \EndFor
 \For{$k = 1, 2, ..., n$}
-\State \footnotesize{\emph{//finché esiste un predecessore di $B_{k}$ che viola la monotonicità}}
+\State \emph{// finché esiste un predecessore di $B_{k}$ che viola la monotonicità}
 \While{$\{i \in B_k^{-}: x_i > x_k\}\neq 0$} 
-\State \footnotesize{\emph{// Trova l'elemento che viola maggiormente il vincolo}}
+\State \emph{// Trova l'elemento che viola maggiormente il vincolo}
 \State \textbf{Find} $j \in B_k^{-}: x_j = max\{x_i : i \in B_k^{-}\}$ 
 \State \textbf{Absorb(k, j)} \emph{// $j$ viene assorbito da $B_k$}
 \EndWhile
 \EndFor
+\State \emph{//Aggiornamento per soluzione finale }  
+\For{each $k \in H$}
+\For{each $i \in B_k$}
+\State $\bar{y}_i = x_i$  
+\EndFor
+\EndFor
 \EndProcedure
+\State \textbf{Output: }
+\State $\bar{y} = <\bar{y}_1, \bar{y}_2, ...,\bar{y}_{|N|}>$
 \end{algorithmic}
-\caption{GPAV}
 \end{algorithm}
 \end{minipage}}
 \end{center}
+\end{tframe}
+\begin{tframe}{Generalized Pool Adjacent Violator (GPAV e ISO-TPR) (5/5)}
 \begin{itemize}
-\onslide<2->
+\onslide<1->
 \item Riassumendo, l’algoritmo effettua degli assorbimenti di blocchi adiacenti, finché questi violano i vincoli del problema quadratico, generando di fatto una partizione dei nodi, in cui le parti condividono lo stesso valore.
-\onslide<3->
+\onslide<2->
 \item Sostituendo GPAV allo step Top-Down dell'algoritmo TPR-DAG visto in precedenza (invece che HTD), si ottiene l'algoritmo \highlightbf{ISO-TPR}, un altro nuovo metodo utilizzato in questa tesi.
+\onslide<3->
+\item Il passo bottom-up di TPR permette di aumentare la sensibilità (Recall) e l'algoritmo GPAV nello step top-down assicura la consistenza, manetenendo gli score il più vicino possibile agli score ottenuti nel passo bottom-up (nel senso dei minimi quadrati).
 \end{itemize}
 \end{tframe}
 
@@ -285,7 +299,7 @@ Funzionamento Generale:
 \begin{itemize}
 \onslide<1->
 \item Si è eseguita la sperimentazione sul genoma della specie
-\highlight{Caenorhabditis elegans} (WORM), utilizzando come insieme delle  istanze e input del problema una matrice simmetrica generata dal network di interazione proteina-proteina \highlight{STRING}\footnote{\footnotesize{Search Tool for the Retrieval of Interacting Genes/Proteins}}.
+\highlight{Caenorhabditis elegans} (WORM), utilizzando come insieme delle  istanze e input del problema una matrice simmetrica generata dal network di interazione proteina-proteina \highlight{STRING} [\emph{Szklarczyk et al., 2015}] \footnote{\footnotesize{Search Tool for the Retrieval of Interacting Genes/Proteins}}.
 \onslide<2->
 \item Tale matrice STRING ha dimensione 15752×15752 (WORM). Il nostro problema ha quindi 15752 istanze.
 \onslide<3->
@@ -343,7 +357,7 @@ CC            & 221                 & 131,9                & 302,25             
 \item \emph{Bagged CART} (Bagged ensemble di alberi di decisione)
 \item \emph{AdaBoost.M1}
 \item \emph{Naive Bayes}
-\item \emph{Glmnet}}
+\item \emph{Modelli Lineari Generalizzati}}
 \end{enumerate}
 \onslide<2->
 \item Dato l'elevato numero di algoritmi selezionati per la sperimentazione, si è deciso di \highlight{non effettuare il tuning dei parametri}, questo per evitare di allungare ulteriorimente i tempi dell'intero processo di valutazione e generazione degli score flat.
@@ -357,16 +371,16 @@ CC            & 221                 & 131,9                & 302,25             
       \minipage[c][0.4\textheight][s]{\columnwidth}
 	   \begin{itemize}	
       		\onslide<1->
-	  		\item Per stimare le performance dei nostri predittori si è utilizzata la tecnica della \highlight{cross-validazione}, la quale permette di valutare l’errore di un algoritmo di apprendimento stimando l’errore medio dei predittori prodotti  dall’algoritmo. 
+	  		\item Per stimare le performance dei nostri predittori si è utilizzata la tecnica della \highlight{cross-validazione}. 
 	  		\onslide<2->
 	  		\item Come metriche si sono poi usate la:
 	  		\begin{enumerate}
 	  			\onslide<3->
-				\item \highlight{AUROC}: una misura di robustezza del classificatore,  che mette in relazione le misure di Recall e False Positive Rate, al variare di una soglia applicata all’output del modello.
+				\item \highlight{AUROC}: mette in relazione le misure di Recall e False Positive Rate, al variare di una soglia applicata all’output del modello.
 				\onslide<4->	  			
-				\item \highlight{AUPRC}: è una misura che mette in relazione la variazione di Precision al variare della Recall ed è utile nel caso di problemi sbilanciati. 
+				\item \highlight{AUPRC}: è una misura che mette in relazione la variazione di Precision al variare della Recall. 
 				\onslide<5->
-	  			\item \highlight{F-Score gerarchica}: è una metrica centrata sui geni, massimizzata al variare di una soglia t in (0, 1). Tale misura si basa sulla Precisione e Recall centrate sui geni e non su le classi. Tale metrica è stata usata per il fit degli iperparametri dei metodi ensemble (soglia e pesi).
+	  			\item \highlight{F-Score gerarchica}: è una metrica centrata sui geni, massimizzata al variare di una soglia t in (0, 1). Tale misura si basa sulla Precisione e Recall centrate sui geni e non su le classi.
 	  		\end{enumerate}
 	  \end{itemize}
       \endminipage      
@@ -409,7 +423,7 @@ Cross-validation 10 fold - No tuning - Campione 10 classi
 \end{figure}
 \end{tframe}
 
-\begin{tframe}{Riduzione della complessità del problema}
+\begin{tframe}{Riduzione dei tempi di calcolo del problema}
 
 \begin{columns}
     \begin{column}{.60\textwidth}
@@ -462,7 +476,7 @@ Cross-validation 10 fold - No tuning - Campione 10 classi
 
 \begin{tframe}{Organizzazione degli esperimenti}
 \onslide<1->
-Data l'analisi precedente effettuata sugli algoritmi di apprendimento flat (su di un campione di 10 classi), si è deciso per queste due tipologie di configurazioni: 
+Data l'analisi precedente effettuata sugli algoritmi di apprendimento flat (su di un campione di 10 classi), si è deciso di adottare il seguente set-up sperimentale: 
 
 \begin{itemize}
 \item \highlightbf{cross-validation 5 fold + Selezione delle prime 100 feature con Correlazione di Pearson}.
@@ -475,10 +489,10 @@ Le quali hanno evidenziato un buon compromesso tra tempi di esecuzione e perform
 Per quanto riguarda i metodi ensemble gerarchici, si sono utilizzati i seguenti metodi:
 
 \begin{enumerate}
-\item \highlightbf{HTD-DAG} 
-\item \highlightbf{GPAV}
-\item \highlightbf{TPR-DAG} (con variante senza soglia, con soglia adattiva, con pesi nell'aggiornamento)
-\item \highlightbf{ISO-TPR} (con variante senza soglia, con soglia adattiva)
+\item \highlightbf{HTD-DAG} [\emph{Notaro et al., 2017}]
+\item \highlightbf{TPR-DAG} (con variante senza soglia, con soglia adattiva, con pesi nell'aggiornamento) [\emph{Notaro et al., 2017}]
+\item \highlightbf{GPAV} (nuovo metodo introdotto in questa tesi)
+\item \highlightbf{ISO-TPR} (nuovo metodo introdotto in questa tesi, con variante senza soglia e con soglia adattiva)
 \end{enumerate}
 
 \end{tframe}
@@ -508,7 +522,7 @@ I metodi ensemble risultano essere più efficaci e riescono a migliorare in mani
 \caption{ \textbf{[AUROC] [BP] [FS]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{METODI GERARCHICI} & \textbf{WIN-TIE-LOSS} \\ \hline
  \textbf{GPAV} &12-0-0\\ \hline
  \textbf{HTD} &1-4-7\\ \hline
  \textbf{TPR-TF} &11-1-0\\ \hline
@@ -527,7 +541,7 @@ I metodi ensemble risultano essere più efficaci e riescono a migliorare in mani
 \caption{ \textbf{[AUROC] [BP] [PCA]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{METODI GERARCHICI} & \textbf{WIN-TIE-LOSS} \\ \hline
  \textbf{GPAV} &8-1-3\\ \hline
  \textbf{HTD} &7-0-5\\ \hline
  \textbf{TPR-TF} &8-1-3\\ \hline
@@ -550,7 +564,7 @@ I metodi ensemble risultano essere più efficaci e riescono a migliorare in mani
 \caption{ \textbf{[AUPRC] [BP] [FS]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{METODI GERARCHICI} & \textbf{WIN-TIE-LOSS} \\ \hline
  \textbf{GPAV} &12-0-0\\ \hline
  \textbf{HTD} &3-1-8\\ \hline
  \textbf{TPR-TF} &12-0-0\\ \hline
@@ -569,7 +583,7 @@ I metodi ensemble risultano essere più efficaci e riescono a migliorare in mani
 \caption{ \textbf{[AUPRC] [BP] [PCA]}}
 \begin{tabular}{|l|l|}
 \hline
- \textbf{WIN-TIE-LOSS} & \textbf{flat} \\ \hline
+ \textbf{METODI GERARCHICI} & \textbf{WIN-TIE-LOSS} \\ \hline
  \textbf{GPAV} &8-3-1\\ \hline
  \textbf{HTD} &6-2-4\\ \hline
  \textbf{TPR-TF} &10-1-1\\ \hline
@@ -624,6 +638,14 @@ CC&\footnotesize{0.25$\pm$0.0116}&\footnotesize{0.2305$\pm$0.0118}& \textbf{\foo
 \end{figure}}
 \end{tframe}
 
+\begin{tframe}{Heat Map metodi flat vs metodi gerarchici}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.22]{./img/HEATMAP.eps}
+\end{figure}
+\end{tframe}
+
 \begin{tframe}{Confronto tra metodi ensemble}
 \only<1>{
 \highlightbf{AUPRC (arancio) AUROC(Blu) FS (36 punti = 12 algo * 3 onto)}
@@ -645,11 +667,11 @@ CC&\footnotesize{0.25$\pm$0.0116}&\footnotesize{0.2305$\pm$0.0118}& \textbf{\foo
 \onslide<1->
 \item I metodi ensemble gerarchici riescono ad apportare miglioramenti statisticamente significativi alle performance dei predittori flat a patto di avere delle predizioni di partenza sufficientemente accurate.
 \onslide<2->
-\item La FS con correlazione di Pearson richiede tempi decisamente più lunghi della selezione con PCA, ma determina un vantaggio statisticamente significativo a livello di performance rispetto a quest’ultima (sia flat che ensemble).
+\item La FS con correlazione di Pearson richiede tempi più lunghi della selezione con PCA, ma determina un vantaggio statisticamente significativo a livello di performance rispetto a quest’ultima (sia flat che ensemble).
 \onslide<3->
-\item Il tuning degli algoritmi flat svolge un ruolo importante. Alcuni algoritmi hanno prodotto predittori flat scadenti, che non hanno consentito ai metodi di ensemble gerarchici di migliorare le performance (es. glmnet).
+\item Il tuning degli algoritmi flat svolge un ruolo importante. Alcuni algoritmi hanno prodotto predittori flat scadenti, che non hanno consentito ai metodi di ensemble gerarchici di migliorare le performance (es. i modelli lineari generalizzati, addestrati con il package glmnet in R).
 \onslide<4->
-\item I nuovi metodi ensemble gerarchici introdotti in questa tesi (GPAV e ISO-TPR), si sono dimostrati competitivi rispetto ai metodi ensemble gerarchici allo stato dell’arte, e in alcuni contesti (FS) hanno prodotto risultati significativamente migliori rispetto agli algoritmi noti.
+\item I nuovi metodi ensemble gerarchici introdotti in questa tesi (GPAV e ISO-TPR), si sono dimostrati competitivi rispetto ai metodi ensemble gerarchici allo stato dell’arte, e in alcuni casi hanno prodotto risultati significativamente migliori rispetto ad algoritmi gerarchici allo stato dell'arte.
 \end{itemize}
 \end{tframe}
 \begin{tframe}{Lavori futuri}
@@ -668,8 +690,7 @@ dei figli pesata con soglia adattiva).
 \item Analizzare in maniera più approfondita le performance, ad esempio in relazione ad altre metriche, come la F-score gerarchica.
 \onslide<6->
 \item Confrontare i metodi ensemble con i diversi metodi per la predizione su
-output strutturati, come ad esempio i metodi Kernel o i metodi basati su
-reti.
+output strutturati, come ad esempio i metodi Kernel con output strutturato.
 \end{itemize}
 \end{tframe}
 \begin{frame}{}
@@ -678,10 +699,13 @@ reti.
 \end{frame}
 \begin{tframe}{Bibliografia}
 \begin{itemize}
+\footnotesize{
 \item G. Valentini,\emph{ Hierarchical Ensemble Methods for Protein Function Prediction}, ISRN Bioinformatics, anno 2014.
 \item G. Valentini, \emph{True path rule hierarchical ensembles for genome-wide gene function prediction}, IEEE/ACM Transactions on Computational Biology and Bioinformatics, vol.8, no. 3, pp. 832–847, anno 2011.
 \item N. Cesa-Bianchi, M. Re, G. Valentini, \emph{Synergy of multi-label hierarchical ensembles, data fusion, and cost-sensitive methods for gene functional inference}, Machine Learning, vol.88(1), pp. 209-241, anno 2012.
 \item M. Notaro, M. Schubach, P. N. Robinson e Giorgio Valentini, \emph{Prediction of Human Phenotype Ontology terms by means of hierarchical ensemble methods}, BMC Bioinformatics, vol 18, numero 1, pagine 449, 12 Ottobre, anno 2017.
+\item Burdakov O., Sysoev O., Grimvall A., Hussian M. \emph{An O(n2) Algorithm for Isotonic Regression.}, Large-Scale Nonlinear Optimization. Nonconvex Optimization and Its Applications, vol 83. Springer, anno 2006.
+\item Szklarczyk D, Franceschini A, Wyder S, \emph{STRING v10: protein–protein interaction networks}, integrated over the tree of life, Nucleic Acids Research, anno 2015.}
 \end{itemize}
 \end{tframe}
 \end{document}
